@@ -1,0 +1,23 @@
+   #container{
+   		background-color: #D9E5FF;
+   		margin:0px;
+   		padding:0px;
+   		width: 610px;
+   		height: 300px;
+   }
+    #header{
+   		background-color: #EAEAEA;
+   		margin:0px;
+   		padding:0px;
+   		width: 570px;
+   		height: 40px;
+   		font-weight: bold;
+   }
+   
+    #content{
+   		background-color: #FAF4C0;
+   		margin:0px;
+   		padding:0px;
+   		width: 570px;
+   		height: 250px;
+   }

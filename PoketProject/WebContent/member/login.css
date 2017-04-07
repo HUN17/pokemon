@@ -1,0 +1,10 @@
+	#join{
+		color: gray;
+	}
+	#join:Hover{
+		text-decoration: underline;
+	}
+	
+	.box{
+		font-size: 20px;
+	}

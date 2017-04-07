@@ -1,0 +1,29 @@
+	.bookList{
+	
+		overflow: auto;
+		width:960px;
+		height:700px;
+		padding:0px;
+		margin:0px 0px 0px 180px;
+		float: left;
+	}
+	
+	.bookLogowrap{
+		width:1300px;
+		height: 150px;
+	}
+	
+	.bookLogo{
+		width:500px;
+		height: 100px;
+		float: left;
+	}
+	.bookSearch{
+		width:780px;
+		height: 100px;
+		float: left;
+	}
+	.bookListWrap{
+		width:1300px;
+		height: 700px;
+	}
