@@ -13,7 +13,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<<<<<<< HEAD
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="../chat/chat.css">
@@ -21,12 +20,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/owl.carousel.min.css">
 <link rel="stylesheet" href="resource/owl.theme.default.min.css">
-=======
-<title>Insert title here</title> 
-<link rel="stylesheet" type="text/css" href="main.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
->>>>>>> refs/remotes/origin/master
 </head>
 <body>      
 	<center>
