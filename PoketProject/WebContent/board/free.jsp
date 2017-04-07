@@ -23,8 +23,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <!-- BootStrap CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
 <script type="text/javascript">
 	$(function(){
 		$('#findBtn').click(function(){
@@ -67,7 +66,7 @@
 									out.write("&nbsp;&nbsp;");
 								}
 						%>
-								<img alt="다시" src="image/icon_reply.gif">&nbsp;
+								<img alt="다시" src="../image/board_image/icon_reply.gif">&nbsp;
 						<%		
 							}
 							String msg="관리자에 의해 삭제된 게시물입니다.";
@@ -113,7 +112,7 @@
                   <option value="subject">제목</option>
                   <option value="content">내용</option>
                </select>
-               <input type="text" name="ss" id="ss" class="form-control" style="width:20%">      
+               <input type="text" name="ss" id="ss" class="form-control" style="width:20%"> 
                <input type="button" value="찾기" id="findBtn" class="btn btn-primary" >
   
                

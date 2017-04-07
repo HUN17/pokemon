@@ -5,10 +5,10 @@ import java.util.*;
 public class freeDAO {
 	private Connection conn;
 	private PreparedStatement ps;
-	private final String URL="jdbc:oracle:thin:@211.238.142.229:1521:ORCL";
+	private final String URL="jdbc:oracle:thin:@211.238.142.235:1521:ORCL";
 	private static freeDAO dao;
 	
-	//µå¶óÀÌ¹ö µî·Ï
+	//ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½
 	public freeDAO(){
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -18,7 +18,7 @@ public class freeDAO {
 		}
 	}
 	
-	//½Ì±ÛÅÏ
+	//ï¿½Ì±ï¿½ï¿½ï¿½
 	public static freeDAO newInstance(){
 		if(dao==null)
 			dao=new freeDAO();
@@ -26,7 +26,7 @@ public class freeDAO {
 	}
 	
 	
-	//¿À¶óÅ¬ ÇØÁ¦
+	//ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½ï¿½ï¿½ï¿½
 	public void disConnection(){
 		try{
 			if(ps!=null)ps.close();
@@ -36,7 +36,7 @@ public class freeDAO {
 		}
 	}
 	
-	//¿À¶óÅ¬ ¿¬°á
+	//ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½ï¿½ï¿½ï¿½
 	public void getConnection(){
 		try{
 			conn=DriverManager.getConnection(URL, "scott", "tiger");
@@ -45,7 +45,7 @@ public class freeDAO {
 		}
 	}
 	
-	//¸®½ºÆ®
+	//ï¿½ï¿½ï¿½ï¿½Æ®
 	public List<freeVO> boardListData(int page){
 		ArrayList<freeVO> list=new ArrayList<>();
 		
@@ -110,7 +110,7 @@ public class freeDAO {
 		return total;
 	}
 	
-	//ÀüÃ¼ °Ô½Ã±Û °¹¼ö
+	//ï¿½ï¿½Ã¼ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public int boardRowCount(){
 		int total=0;
 		try{
@@ -184,7 +184,7 @@ public class freeDAO {
 		return list;
 	}
 	
-	//³»¿ëº¸±â
+	//ï¿½ï¿½ï¿½ëº¸ï¿½ï¿½
 	public freeVO boardContent(int no,int type){
 		freeVO vo=new freeVO();
 		
@@ -240,7 +240,7 @@ public class freeDAO {
 			int gt=rs.getInt(3);
 			rs.close();
 			ps.close();
-			//´äº¯ÀÇ ÇÙ½ÉÄõ¸®
+			//ï¿½äº¯ï¿½ï¿½ ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½
 			sql="UPDATE pokeBoard SET "
 					+"group_step=group_step+1 "
 					+"WHERE group_id=? AND group_step>?";
@@ -250,7 +250,7 @@ public class freeDAO {
 			ps.executeUpdate();
 			ps.close();
 			
-			//Ãß°¡
+			//ï¿½ß°ï¿½
 			sql="INSERT INTO pokeBoard(no,name,subject,content,pwd,group_id,group_step,group_tab,root) "
 					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
@@ -300,25 +300,25 @@ public class freeDAO {
 		}
 	}
 	
-	//¼öÁ¤-°Ô½Ã±Û ³»¿ëÀ» ºÒ·¯¿À±â
+	//ï¿½ï¿½ï¿½ï¿½-ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 	public boolean boardUpdate(freeVO vo){
 		boolean bCheck = false;
 		
 		try {
 			getConnection();
-			//ÆÐ½º¿öµå ºÒ·¯¿À±â
+			//ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 			String sql= "SELECT pwd FROM pokeBoard "
 					+"WHERE no=?";
 			ps =conn.prepareStatement(sql);
-			ps.setInt(1,vo.getNo());			//¼±ÅÃµÇ¾îÁø °Ô½Ã±ÛÀÇ no
+			ps.setInt(1,vo.getNo());			//ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ï¿½ï¿½ no
 			
 			ResultSet rs = ps.executeQuery();
 			rs.next();
-			String db_pwd = rs.getString(1);	//°Ô½ÃÇÑ »ç¶÷¸¸ ¼öÁ¤°¡´É 
+			String db_pwd = rs.getString(1);	//ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 			rs.close();
 			ps.close();
 			
-			//¼öÁ¤ Äõ¸®¹®
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(db_pwd.equals(vo.getPwd())){
 				bCheck = true;
 				sql ="UPDATE pokeBoard SET "
@@ -344,7 +344,7 @@ public class freeDAO {
 		return bCheck;
 	}
 			
-	//¼öÁ¤ÇÏ±â-°Ô½Ã±Û ³»¿ë ºÒ·¯¿À±â
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½-ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 	public freeVO boardUpdateData(int no){
 		freeVO vo = new freeVO();
 		try {
@@ -379,7 +379,7 @@ public class freeDAO {
 		
 		try {
 			getConnection();
-			//ÆÐ½º¿öµå ºÒ·¯¿À±â
+			//ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 			String sql ="SELECT pwd FROM pokeBoard "
 					+"WHERE no=?";
 			ps = conn.prepareStatement(sql);
@@ -390,7 +390,7 @@ public class freeDAO {
 			rs.close();
 			ps.close();
 			
-			//select¸¸ excuteQuery ³ª¸ÓÁö excuteUpdate
+			//selectï¿½ï¿½ excuteQuery ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ excuteUpdate
 			if(db_pwd.equals(pwd)){
 				bCheck = true;
 				sql = "DELETE FROM pokeBoard "
