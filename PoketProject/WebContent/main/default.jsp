@@ -16,11 +16,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="main.css">
-<!-- 리잉크으 -->
-<link rel="stylesheet" href="resource/owl.carousel.min.css">
-<link rel="stylesheet" href="resource/owl.theme.default.min.css">
-
 <!-- 스으크으리입트으 -->
 <script src="resource/jquery.min.js"></script>
 <script src="resource/owl.carousel.min.js"></script>

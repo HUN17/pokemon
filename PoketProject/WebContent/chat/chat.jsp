@@ -10,7 +10,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../chat/chat.css">
 <script type="text/javascript">
 
 var userId ="<%=id%>"; //아이디
@@ -107,20 +106,19 @@ var userId ="<%=id%>"; //아이디
 </script>
 </head>
 <body onload="startRequest()" onunload="accessExit()">
-<center>
-<div id="container">
-	<div id="header">
+<div id="chatContainer">
+	<div id="chatHeader">
 		현재 접속인원: <%=accessUserCount.size() %>명
 	</div>
-	<div id="content">
-		<table border="0" cellspacing="1" cellpadding="0" width="570">
+	<div id="chatContent">
+		<table border="0" cellspacing="1" cellpadding="0" width="100%" >
 			<tr>
 				<th>아이디</th>
 				<th>닉네임</th>
 			</tr>
 		</table>
 		<div id="scrollList" style="overflow:scroll; overflow-x:hidden;">
-			<table border="0" cellspacing="1" cellpadding="0" width="570">
+			<table border="0" cellspacing="1" cellpadding="0" width="100%">
 				<tr>
 					<td>
 					Loading
@@ -130,6 +128,5 @@ var userId ="<%=id%>"; //아이디
 		</div>
 	</div>
 </div>
-   </center>
 </body>
 </html>
