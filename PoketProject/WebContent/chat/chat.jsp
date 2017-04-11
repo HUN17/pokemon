@@ -107,11 +107,13 @@ var userId ="<%=id%>"; //아이디
 </head>
 <body onload="startRequest()" onunload="accessExit()">
 <div id="chatContainer">
-	<div id="chatHeader">
+	<div id="chatHeader" >
+		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 		현재 접속인원: <%=accessUserCount.size() %>명
+		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 	</div>
 	<div id="chatContent">
-		<table border="0" cellspacing="1" cellpadding="0" width="100%" >
+		<table id="chatTable" border="0" cellspacing="1" cellpadding="0" width="100%" >
 			<tr>
 				<th>아이디</th>
 				<th>닉네임</th>

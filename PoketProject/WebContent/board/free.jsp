@@ -117,7 +117,7 @@
            		<div class="form-group" style="">
 	               	<ul class="pagination">
 					<li class="pagination"><a href="main.jsp?mode=5&page=<%=curpage>1?curpage-1:curpage%>">
-					< </a></li>
+					</a></li>
 				
 				<%
 					for(i=1; i<=totalpage; i++){

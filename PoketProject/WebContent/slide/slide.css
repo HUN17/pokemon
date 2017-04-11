@@ -1,0 +1,9 @@
+#inner-fade{
+	float: left;
+	position: relative;
+}
+
+#inner-fade .slideImg{
+	width: 610px;
+	position: relative;
+}

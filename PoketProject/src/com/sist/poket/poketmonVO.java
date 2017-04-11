@@ -12,7 +12,56 @@ public class poketmonVO {
 	private String s_type2;
 	private String l_type1;
 	private String l_type2;
+	private String cp;
+	private String att;
+	private String def;
+	private String hp;
+	private String rev4;
+	private String rev5;
+	private String rev6;
 	
+	public String getCp() {
+		return cp;
+	}
+	public void setCp(String cp) {
+		this.cp = cp;
+	}
+	public String getAtt() {
+		return att;
+	}
+	public void setAtt(String att) {
+		this.att = att;
+	}
+	public String getDef() {
+		return def;
+	}
+	public void setDef(String def) {
+		this.def = def;
+	}
+	public String getHp() {
+		return hp;
+	}
+	public void setHp(String hp) {
+		this.hp = hp;
+	}
+	public String getRev4() {
+		return rev4;
+	}
+	public void setRev4(String rev4) {
+		this.rev4 = rev4;
+	}
+	public String getRev5() {
+		return rev5;
+	}
+	public void setRev5(String rev5) {
+		this.rev5 = rev5;
+	}
+	public String getRev6() {
+		return rev6;
+	}
+	public void setRev6(String rev6) {
+		this.rev6 = rev6;
+	}
 	public int getNo() {
 		return no;
 	}

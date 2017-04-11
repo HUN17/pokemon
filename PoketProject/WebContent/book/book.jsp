@@ -92,14 +92,9 @@
 	        window.open(url,'popupView',set); 
 	    }
 </script>
-<style>
-	div {
-		font-family: 고딕;
-	}
-</style> 
 </head>
  <body>
-		<center>
+		<%-- <center>
 			 <div class="bookLogowrap">
 				<form name="logo" action="../main/main.jsp?mode=2" method="post">
 				<div class="bookLogo">
@@ -165,6 +160,66 @@
 					</ul>
 				</div>
 			</div>
-		</center>
+		</center> --%>
+		<!--  -->
+		<div class="bookLogowrap">
+			<form name="logo" action="../main/main.jsp?mode=2" method="post">
+				<div class="bookLogo">
+								<input type="image" src="../image/book_image/book_logo.png">
+				</div>
+			</form>
+			<form name="select" action="../main/main.jsp?mode=2" method="post">
+					<div class="bookSearch">
+						<div id="bookBtn">
+									<select name="select" class="form-control"  style="width:100px; float: left">
+									<option value="name">이름</option>
+									<option value="no">번호</option>
+									<option value="type">속성</option>
+								</select>&nbsp;
+									<input type="text" class="form-control" size="12" name="text" style="width:100px; float: left">&nbsp;
+									<input type="submit" class="btn btn-primary" value="검색" style="width:100px; float: left">
+						</div>
+					</div>
+				</form>
+		</div>
+		
+		<div class="bookListWrap">
+				<c:set var="list" value="<%=list %>"></c:set>
+				<script type="text/javascript">
+					<%
+						if(list.size() <= 0) {
+					%>
+						alert("검색 결과가 없습니다");
+					<% } %>
+				</script>
+				<c:set var="num" value="0"></c:set>
+	
+				<div class="bookList">
+					<ul style="padding: 2px;  margin: 20 auto;">
+						<li style="list-style: none;">
+							<c:forEach var="vo" items="${list}" >
+							<div class="bookImg" onclick="open_pop2(${vo.no})">
+								<div>
+									<img class="bookPokeImg" src="../image/poket_image/${vo.no }.png">
+								</div>
+								<div class="poketName">
+									<h2 style="padding: 0px; margin: 0px; font-size: 15px;">No.${vo.no }&nbsp; ${vo.name }</h2>
+									<img class="bookTypeImg" alt="속성1" src="../image/book_image/${vo.type1 }">
+									<c:if test="${vo.type2 != null }">
+										<img class="bookTypeImg" alt="속성2" src="../image/book_image/${vo.type2 }">
+									</c:if>
+									<c:if test="${vo.type2 == null }"></c:if>
+								</div>
+							</div>
+							<c:set var="num" value="${num+1 }"></c:set>
+							<c:if test="${num%6==0 }">
+							<li style="list-style: none;">
+							</li>
+							</c:if>
+							</c:forEach>
+						</li>
+					</ul>
+				</div>
+			</div>
 </body>
 </html>

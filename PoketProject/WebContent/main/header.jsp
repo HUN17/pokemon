@@ -9,10 +9,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/master
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- <script type="text/javascript">
 	$(function(){
@@ -78,16 +74,6 @@
 		<a href="main.jsp">
 			<img src="../image/main_image/main_logo.png" width="250px">
 		</a>
-<!-- 		<div class="menu" id="notice">공지사항</div>
-		<div class="menu" id="book">도감</div>
-		<div class="menu" id="board">게시판</div>
-			<div class="dropdown">
-				<a href="#">공략게시판</a>
-				<a href="#">질문게시판</a>
-				<a href="#">자유게시판</a>
-			</div>
-		<div class="menu" id="site">제휴사이트</div>
-		<div class="menu" id="mypage">마이페이지</div> -->
 		<ul class="headerMenu">
 			<li class="menu" id="notice"><a href="main.jsp?mode=1">공지사항</a></li>
 			<li class="menu" id="book"><a href="main.jsp?mode=2">도감</a></li>

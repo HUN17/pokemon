@@ -59,15 +59,22 @@ public class poketmonDAO {
 				poketmonVO vo = new poketmonVO();
 				vo.setNo(rs.getInt(1));
 				vo.setName(rs.getString(2));
-				vo.setRev1(rs.getString(3));
-				vo.setRev2(rs.getString(4));
-				vo.setRev3(rs.getString(5));
-				vo.setType1(rs.getString(6));
-				vo.setType2(rs.getString(7));
-				vo.setS_type1(rs.getString(8));
-				vo.setS_type2(rs.getString(9));
-				vo.setL_type1(rs.getString(10));
-				vo.setL_type2(rs.getString(11));
+				vo.setType1(rs.getString(3));
+				vo.setType2(rs.getString(4));
+				vo.setRev1(rs.getString(5));
+				vo.setRev2(rs.getString(6));
+				vo.setRev3(rs.getString(7));
+				vo.setRev4(rs.getString(8));
+				vo.setRev5(rs.getString(9));
+				vo.setRev6(rs.getString(10));
+				vo.setS_type1(rs.getString(11));
+				vo.setS_type2(rs.getString(12));
+				vo.setL_type1(rs.getString(13));
+				vo.setL_type2(rs.getString(14));
+				vo.setCp(rs.getString(15));
+				vo.setAtt(rs.getString(16));
+				vo.setDef(rs.getString(17));
+				vo.setHp(rs.getString(18));
 				list.add(vo);	
 			}
 		} catch (Exception ex) {

@@ -34,9 +34,9 @@
 		<div style="width:500px; height:350px; float: left;"> <!-- 폼2 -->
 			<div style="width:500px; height:150px; vertical-align: middle;">
 					타입 : 
-					<img src="../image/poket_image/${vo.type1 }.png" align="middle">&nbsp;
+					<img src="../image/book_image/${vo.type1 }.png" align="middle">&nbsp;
 					<c:if test="${vo.type2 != null }">
-						<img src="../image/poket_image/${vo.type2 }.png" align="middle"><br/>
+						<img src="../image/book_image/${vo.type2 }.png" align="middle"><br/>
 					</c:if>
 					<c:if test="${vo.type2 == null }">
 						<br/>
@@ -44,13 +44,13 @@
 					
 					강한 상성 :&nbsp; 
 					<c:if test="${vo.s_type1 != null }">
-					<img src="../image/poket_image/${vo.s_type1}.png" align="middle">&nbsp;
+					<img src="../image/book_image/${vo.s_type1}.png" align="middle">&nbsp;
 					</c:if>
 					<c:if test="${vo.s_type1 == null }">
 					<br/>
 					</c:if>
 					<c:if test="${vo.s_type2 != null }">
-						<img src="../image/poket_image/${vo.s_type2 }.png" align="middle"><br/>
+						<img src="../image/book_image/${vo.s_type2 }.png" align="middle"><br/>
 					</c:if>
 					<c:if test="${vo.s_type2 == null }">
 						<br/>

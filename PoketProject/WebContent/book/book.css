@@ -1,11 +1,12 @@
 	.bookList{
 	
 		overflow: auto;
-		width:960px;
+		width:1165px;
 		height:700px;
 		padding:0px;
-		margin:0px 0px 0px 180px;
+		margin:0px 0px 0px 0px;
 		float: left;
+		background-color: #BDBDBD;
 	}
 	
 	.bookLogowrap{
@@ -18,12 +19,58 @@
 		height: 100px;
 		float: left;
 	}
+	
+	.bookLogo input{
+		float: left;
+		margin-top: 50px;
+	}
+	
 	.bookSearch{
 		width:780px;
 		height: 100px;
 		float: left;
 	}
+	#bookBtn{
+		width: 319px;
+		height: 30px;
+		float: right;
+		margin-top: 70px;
+	}
+
 	.bookListWrap{
-		width:1300px;
+		width: 1165px;
 		height: 700px;
+	}
+	
+	.bookImg{
+		width: 180px; 
+		height: 220px; 
+		float: left; 
+		margin: 5px; 
+		background-image: url("image/back.jpg"); 
+		border-radius: 10px;" 
+
+	}
+	
+	.poketName{
+		background-color: #EAEAEA;
+		width: 190px;
+		height: 60px;
+		border-radius: 10px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	.bookImg .bookPokeImg{
+		width:150px; height:150px;
+		margin-top: 10px;
+	}
+	
+	.bookImg .bookPokeImg:HOVER{
+		-webkit-filter: drop-shadow(0px 20px 15px #8C8C8C);
+		filter: drop-shadow(0px 0px 15px #8C8C8C);
+	}
+	
+	.bookTypeImg{
+		width: 20px;
 	}

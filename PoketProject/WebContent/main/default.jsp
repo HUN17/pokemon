@@ -72,12 +72,12 @@
 					
 					<!-- 왼쪽 위 div -->
 					<div style="width: 610px; height: 300px; float: left; margin: 15px 10px 15px 25px; background-color: #d3d3d3;">		
-					<jsp:include page="../chat/chat.jsp"></jsp:include> 
+						<jsp:include page="../chat/chat.jsp"></jsp:include> 
 					</div>		<!-- 왼쪽 위 div -->
 	
 					<!-- 오른쪽 위 div -->
 					<div style="width: 610px; height: 300px;  float: left; margin: 15px; background-color: #d3d3d3;">		
-					
+						<jsp:include page="../slide/image.jsp"></jsp:include>
 					</div>		<!-- 오른쪽 위 div -->
 				
 				</div>		<!-- 위 div -->

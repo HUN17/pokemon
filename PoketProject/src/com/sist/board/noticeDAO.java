@@ -5,10 +5,9 @@ import java.util.*;
 public class noticeDAO {
 	private Connection conn;
 	private PreparedStatement ps;
-	private final String URL="jdbc:oracle:thin:@211.238.142.229:1521:ORCL";
+	private final String URL="jdbc:oracle:thin:@211.238.142.235:1521:ORCL";
 	private static noticeDAO dao;
 	
-	//����̹� ���
 	public noticeDAO(){
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -18,7 +17,6 @@ public class noticeDAO {
 		}
 	}
 	
-	//�̱���
 	public static noticeDAO newInstance(){
 		if(dao==null)
 			dao=new noticeDAO();
@@ -26,7 +24,6 @@ public class noticeDAO {
 	}
 	
 	
-	//����Ŭ ����
 	public void disConnection(){
 		try{
 			if(ps!=null)ps.close();
@@ -35,8 +32,7 @@ public class noticeDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-	
-	//����Ŭ ����
+
 	public void getConnection(){
 		try{
 			conn=DriverManager.getConnection(URL, "scott", "tiger");
@@ -45,14 +41,13 @@ public class noticeDAO {
 		}
 	}
 	
-	//����Ʈ
 	public List<freeVO> boardListData(int page){
 		ArrayList<freeVO> list=new ArrayList<>();
 		
 		try{
 			getConnection();
 			String sql="SELECT no,subject,name,regdate,hit,group_tab "
-					+"FROM pokeBoard "
+					+"FROM noticeBoard "
 					+"ORDER BY group_id DESC,group_step ASC";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
@@ -94,7 +89,7 @@ public class noticeDAO {
 		int total=0;
 		try{
 			getConnection();
-			String sql="SELECT CEIL(COUNT(*)/15) FROM pokeBoard";
+			String sql="SELECT CEIL(COUNT(*)/15) FROM noticeBoard";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			rs.next();
@@ -110,12 +105,11 @@ public class noticeDAO {
 		return total;
 	}
 	
-	//��ü �Խñ� ����
 	public int boardRowCount(){
 		int total=0;
 		try{
 			getConnection();
-			String sql="SELECT COUNT(*) FROM pokeBoard";
+			String sql="SELECT COUNT(*) FROM noticeBoard";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			rs.next();
@@ -136,7 +130,7 @@ public class noticeDAO {
 		try{
 			getConnection();
 			String sql="SELECT COUNT(*) "
-					+"FROM pokeBoard "
+					+"FROM noticeBoard "
 					+"WHERE "+fs+" LIKE '%'||?||'%'";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, ss);
@@ -158,7 +152,7 @@ public class noticeDAO {
 		try{
 			getConnection();
 			String sql="SELECT no,subject,name,regdate,hit,group_tab "
-					+"FROM pokeBoard "
+					+"FROM noticeBoard "
 					+"WHERE "+fs+" LIKE '%'||?||'%'";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, ss);
@@ -184,7 +178,6 @@ public class noticeDAO {
 		return list;
 	}
 	
-	//���뺸��
 	public freeVO boardContent(int no,int type){
 		freeVO vo=new freeVO();
 		
@@ -192,7 +185,7 @@ public class noticeDAO {
 			getConnection();
 			String sql="";
 			if(type==1){
-				sql="UPDATE pokeBoard SET "
+				sql="UPDATE noticeBoard SET "
 						+"hit=hit+1 "
 						+"WHERE no=?";
 				ps=conn.prepareStatement(sql);
@@ -202,7 +195,7 @@ public class noticeDAO {
 			}
 			
 			sql="SELECT no,name,subject,content,regdate,hit "
-					+"FROM pokeBoard "
+					+"FROM noticeBoard "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -229,7 +222,7 @@ public class noticeDAO {
 		try{
 			getConnection();
 			String sql="SELECT group_id,group_step,group_tab "
-					+"FROM pokeBoard "
+					+"FROM noticeBoard "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, pno);
@@ -240,8 +233,7 @@ public class noticeDAO {
 			int gt=rs.getInt(3);
 			rs.close();
 			ps.close();
-			//�亯�� �ٽ�����
-			sql="UPDATE pokeBoard SET "
+			sql="UPDATE noticeBoard SET "
 					+"group_step=group_step+1 "
 					+"WHERE group_id=? AND group_step>?";
 			ps=conn.prepareStatement(sql);
@@ -250,8 +242,7 @@ public class noticeDAO {
 			ps.executeUpdate();
 			ps.close();
 			
-			//�߰�
-			sql="INSERT INTO pokeBoard(no,name,subject,content,pwd,group_id,group_step,group_tab,root) "
+			sql="INSERT INTO noticeBoard(no,name,subject,content,pwd,group_id,group_step,group_tab,root) "
 					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
@@ -265,7 +256,7 @@ public class noticeDAO {
 			ps.executeUpdate();
 			ps.close();
 			//depth=depth+1
-			sql="UPDATE pokeBoard SET "
+			sql="UPDATE noticeBoard SET "
 					+"depth=depth+1 "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
@@ -282,9 +273,9 @@ public class noticeDAO {
 	public void boardInsert(freeVO vo){
 		try{
 			getConnection();
-			String sql="INSERT INTO pokeBoard(no,name,subject,content,pwd,group_id) "
+			String sql="INSERT INTO noticeBoard(no,name,subject,content,pwd,group_id) "
 					+"VALUES(seq_pb_no.nextval,?,?,?,?,"
-					+"(SELECT NVL(MAX(group_id)+1,1) FROM pokeBoard))";
+					+"(SELECT NVL(MAX(group_id)+1,1) FROM noticeBoard))";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());	
 			ps.setString(2, vo.getSubject());
@@ -299,29 +290,25 @@ public class noticeDAO {
 			disConnection();
 		}
 	}
-	
-	//����-�Խñ� ������ �ҷ�����
 	public boolean boardUpdate(freeVO vo){
 		boolean bCheck = false;
 		
 		try {
 			getConnection();
-			//�н����� �ҷ�����
-			String sql= "SELECT pwd FROM pokeBoard "
+			String sql= "SELECT pwd FROM noticeBoard "
 					+"WHERE no=?";
 			ps =conn.prepareStatement(sql);
-			ps.setInt(1,vo.getNo());			//���õǾ��� �Խñ��� no
+			ps.setInt(1,vo.getNo());
 			
 			ResultSet rs = ps.executeQuery();
 			rs.next();
-			String db_pwd = rs.getString(1);	//�Խ��� ����� �������� 
+			String db_pwd = rs.getString(1);
 			rs.close();
 			ps.close();
 			
-			//���� ������
 			if(db_pwd.equals(vo.getPwd())){
 				bCheck = true;
-				sql ="UPDATE pokeBoard SET "
+				sql ="UPDATE noticeBoard SET "
 						+"name=?, "
 						+"subject=?,content=? "
 						+"WHERE no=?";
@@ -344,13 +331,12 @@ public class noticeDAO {
 		return bCheck;
 	}
 			
-	//�����ϱ�-�Խñ� ���� �ҷ�����
 	public freeVO boardUpdateData(int no){
 		freeVO vo = new freeVO();
 		try {
 			getConnection();
 			String sql ="SELECT * "
-					+"FROM pokeBoard "
+					+"FROM noticeBoard "
 					+"WHERE no=?";
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -379,8 +365,7 @@ public class noticeDAO {
 		
 		try {
 			getConnection();
-			//�н����� �ҷ�����
-			String sql ="SELECT pwd FROM pokeBoard "
+			String sql ="SELECT pwd FROM noticeBoard "
 					+"WHERE no=?";
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -390,10 +375,9 @@ public class noticeDAO {
 			rs.close();
 			ps.close();
 			
-			//select�� excuteQuery ������ excuteUpdate
 			if(db_pwd.equals(pwd)){
 				bCheck = true;
-				sql = "DELETE FROM pokeBoard "
+				sql = "DELETE FROM noticeBoard "
 						+"WHERE no=?";
 				ps = conn.prepareStatement(sql);
 				ps.setInt(1, no);
@@ -410,5 +394,3 @@ public class noticeDAO {
 		return bCheck;
 	}
 }
-
-

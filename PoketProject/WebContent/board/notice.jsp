@@ -116,17 +116,17 @@
                
            		<div class="form-group" style="">
 	               	<ul class="pagination">
-					<li class="pagination"><a href="main.jsp?mode=5&page=<%=curpage>1?curpage-1:curpage%>">
+					<li class="pagination"><a href="main.jsp?mode=1&page=<%=curpage>1?curpage-1:curpage%>">
 					< </a></li>
 				
 				<%
 					for(i=1; i<=totalpage; i++){
 				%>
-						<li><a href="main.jsp?mode=5&page=<%=i%>"><%=i %></a></li>
+						<li><a href="main.jsp?mode=1&page=<%=i%>"><%=i %></a></li>
 				<%						
 					}
 				%>
-					<li class="pagination"><a href="main.jsp?mode=5&page=<%=curpage<totalpage?curpage+1:curpage%>">
+					<li class="pagination"><a href="main.jsp?mode=1&page=<%=curpage<totalpage?curpage+1:curpage%>">
 					></a></li>
 					</ul>
 				</div>

@@ -10,7 +10,7 @@
 <body>
 		<div style="width: 1260px; height: 170px;">
 			<div class="icon">
-				<a href="#">
+				<a href="http://pokemonkorea.co.kr/main_v2" target="_blank">
 					<img alt="포켓몬 코리아" src="../alliance/image/icon_pokemon.png" onmouseover="this.src='../alliance/image/icon_pokemon_h.png';" onmouseout="this.src='../alliance/image/icon_pokemon.png';" width="90">
 				<br/>포켓몬 코리아
 				</a>
@@ -18,14 +18,14 @@
 			</div>
 			<div class="icon">
 				<div style="height: 30px"></div>
-				<a href="#">
+				<a href="http://pokemongo.inven.co.kr/" target="_blank">
 					<img alt="포켓몬고 인벤" src="../alliance/image/icon_inven.png" onmouseover="this.src='../alliance/image/icon_inven_h.png';" onmouseout="this.src='../alliance/image/icon_inven.png';"width="100">
 				<div style="height: 25px"></div>
 				<br/>포켓몬고 인벤
 				</a>
 			</div>
 			<div class="icon">
-				<a href="#">
+				<a href="https://www.facebook.com/PokemonCoKr" target="_blank">
 					<img alt="포켓몬 페이스북" src="../alliance/image/icon_facebook.png" onmouseover="this.src='../alliance/image/icon_facebook_h.png';" onmouseout="this.src='../alliance/image/icon_facebook.png';"width="90">
 				<br/>포켓몬 페이스북
 				</a>
