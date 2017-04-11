@@ -77,6 +77,7 @@
 	poketmonVO vo = new poketmonVO();
 	int curpage = 1, totalpage = 6;
 %>
+<c:set var="vo" value="<%=list %>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -203,12 +204,14 @@
 									<img class="bookPokeImg" src="../image/poket_image/${vo.no }.png">
 								</div>
 								<div class="poketName">
-									<h2 style="padding: 0px; margin: 0px; font-size: 15px;">No.${vo.no }&nbsp; ${vo.name }</h2>
-									<img class="bookTypeImg" alt="加己1" src="../image/book_image/${vo.type1 }">
-									<c:if test="${vo.type2 != null }">
-										<img class="bookTypeImg" alt="加己2" src="../image/book_image/${vo.type2 }">
+									No.${vo.no }&nbsp; ${vo.name }<br/>
+									<img class="bookTypeImg" alt="加己1" src="../image/book_image/${vo.type1 }.jpg">
+									<c:if test="${vo.type2 == '0'}">
+										<br/>
 									</c:if>
-									<c:if test="${vo.type2 == null }"></c:if>
+									<c:if test="${vo.type2 != '0' }">
+										<img class="bookTypeImg" alt="加己2" src="../image/book_image/${vo.type2 }.jpg">
+									</c:if>
 								</div>
 							</div>
 							<c:set var="num" value="${num+1 }"></c:set>

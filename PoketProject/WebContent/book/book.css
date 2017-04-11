@@ -53,12 +53,15 @@
 	}
 	
 	.poketName{
+		padding: 0px;
+		margin: 0px;
 		background-color: #EAEAEA;
 		width: 190px;
 		height: 60px;
 		border-radius: 10px;
 		display: table-cell;
 		vertical-align: middle;
+		font-size: 15px;
 	}
 	
 	.bookImg .bookPokeImg{
@@ -70,7 +73,10 @@
 		-webkit-filter: drop-shadow(0px 20px 15px #8C8C8C);
 		filter: drop-shadow(0px 0px 15px #8C8C8C);
 	}
+	.bookImg:HOVER{
+		font-weight: bold;
+	}
 	
 	.bookTypeImg{
-		width: 20px;
+		width: 50px;
 	}
