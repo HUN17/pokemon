@@ -63,7 +63,7 @@
 		<table class="table table-bordered" style="width: 60%">
 			<tr>
 				<td align="right">
-					<a href="reply.jsp?no=<%=no%>">
+					<a href="main.jsp?mode=12&no=<%=no%>">
 						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
 						 <input type="button" value="답글쓰기"  class="btn btn-default">
 					</a>
