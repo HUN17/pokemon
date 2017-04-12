@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<!-- <script src="../main/js/jquery-3.1.0.js" ></script>
 <script src="../main/js/jquery.innerfade.js"></script>
 <script>
         $(document).ready(function () {
@@ -15,10 +14,10 @@
                 speed: 750,
                 timeout: 4000,
                 type: 'random',
-               // containerheight: '350px'
+                containerheight: '350px'
             });
         });
-</script> -->
+</script>
 </head>
 <body>
      

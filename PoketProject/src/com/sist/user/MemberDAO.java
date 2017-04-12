@@ -12,7 +12,6 @@ public class MemberDAO {
 	private final String URL = "jdbc:oracle:thin:@211.238.142.235:1521:ORCL";
 	private static MemberDAO dao;
 
-	// ����̹� ��ġ
 	public MemberDAO() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -21,7 +20,6 @@ public class MemberDAO {
 		}
 	}
 
-	// �̱���
 	public static MemberDAO newInstance() {
 		if (dao == null) {
 			dao = new MemberDAO();
@@ -29,7 +27,6 @@ public class MemberDAO {
 		return dao;
 	}
 
-	// ����
 	public void getConnection() {
 		try {
 			conn = DriverManager.getConnection(URL, "scott", "tiger");
@@ -37,8 +34,7 @@ public class MemberDAO {
 			System.out.println("getConnection()" + ex.getMessage());
 		}
 	}
-
-	// ����
+	
 	public void disConnection() {
 		try {
 			if (ps != null)
@@ -50,8 +46,6 @@ public class MemberDAO {
 		}
 	}
 
-	// ���
-	// 1. �α���
 	public int isLogin(String id, String pwd) {
 		int result = 0;
 
@@ -64,9 +58,9 @@ public class MemberDAO {
 			rs.next();
 			int count = rs.getInt(1);
 
-			if (count == 0) { // ���̵� ����
+			if (count == 0) {
 				result = 0;
-			} else { // ���̵� ����
+			} else {
 				sql = "SELECT pwd FROM join_user WHERE id=?";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, id);
@@ -76,9 +70,9 @@ public class MemberDAO {
 				rs.close();
 
 				if (db_pwd.equals(pwd)) {
-					result = 2; // �α��� ����
+					result = 2;
 				} else {
-					result = 1; // ��й�ȣ Ʋ��
+					result = 1;
 				}
 			}
 			rs.close();
@@ -92,7 +86,6 @@ public class MemberDAO {
 		return result;
 	}
 
-	// 2. �̸� ����
 	public String getLogData(String id) {
 		String result = "";
 		try {
@@ -113,7 +106,6 @@ public class MemberDAO {
 		return result;
 	}
 
-	// 3. ���̵� �ߺ�üũ
 	public int idcheck(String id) {
 		int count = 0;
 
@@ -137,7 +129,6 @@ public class MemberDAO {
 
 	}
 
-	// 4 ȸ������
 	public void MemberInsert(MemberVO vo) {
 		try {
 			getConnection();
@@ -165,7 +156,7 @@ public class MemberDAO {
 		}
 
 		/*
-		 * //ȸ������ ���� public void updateMember(MemberVO member) throws
+		 * public void updateMember(MemberVO member) throws
 		 * SQLException{
 		 * 
 		 * Connection conn=null; PreparedStatement pstmt=null;

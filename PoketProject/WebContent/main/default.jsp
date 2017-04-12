@@ -17,8 +17,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <!-- 스으크으리입트으 -->
-<script src="resource/jquery.min.js"></script>
-<script src="resource/owl.carousel.min.js"></script>
+<script src="../main/resource/jquery.min.js"></script>
+<script src="../main/resource/owl.carousel.min.js"></script>
 <script type="text/javascript">
  	$(document).ready(function(){
 		$('.owl-carousel').owlCarousel({

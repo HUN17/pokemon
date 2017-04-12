@@ -38,5 +38,8 @@
 				<jsp:include page="bottom.jsp"></jsp:include>
 			</div>		<!-- bottom div -->
 	</center>
+	<script type="text/javascript">
+	
+	</script>
 </body>
 </html>

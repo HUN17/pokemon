@@ -44,7 +44,7 @@
 	
 	.bookImg{
 		width: 180px; 
-		height: 220px; 
+		height: 230px; 
 		float: left; 
 		margin: 5px; 
 		background-image: url("image/back.jpg"); 
@@ -54,11 +54,12 @@
 	
 	.poketName{
 		padding: 0px;
-		margin: 0px;
+		margin: 10px;
 		background-color: #EAEAEA;
 		width: 190px;
 		height: 60px;
-		border-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
 		display: table-cell;
 		vertical-align: middle;
 		font-size: 15px;
@@ -67,13 +68,16 @@
 	.bookImg .bookPokeImg{
 		width:150px; height:150px;
 		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 	
-	.bookImg .bookPokeImg:HOVER{
+/* 	.bookImg .bookPokeImg:HOVER{
 		-webkit-filter: drop-shadow(0px 20px 15px #8C8C8C);
 		filter: drop-shadow(0px 0px 15px #8C8C8C);
-	}
+	} */
 	.bookImg:HOVER{
+		-webkit-filter: drop-shadow(0px 20px 25px #8C8C8C);
+		filter: drop-shadow(0px 0px 25px #8C8C8C);
 		font-weight: bold;
 	}
 	
