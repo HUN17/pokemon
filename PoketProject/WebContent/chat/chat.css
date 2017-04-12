@@ -1,5 +1,4 @@
    #chatContainer{
-   		background-color: #D9E5FF;
    		margin:0px;
    		padding:0px;
    		width: 610px;
@@ -8,10 +7,10 @@
     #chatHeader{
    		margin-top:0px;
    		padding:0px;
-   		width: 220px;
+   		width: 250px;
    		height: 30px;
    		font-weight: bold;
-   		font-size: 17px;
+   		font-size: 20px;
    }
    
   #chatHeader .chat_ball{
@@ -19,12 +18,33 @@
   }
 
     #chatContent{
-   		background-color: #FAF4C0;
    		margin:0px;
    		padding:0px;
    		width: 570px;
    		height: 250px;
+   		border: 1px solid #BDBDBD;
+   		border-radius: 10px;
    }
     #chatTable th{
+    	font-size: 17px;
     	text-align: center;
+    }
+    #chatTable{
+    	border:0;
+    	cellspacing:1px;
+    	cellpadding:0;
+    	width:100%; 
+    }
+    
+    #chatTable th{
+    	border-bottom: 1px solid #BDBDBD;
+    }
+    #chatContent td{
+    	border-bottom: 1px dotted #BDBDBD;
+    }
+    
+    #scrollList{
+    	overflow:auto;
+    	overflow-x:hidden;
+    	background-color: #F6F6F6;
     }

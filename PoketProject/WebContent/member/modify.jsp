@@ -32,13 +32,8 @@
 </head>
 
 <body>
-    <h3>수정 및 탈퇴  페이지</h3>
-    <!-- <h2>modify.jsp</h2>
-    <p>
-    <span id="update">정보 수정</span>
-    <a href="deleteForm.jsp">회원 탈퇴</a>
-    </p> -->
     <center>
+    <h3>마이페이지</h3>
     <form name="updateform" action="../member/updateForm_ok.jsp" method="post" onSubmit="return checkIt()" class="form-inline">
     <table border="0" width="600" class="table" style="width: 40%">
         <tr height="25">

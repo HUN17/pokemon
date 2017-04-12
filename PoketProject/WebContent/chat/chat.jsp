@@ -113,13 +113,13 @@ var userId ="<%=id%>"; //아이디
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 	</div>
 	<div id="chatContent">
-		<table id="chatTable" border="0" cellspacing="1" cellpadding="0" width="100%" >
+		<table id="chatTable" >
 			<tr>
 				<th>아이디</th>
 				<th>닉네임</th>
 			</tr>
 		</table>
-		<div id="scrollList" style="overflow:scroll; overflow-x:hidden;">
+		<div id="scrollList">
 			<table border="0" cellspacing="1" cellpadding="0" width="100%">
 				<tr>
 					<td>

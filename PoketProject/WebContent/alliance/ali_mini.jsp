@@ -12,6 +12,7 @@
 			<div class="icon">
 				<a href="http://pokemonkorea.co.kr/main_v2" target="_blank">
 					<img alt="포켓몬 코리아" src="../alliance/image/icon_pokemon.png" onmouseover="this.src='../alliance/image/icon_pokemon_h.png';" onmouseout="this.src='../alliance/image/icon_pokemon.png';" width="90">
+				<div style="height: 1px"></div>
 				<br/>포켓몬 코리아
 				</a>
 				
@@ -27,6 +28,7 @@
 			<div class="icon">
 				<a href="https://www.facebook.com/PokemonCoKr" target="_blank">
 					<img alt="포켓몬 페이스북" src="../alliance/image/icon_facebook.png" onmouseover="this.src='../alliance/image/icon_facebook_h.png';" onmouseout="this.src='../alliance/image/icon_facebook.png';"width="90">
+				<div style="height: 1px"></div>
 				<br/>포켓몬 페이스북
 				</a>
 			</div>

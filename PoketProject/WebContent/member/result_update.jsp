@@ -25,6 +25,8 @@
     //member = dto    manager - dao
      %>
 
+
+alert(${id }+님의 회원정보가 수정되었습니다.);
 <table width="270" border="1" cellspacing="0" cellpadding="5" align="center">
     <tr> 
         <td height="39" align="center">

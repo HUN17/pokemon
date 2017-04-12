@@ -33,7 +33,7 @@
 		            items:3
 		        },
 		        1000:{
-		            items:7
+		            items:6
 		        }
 		    }
 		})
@@ -71,7 +71,7 @@
 				<div style="width: 1300px; height: 340px;">
 					
 					<!-- ¿ŞÂÊ À§ div -->
-					<div style="width: 610px; height: 300px; float: left; margin: 15px 10px 15px 25px; background-color: #d3d3d3;">		
+					<div style="width: 610px; height: 300px; float: left; margin: 18px 10px 15px 25px;">		
 						<jsp:include page="../chat/chat.jsp"></jsp:include> 
 					</div>		<!-- ¿ŞÂÊ À§ div -->
 	
@@ -86,7 +86,7 @@
 				<div style="width: 1300px; height: 240px;">
 						
 						<!-- Æ÷ÄÏ¸ó »çÁø div -->
- 						<c:set var="list" value="<%=list %>"></c:set>
+ 				<c:set var="list" value="<%=list %>"></c:set>
 						<div class="owl-carousel owl-theme" style="width: 1200px; height: 200px;">
 						    <c:forEach var="vo" items="${list}" >
 						    	<div class="item" style="width: 150px" onclick="open_pop2(${vo.no})">
