@@ -64,6 +64,7 @@
 </style>
 </head>
 <body>
+	<center>
 			<!-- mid div -->
 			<div style="width: 1300px; height: 1800px;">		
 				
@@ -107,25 +108,24 @@
 					<div style="width: 1300px; height: 800px;">
 						
 						<!-- 게시판1  div -->
-						<div style="width: 610px; height: 370px; float: left; margin: 15px 15px 15px 25px;								background-color: #d3d3d3;">		
-						
+						<div style="width: 610px; height: 370px; float: left; margin: 10px 15px 15px 25px;">		
+							<jsp:include page="../board/free_mini.jsp"></jsp:include>
 						</div>		<!-- 게시판1 div -->
 						
 						<!-- 게시판2  div -->
-						<div style="width: 610px; height: 370px; float: left; margin: 15px 15px 15px 25px;								background-color: #d3d3d3;">		
-						
+						<div style="width: 610px; height: 370px; float: left; margin: 10px 15px 15px 25px;">		
+							<jsp:include page="../board/free_mini.jsp"></jsp:include>
 						</div>		<!-- 게시판2 div -->
 		
 						<!-- 게시판3 아래 div -->
-						<div style="width: 610px; height: 370px;  float: left; margin: 15px 15px 15px 25px;								background-color: #d3d3d3;">		
-						
+						<div style="width: 610px; height: 370px;  float: left; margin: 15px 15px 15px 25px;">		
+							<jsp:include page="../board/free_mini.jsp"></jsp:include>
 						</div>		<!-- 게시판3 아래 div -->
 						
 						<!-- 게시판4 아래 div -->
 						
-						<div style="width: 610px; height: 370px;  float: left; margin: 15px 15px 15px 25px;								background-color: #d3d3d3;">	
-							<div style="width: 520px; height: 50px; background-color: #000000; margin:0px 15px; color:white; font-weight: bold; font-size: 30px; padding: 0px 30px">자유게시판</div>	
-							<table width="580" height="300" style="margin: 10px" align="center">
+						<div style="width: 610px; height: 370px;  float: left; margin: 15px 15px 15px 25px;">	
+							<%-- <table width="580" height="300" style="margin: 10px" align="center">
 								<tr>
 									<td width="10%" align="center">번호</td>
 									<td width="70%" align="center">제목</td>
@@ -141,24 +141,25 @@
 									<c:set var="f_list" value="<%=f_list %>"></c:set>
 									<c:set var="today" value="<%=today %>"></c:set>
 									<c:forEach var="f_vo" items="${f_list}" >
-										<%-- <c:if test="${today == f_vo.dbday }"> --%> <%-- 오늘 날짜랑 DB 날짜랑 비교해서 같은거만 출력 --%>
+										<c:if test="${today == f_vo.dbday }"> 오늘 날짜랑 DB 날짜랑 비교해서 같은거만 출력
 										<tr >
 											<td width="10%" align="center">${f_vo.no }</td>
 											<td width="70%" align="center">${f_vo.subject }</td>
 											<td width="20%" align="center">${f_vo.name }</td>
 										</tr>
-										<%-- </c:if> --%>
+										</c:if>
 									</c:forEach>
 								
 								
-							</table> 
+							</table>  --%>
+								<jsp:include page="../board/free_mini.jsp"></jsp:include>
 
 						</div>		<!-- 게시판4 아래 div -->
 					</div>
 				</div><!-- 아래 div -->
 				
 				<!-- 제휴 사이트 -->
-				<div style="width:1300px; height: 170px; background-color: pink; margin: 15px 15px 15px 25px;">
+				<div style="width:1300px; height: 170px; margin: 15px 15px 15px 25px;">
 					<jsp:include page="../alliance/ali_mini.jsp"></jsp:include>
 				</div><!-- 제휴 사이트 -->
 				
@@ -170,6 +171,6 @@
 			</div>		<!-- mid div -->
 			
 
-
+	</center>
 </body>
 </html>

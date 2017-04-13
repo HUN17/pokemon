@@ -39,8 +39,16 @@
     #chatTable th{
     	border-bottom: 1px solid #BDBDBD;
     }
+    
+    #chatTable tr{
+    	height: 34px;
+    }
     #chatContent td{
     	border-bottom: 1px dotted #BDBDBD;
+    }
+    
+    #chatContent tr{
+    	height: 34px;
     }
     
     #scrollList{
@@ -48,3 +56,20 @@
     	overflow-x:hidden;
     	background-color: #F6F6F6;
     }
+    
+    #chatContent_board_mini{
+   		margin:0px;
+   		padding:0px;
+   		width: 570px;
+   		height: 343px;
+   		border: 1px solid #BDBDBD;
+   		border-radius: 10px;
+   }
+   
+   #chatContent_board_mini td{
+    	border-bottom: 1px dotted #BDBDBD;
+    }
+    
+    #chatContent_board_mini tr:NTH-CHILD(odd){
+       background-color: #F6F6F6;
+   }

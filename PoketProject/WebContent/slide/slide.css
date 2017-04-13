@@ -1,6 +1,7 @@
 #inner-fade{
 	float: left;
 	position: relative;
+	border-radius: 30px;
 }
 
 #inner-fade .slideImg{
