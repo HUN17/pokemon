@@ -8,7 +8,6 @@ public class freeDAO {
 	private final String URL="jdbc:oracle:thin:@211.238.142.235:1521:ORCL";
 	private static freeDAO dao;
 	
-	//����̹� ���
 	public freeDAO(){
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -18,7 +17,6 @@ public class freeDAO {
 		}
 	}
 	
-	//�̱���
 	public static freeDAO newInstance(){
 		if(dao==null)
 			dao=new freeDAO();
@@ -26,7 +24,6 @@ public class freeDAO {
 	}
 	
 	
-	//����Ŭ ����
 	public void disConnection(){
 		try{
 			if(ps!=null)ps.close();
@@ -36,7 +33,6 @@ public class freeDAO {
 		}
 	}
 	
-	//����Ŭ ����
 	public void getConnection(){
 		try{
 			conn=DriverManager.getConnection(URL, "scott", "tiger");
@@ -45,7 +41,6 @@ public class freeDAO {
 		}
 	}
 	
-	//����Ʈ
 	public List<freeVO> boardListData(int page){
 		ArrayList<freeVO> list=new ArrayList<>();
 		
@@ -110,7 +105,6 @@ public class freeDAO {
 		return total;
 	}
 	
-	//��ü �Խñ� ����
 	public int boardRowCount(){
 		int total=0;
 		try{
@@ -184,7 +178,6 @@ public class freeDAO {
 		return list;
 	}
 	
-	//���뺸��
 	public freeVO boardContent(int no,int type){
 		freeVO vo=new freeVO();
 		
@@ -240,7 +233,7 @@ public class freeDAO {
 			int gt=rs.getInt(3);
 			rs.close();
 			ps.close();
-			//�亯�� �ٽ�����
+
 			sql="UPDATE pokeBoard SET "
 					+"group_step=group_step+1 "
 					+"WHERE group_id=? AND group_step>?";
@@ -250,7 +243,7 @@ public class freeDAO {
 			ps.executeUpdate();
 			ps.close();
 			
-			//�߰�
+
 			sql="INSERT INTO pokeBoard(no,name,subject,content,pwd,group_id,group_step,group_tab,root) "
 					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
@@ -300,25 +293,24 @@ public class freeDAO {
 		}
 	}
 	
-	//����-�Խñ� ������ �ҷ�����
+
 	public boolean boardUpdate(freeVO vo){
 		boolean bCheck = false;
 		
 		try {
 			getConnection();
-			//�н����� �ҷ�����
+
 			String sql= "SELECT pwd FROM pokeBoard "
 					+"WHERE no=?";
 			ps =conn.prepareStatement(sql);
-			ps.setInt(1,vo.getNo());			//���õǾ��� �Խñ��� no
+			ps.setInt(1,vo.getNo());
 			
 			ResultSet rs = ps.executeQuery();
 			rs.next();
-			String db_pwd = rs.getString(1);	//�Խ��� ����� �������� 
+			String db_pwd = rs.getString(1);
 			rs.close();
 			ps.close();
-			
-			//���� ������
+
 			if(db_pwd.equals(vo.getPwd())){
 				bCheck = true;
 				sql ="UPDATE pokeBoard SET "
@@ -344,7 +336,6 @@ public class freeDAO {
 		return bCheck;
 	}
 			
-	//�����ϱ�-�Խñ� ���� �ҷ�����
 	public freeVO boardUpdateData(int no){
 		freeVO vo = new freeVO();
 		try {
@@ -379,7 +370,6 @@ public class freeDAO {
 		
 		try {
 			getConnection();
-			//�н����� �ҷ�����
 			String sql ="SELECT pwd FROM pokeBoard "
 					+"WHERE no=?";
 			ps = conn.prepareStatement(sql);
@@ -390,7 +380,6 @@ public class freeDAO {
 			rs.close();
 			ps.close();
 			
-			//select�� excuteQuery ������ excuteUpdate
 			if(db_pwd.equals(pwd)){
 				bCheck = true;
 				sql = "DELETE FROM pokeBoard "
@@ -409,6 +398,46 @@ public class freeDAO {
 		}
 		return bCheck;
 	}
+	
+	public List<freeVO> freeMiniData(int page){
+		ArrayList<freeVO> list  = new ArrayList<>();
+		
+		try{
+			getConnection();
+			/*String sql="SELECT no,subject,name,hit "
+					+"FROM (SELECT * FROM (SELECT * FROM POKEBOARD ORDER BY hit DESC )) "
+					+"ORDER BY group_id DESC,group_step ASC";*/
+			String sql="SELECT no,subject,name,hit "
+			+" FROM POKEBOARD WHERE group_step=0 ORDER BY hit DESC ";
+			ps=conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			int i=0;
+			int j=0;
+			int pagecnt=(page*10)-10;
+			
+			while(rs.next()){
+				if(i<10 && j>=pagecnt){
+					freeVO vo=new freeVO();
+					vo.setNo(rs.getInt(1));
+					vo.setSubject(rs.getString(2));
+					vo.setName(rs.getString(3));
+					vo.setHit(rs.getInt(4));
+					list.add(vo);
+					i++;
+				}
+				j++;
+			}
+			
+		}catch(Exception ex){
+			System.out.println("freeMiniData()"+ex.getMessage());
+		}finally{
+			disConnection();
+		}
+		
+		return list;
+	}
+	
 }
 
 

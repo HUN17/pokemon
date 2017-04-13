@@ -15,6 +15,7 @@
 	
 	.icon a:HOVER {
 		color: black;
+		font-weight: bold;
 	}
 	.aliSection a{
 		text-decoration: none;
