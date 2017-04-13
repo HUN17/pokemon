@@ -73,3 +73,17 @@
     #chatContent_board_mini tr:NTH-CHILD(odd){
        background-color: #F6F6F6;
    }
+   
+   #chatContent_board_mini a{
+   		text-decoration: none;
+   		color: black;
+   }
+   
+   #chatContent_board_mini a:HOVER{
+   		text-decoration: underline;
+   		font-weight: bold;
+   }
+   
+   #chatContent_board_mini tr:HOVER{
+       background-color: ivory;
+   }

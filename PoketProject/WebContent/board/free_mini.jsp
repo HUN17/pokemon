@@ -5,6 +5,7 @@
 <%@ page import="com.sist.board.*" %>
 <%@page import="java.text.SimpleDateFormat"%>
     <%
+    	freeVO vo = new freeVO();
     	freeDAO dao = new freeDAO();
     	List<freeVO> list = dao.freeMiniData(1);
     %>
@@ -33,13 +34,18 @@
 		</tr> -->
 		
 		<c:forEach var="vo" items="${list }">
+		
 		<tr height="34">
+		
 			<td width="20%" align="center">
 				<img alt="ÀÎ±â±Û" src="../image/board_image/mini_star.png" width="20">
 			</td>
-			<td width="50%" align="left">${vo.subject }</td>
+			<td width="50%" align="left">
+			<a class="mini_subject" href="main.jsp?mode=9&no=<%=vo.getNo()%>">${vo.subject }</a>
+			</td>
 			<td width="30%" align="center">${vo.name }</td>
 			<%-- <td width="20%" align="center">${vo.hit }</td> --%>
+		
 		</tr>
 		</c:forEach>
 	</table>
