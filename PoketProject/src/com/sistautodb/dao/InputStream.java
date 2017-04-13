@@ -11,7 +11,7 @@ public class InputStream {
 		PokemonDAO dao = new PokemonDAO();
 
 		try {			// C:\\Users\\sist\\git\\project_poket3\\PoketProject\\src\\com\\sistautodb\\dao\\db.txt
-			String path = "C:\\Users\\sist\\git\\project_poket3\\PoketProject\\src\\com\\sistautodb\\dao\\db.txt";
+			String path = "C:\\Users\\sist\\git\\pokemon\\PoketProject\\src\\com\\sistautodb\\dao\\db.txt";
 			System.out.println(System.getProperty("user.dir"));
 			fr = new FileReader(path);
 			br = new BufferedReader(fr);
@@ -25,8 +25,8 @@ public class InputStream {
 				//System.out.println(sCurrentLine);
 				String[] temp = sCurrentLine.split("\t");
 				for(int i = 0; i < temp.length; i++){
-					if(temp[i].equals("*")){
-						temp[i] = null;
+					if(temp[i].equals("0")){
+						temp[i] = "0";
 					}
 				}
 				System.out.println();
@@ -40,11 +40,18 @@ public class InputStream {
 				vo.setRev1(temp[4]);
 				vo.setRev2(temp[5]);
 				vo.setRev3(temp[6]);
-				vo.setS_type1(temp[7]);
-				vo.setS_type2(temp[8]);
-				vo.setL_type1(temp[9]);
-				vo.setL_type2(temp[10]);
-				System.out.println(
+				vo.setRev4(temp[7]);
+				vo.setRev5(temp[8]);
+				vo.setRev6(temp[9]);
+				vo.setS_type1(temp[10]);
+				vo.setS_type2(temp[11]);
+				vo.setL_type1(temp[12]);
+				vo.setL_type2(temp[13]);
+				vo.setCp(temp[14]);
+				vo.setAtt(temp[15]);
+				vo.setDef(temp[16]);
+				vo.setHp(temp[17]);
+				/*System.out.println(
 						 vo.getNo() + " " 
 						+vo.getName() + " "
 						+vo.getType1() + " "
@@ -56,7 +63,7 @@ public class InputStream {
 						+vo.getS_type2() + " "
 						+vo.getL_type1() + " "
 						+vo.getL_type2() + " "
-				);
+				);*/
 				dao.update(vo);
 				numOfLine++;
 			}

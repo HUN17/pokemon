@@ -88,8 +88,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
 <script type="text/javascript">
 	    function open_pop2(detail){
-	        var url = '../book/detailBook.jsp?detail='+detail;
-	        var set = "width=820,height=400";
+	        var url = '../book/detailBook1.jsp?detail='+detail;
+	        var set = "width=1000,height=650";
 	        window.open(url,'popupView',set); 
 	    }
 </script>

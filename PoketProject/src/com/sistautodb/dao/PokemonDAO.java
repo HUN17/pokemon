@@ -69,8 +69,8 @@ public class PokemonDAO {
 		try{
 			getConnection();
 			String sql = "INSERT INTO p_table"
-					+ "(no, name, type1, type2, rev1, rev2, rev3, s_type1, s_type2, l_type1, l_type2) "
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+					+ "(no, name, type1, type2, rev1, rev2, rev3, rev4, rev5, rev6, s_type1, s_type2, l_type1, l_type2, cp, att, def, hp) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";
 			
 			//System.out.println("SQL: " + sql);
 			ps = conn.prepareStatement(sql);
@@ -82,10 +82,17 @@ public class PokemonDAO {
 			ps.setString(5, vo.getRev1());
 			ps.setString(6, vo.getRev2());
 			ps.setString(7, vo.getRev3());
-			ps.setString(8, vo.getS_type1());
-			ps.setString(9, vo.getS_type2());
-			ps.setString(10, vo.getL_type1());
-			ps.setString(11, vo.getL_type2());
+			ps.setString(8, vo.getRev4());
+			ps.setString(9, vo.getRev5());
+			ps.setString(10, vo.getRev6());
+			ps.setString(11, vo.getS_type1());
+			ps.setString(12, vo.getS_type2());
+			ps.setString(13, vo.getL_type1());
+			ps.setString(14, vo.getL_type2());
+			ps.setString(15, vo.getCp());
+			ps.setString(16, vo.getAtt());
+			ps.setString(17, vo.getDef());
+			ps.setString(18, vo.getHp());
 			
 			ps.executeUpdate();
 			//TODO
