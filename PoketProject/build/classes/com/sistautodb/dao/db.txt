@@ -130,7 +130,7 @@
 130	갸라도스	water	flying	129	130	0	0	0	0	fire	fight	electric	electric	3281	237	197	190
 131	라프라스	water	ice	0	0	0	0	0	0	fire	dragon	electric	fire	2603	165	180	260
 132	메타몽	normal	0	0	0	0	0	0	0	0	0	fight	0	718	91	91	96
-133	이브이	normal	0	134	135	136	136	196	197	0	0	fight	0	969	104	121	110
+133	이브이	normal	0	133	134	135	136	196	197	0	0	fight	0	969	104	121	110
 134	샤미드	water	0	133	134	0	0	0	0	fire	0	electric	0	3157	205	177	260
 135	쥬피썬더	electric	0	133	135	0	0	0	0	water	0	ground	0	2730	232	201	130
 136	부스터	fire	0	133	136	0	0	0	0	grass	0	water	0	2904	246	204	130
@@ -193,8 +193,8 @@
 193	왕자리	bug	flying	0	0	0	0	0	0	grass	fight	fire	electric	1326	154	94	130
 194	우파	water	ground	194	195	0	0	0	0	fire	electric	electric	grass	596	75	75	110
 195	누오	water	ground	194	195	0	0	0	0	fire	electric	electric	grass	1929	152	152	190
-196	에브이	psycho	0	134	135	136	136	196	197	poison	0	ghost	0	3000	261	194	130
-197	블래키	evil	0	134	135	136	136	196	197	ghost	0	fairy	0	2052	126	250	190
+196	에브이	psycho	0	133	196	0	0	0	0	poison	0	ghost	0	3000	261	194	130
+197	블래키	evil	0	133	197	0	0	0	0	ghost	0	fairy	0	2052	126	250	190
 198	니로우	evil	flying	0	0	0	0	0	0	ghost	fight	fairy	electric	1392	175	87	120
 199	야도킹	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	2482	177	194	190
 200	무우마	ghost	0	0	0	0	0	0	0	psycho	0	evil	0	1781	167	167	120
