@@ -90,13 +90,13 @@
  				<c:set var="list" value="<%=list %>"></c:set>
 						<div class="owl-carousel owl-theme" style="width: 1200px; height: 200px;">
 						    <c:forEach var="vo" items="${list}" >
-						    	<div class="item" style="width: 150px" onclick="open_pop2(${vo.no})">
+						    	<div class="item" style="width: 150px; border: 3px solid #F6F6F6; border-radius: 10px;" onclick="open_pop2(${vo.no})">
 						    		<div>
 										<img src="../image/poket_image/${vo.no }.png" width="100">
 									</div>
-									<div class="poketName">
+									<div>
 									No.${vo.no }&nbsp; ${vo.name }<br/>
-									<div style="display: inline !important;">
+									<div style="margin-bottom: 5px;">
 									<img class="bookTypeImg" alt="¼Ó¼º1" src="../image/book_image/${vo.type1 }.jpg">
 									<c:if test="${vo.type2 == '0'}">
 										<br/>

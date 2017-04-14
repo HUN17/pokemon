@@ -56,32 +56,3 @@
     	overflow-x:hidden;
     	background-color: #F6F6F6;
     }
-    
-    #chatContent_board_mini{
-   		margin:0px;
-   		padding:0px;
-   		width: 570px;
-   		height: 343px;
-   		border: 1px solid #BDBDBD;
-   		border-radius: 10px;
-   }
-   
-   #chatContent_board_mini td{
-    	border-bottom: 1px dotted #BDBDBD;
-    }
-    
-    #chatContent_board_mini tr:NTH-CHILD(odd){
-       background-color: #F6F6F6;
-   }
-   
-   #chatContent_board_mini a{
-   		text-decoration: none;
-   		color: black;
-   }
-   
-   
-   #chatContent_board_mini tr:HOVER{
-       background-color: ivory;
-       text-decoration: underline;
-   		font-weight: bold;
-   }

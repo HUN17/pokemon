@@ -54,7 +54,7 @@ public class freeDAO {
 			
 			int i=0;
 			int j=0;
-			int pagecnt=(page*15)-15;
+			int pagecnt=(page*10)-10;
 			/*
 			 * 		13 	=> 0~9,		10~12
 			 * 		1page		2page 		3page
@@ -62,7 +62,7 @@ public class freeDAO {
 			 * 		  9			  19		  29
 			 */
 			while(rs.next()){
-				if(i<15 && j>=pagecnt){
+				if(i<10 && j>=pagecnt){
 					freeVO vo=new freeVO();
 					vo.setNo(rs.getInt(1));
 					vo.setSubject(rs.getString(2));
@@ -89,7 +89,7 @@ public class freeDAO {
 		int total=0;
 		try{
 			getConnection();
-			String sql="SELECT CEIL(COUNT(*)/15) FROM pokeBoard";
+			String sql="SELECT CEIL(COUNT(*)/10) FROM pokeBoard";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			rs.next();

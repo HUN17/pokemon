@@ -30,8 +30,7 @@
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 	</div>
 	
-	<div id="chatContent_board_mini">
-	<table id="chatTable" >
+	<table id="boardTable_mini" >
 		<!-- <tr>
 			<th width="20%" align="center">번호</th>
 			<th width="50%" align="center">제목</th>
@@ -56,6 +55,5 @@
 		</tr>
 		</c:forEach>
 	</table>
-	</div>
 </body>
 </html>
