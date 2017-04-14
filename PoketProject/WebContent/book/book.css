@@ -56,12 +56,12 @@
 		padding: 0px;
 		margin: 10px;
 		background-color: #EAEAEA;
-		width: 190px;
+		width: 190px !important;
 		height: 60px;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
-		display: table-cell;
-		vertical-align: middle;
+		display: table-cell !important;
+		vertical-align: middle !important;
 		font-size: 15px;
 	}
 	
@@ -81,7 +81,7 @@
 		font-weight: bold;
 	}
 	
-	.bookTypeImg{
-		width: 50px;
+	 .bookTypeImg{
+		width: 50px !important;
 		border-radius: 5px;
 	}

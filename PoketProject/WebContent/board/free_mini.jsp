@@ -16,6 +16,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript">
+<%-- "main.jsp?mode=9&no=<%=vo.getNo()%>" --%>
+	function miniTr (test){
+		location.href="main.jsp?mode=9&no="+test;
+	};
+</script>
 </head>
 <body>
 	<div id="chatHeader" >
@@ -35,17 +41,18 @@
 		
 		<c:forEach var="vo" items="${list }">
 		
-		<tr height="34">
-		
+		<tr height="34" onclick="miniTr(${vo.no});">
+			
 			<td width="20%" align="center">
 				<img alt="인기글" src="../image/board_image/mini_star.png" width="20">
 			</td>
+			
 			<td width="50%" align="left">
-			<a class="mini_subject" href="main.jsp?mode=9&no=<%=vo.getNo()%>">${vo.subject }</a>
+			${vo.subject }
 			</td>
 			<td width="30%" align="center">${vo.name }</td>
 			<%-- <td width="20%" align="center">${vo.hit }</td> --%>
-		
+			
 		</tr>
 		</c:forEach>
 	</table>
