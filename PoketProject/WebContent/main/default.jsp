@@ -40,8 +40,8 @@
 	})
 	
 	function open_pop2(detail){
-	        var url = '../book/detailBook.jsp?detail='+detail;
-	        var set = "width=820,height=400";
+	        var url = '../book/detailBook1.jsp?detail='+detail;
+	        var set = "width=1000,height=650";
 	        window.open(url,'popupView',set); 
 	    }
 </script>
@@ -90,13 +90,22 @@
  				<c:set var="list" value="<%=list %>"></c:set>
 						<div class="owl-carousel owl-theme" style="width: 1200px; height: 200px;">
 						    <c:forEach var="vo" items="${list}" >
-						    	<div class="item" style="width: 150px" onclick="open_pop2(${vo.no})">
+						    	<div class="item" style="width: 150px; border: 3px solid #F6F6F6; border-radius: 10px;" onclick="open_pop2(${vo.no})">
 						    		<div>
 										<img src="../image/poket_image/${vo.no }.png" width="100">
 									</div>
 									<div>
-										<h4 style="padding: 0px; margin: 0px; font-size: 15px;">${vo.name }</h4>
+									No.${vo.no }&nbsp; ${vo.name }<br/>
+									<div style="margin-bottom: 5px;">
+									<img class="bookTypeImg" alt="加己1" src="../image/book_image/${vo.type1 }.jpg">
+									<c:if test="${vo.type2 == '0'}">
+										<br/>
+									</c:if>
+									<c:if test="${vo.type2 != '0' }">
+										<img class="bookTypeImg" alt="加己2" src="../image/book_image/${vo.type2 }.jpg">
+									</c:if>
 									</div>
+								</div>
 						    	</div>
 						    </c:forEach>
 						</div>

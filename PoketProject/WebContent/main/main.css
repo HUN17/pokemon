@@ -1,12 +1,12 @@
 		body, html { 
-	    width: 100% !important;
-	    height: 100% !important;
-	    padding: 0	!important;
-	    margin: 0 !important;
+	    width: 100%!important;
+	    height: 100%!important;
+	    padding: 0!important;
+	    margin: 0!important;
 	}
 	
 	#nav{
-		position: fixed	!important;
+		position: fixed!important;
 		display: block	!important;
 		width: 1920px	!important;
 		height: 150px	!important;
@@ -20,16 +20,16 @@
 	}
 	
 /* 	.menu{
-		display: inline;
-		margin-left:20px;
-		position: relative;
-		top: 70%;
+		display: inline!important;
+		margin-left:20px!important;
+		position: relative!important;
+		top: 70%!important;
 	} */
 	
 	#nav img{	
-		margin: 15px 10px 10px 330px	!important;
-		float: left	!important;
-		width: 250px !important;
+		margin: 15px 10px 10px 330px!important;
+		float: left!important;
+		width: 250px!important;
 	}
 
 	#footer{
@@ -96,3 +96,43 @@
 	#board:HOVER .dropdown {
 		display: block !important;
 	}
+	
+	
+	<!-- 메인화면 게시판 -->
+	/*     #chatContent_board_mini{
+   		margin:0px;
+   		padding:0px;
+   		width: 570px;
+   		height: 343px;
+   		border: 1px solid #BDBDBD;
+   		border-radius: 10px;
+   } */
+   
+   #boardTable_mini td{
+    	border-bottom: 1px dotted #BDBDBD !important;
+    }
+    
+    #boardTable_mini tr:NTH-CHILD(odd){
+       background-color: #F6F6F6;
+   }
+   
+   #boardTable_mini a{
+   		text-decoration: none;
+   		color: black;
+   }
+   
+   
+   #boardTable_mini tr:HOVER{
+       background-color: ivory;
+       text-decoration: underline;
+   		font-weight: bold;
+   }
+   
+   #boardTable_mini{
+   		
+   		margin:0px;
+   		padding:0px;
+   		width: 570px;
+   		height: 343px;
+   		border: 1px solid #BDBDBD;
+   }

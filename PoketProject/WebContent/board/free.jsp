@@ -13,7 +13,7 @@
 	int count=dao.boardRowCount();
 	//전체 18개 개시글 ==>18개
 	//첫번째 계시글 번호 
-	count=count-((curpage*15)-15);		//18-((1*10)-10)=18번
+	//count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
 	
 	int total=dao.boardTotalPage();
 %>     	
@@ -50,6 +50,7 @@
 				<th width="20%" style="font-size: 13px;">작성일</th>
 				<th width="10%" style="font-size: 13px;">조회수</th>
 			</tr>
+
 			<%
 				int i=0;
 				
