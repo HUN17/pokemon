@@ -205,7 +205,7 @@ public class poketmonDAO {
 			poketmonVO vo = new poketmonVO();
 		try {
 			getConnection();
-			String sql="SELECT no,name,rev1,rev2,rev3,type1,type2,s_type1,s_type2,l_type1,l_type2 FROM p_table WHERE no=?";
+			String sql="SELECT no,name,rev1,rev2,rev3,rev4,rev5,rev6,type1,type2,s_type1,s_type2,l_type1,l_type2,cp,att,def,hp FROM p_table WHERE no=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, no);
 			ResultSet rs = ps.executeQuery();
@@ -216,13 +216,20 @@ public class poketmonDAO {
 			vo.setRev1(rs.getString(3));
 			vo.setRev2(rs.getString(4));
 			vo.setRev3(rs.getString(5));
-			vo.setType1(rs.getString(6));
-			vo.setType2(rs.getString(7));
-			vo.setS_type1(rs.getString(8));
-			vo.setS_type2(rs.getString(9));
-			vo.setL_type1(rs.getString(10));
-			vo.setL_type2(rs.getString(11));
-			
+			vo.setRev4(rs.getString(6));
+			vo.setRev5(rs.getString(7));
+			vo.setRev6(rs.getString(8));
+			vo.setType1(rs.getString(9));
+			vo.setType2(rs.getString(10));
+			vo.setS_type1(rs.getString(11));
+			vo.setS_type2(rs.getString(12));
+			vo.setL_type1(rs.getString(13));
+			vo.setL_type2(rs.getString(14));
+			vo.setCp(rs.getString(15));
+			vo.setAtt(rs.getString(16));
+			vo.setDef(rs.getString(17));
+			vo.setHp(rs.getString(18));
+	
 			rs.close();
 			
 		} catch (Exception ex) {
