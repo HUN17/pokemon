@@ -71,17 +71,31 @@
 		margin-bottom: 10px;
 	}
 	
+	.bookListWrap .overming{
+		width: 100px;
+		position: absolute;
+		display: none;
+	}
+	
 /* 	.bookImg .bookPokeImg:HOVER{
 		-webkit-filter: drop-shadow(0px 20px 15px #8C8C8C);
 		filter: drop-shadow(0px 0px 15px #8C8C8C);
 	} */
-	.bookImg:HOVER{
+	
+ 	 .bookImg:HOVER{
 		-webkit-filter: drop-shadow(0px 20px 25px #8C8C8C);
 		filter: drop-shadow(0px 0px 25px #8C8C8C);
 		font-weight: bold;
-	}
+	} 	
+	
 	
 	 .bookTypeImg{
 		width: 50px !important;
 		border-radius: 5px;
+	}
+	
+	#bookMap{
+		margin-top: 50px;
+		margin-left: 20px;
+		float: left;
 	}

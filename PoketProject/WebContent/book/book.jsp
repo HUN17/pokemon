@@ -166,6 +166,9 @@
 			<form name="logo" action="../main/main.jsp?mode=2" method="post">
 				<div class="bookLogo">
 								<input type="image" src="../image/book_image/book_logo.png">
+				<a href="https://pokeinven.com/" target="_blank">
+					<img id="bookMap" alt="瘤档 焊扁" src="../image/book_image/location.png" onmouseover="this.src='../image/book_image/location1.png';" onmouseout="this.src='../image/book_image/location.png';"width="50">
+				</a>
 				</div>
 			</form>
 			<form name="select" action="../main/main.jsp?mode=2" method="post">
@@ -204,7 +207,7 @@
 								</div>
 								<div class="poketName">
 									No.${vo.no }&nbsp; ${vo.name }<br/>
-									<img class="bookTypeImg" alt="加己1" src="../image/book_image/${vo.type1 }.jpg">
+									<img class="bookTypeImg" alt="加己1" src="../image/book_image/${vo.type1 }.jpg">				
 									<c:if test="${vo.type2 == '0'}">
 										<br/>
 									</c:if>
@@ -222,6 +225,7 @@
 						</li>
 					</ul>
 				</div>
+				<img class="overming" alt="加己1" src="../image/book_image/location.png">
 			</div>
 </body>
 </html>
