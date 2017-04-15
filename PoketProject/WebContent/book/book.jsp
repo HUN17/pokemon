@@ -215,6 +215,7 @@
 										<img class="bookTypeImg" alt="¼Ó¼º2" src="../image/book_image/${vo.type2 }.jpg">
 									</c:if>
 								</div>
+								<img class="overImg" alt="µ¸º¸±â" src="../image/book_image/bookDetail.png">
 							</div>
 							<c:set var="num" value="${num+1 }"></c:set>
 							<c:if test="${num%6==0 }">
