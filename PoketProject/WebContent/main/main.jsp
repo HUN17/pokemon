@@ -4,6 +4,7 @@
 <%	
 	request.setCharacterEncoding("EUC-KR");
 	String mode=request.getParameter("mode");
+	
 	if(mode==null)
 		mode="0";
 	String jsp=JspChange.change(Integer.parseInt(mode));
