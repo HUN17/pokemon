@@ -6,8 +6,8 @@
 		request.setCharacterEncoding("EUC-KR");
 		String no = request.getParameter("detail");
 		poketmonDAO dao = poketmonDAO.newInstance();
-		poketmonVO vo = dao.detailData(Integer.parseInt(no));
-/* 		 poketmonVO vo = dao.detailData(1);  */
+		/* poketmonVO vo = dao.detailData(Integer.parseInt(no)); */
+		 poketmonVO vo = dao.detailData(1);  
 %>
 <c:set var="vo" value="<%=vo %>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -33,33 +33,35 @@
 					</div>
 					
 					<div id="div2">
-						<div id="div2_1a">
-							타입 : <img class="t_img" src="../image/book_image/${vo.type1 }.jpg">
-							<c:if test="${vo.type2 != '0' }">
-							<img class="t_img" src="../image/book_image/${vo.type2 }.jpg"><br/>
-							</c:if>
-							<c:if test="${vo.type2 == '0' }">
-							</c:if>
-						</div>
-						<div id="div2_1">강함 : 
-							<c:if test="${vo.s_type1 != '0' }">
-								<img class="t_img" src="../image/book_image/${vo.s_type1}.jpg">&nbsp;
-							</c:if>
-								<c:if test="${vo.s_type1 == '0' }">
-							</c:if>
-							<c:if test="${vo.s_type2 != '0' }">
-								<img class="t_img" src="../image/book_image/${vo.s_type2 }.jpg"><br/>
-							</c:if>
-							<c:if test="${vo.s_type2 == '0' }">
-							</c:if>
-						</div>
-						<div id="div2_1b">
-							약함 :&nbsp; <img class="t_img" src="../image/book_image/${vo.l_type1 }.jpg">&nbsp;
-							<c:if test="${vo.l_type2 != '0' }">
-								<img class="t_img" src="../image/book_image/${vo.l_type2 }.jpg"><br/>
-							</c:if>
-							<c:if test="${vo.l_type2 == '0' }">
-							</c:if>
+						<div id="div2_z">
+							<div id="div2_1a">
+								타입 : <img class="t_img" src="../image/book_image/${vo.type1 }.jpg">
+								<c:if test="${vo.type2 != '0' }">
+								<img class="t_img" src="../image/book_image/${vo.type2 }.jpg"><br/>
+								</c:if>
+								<c:if test="${vo.type2 == '0' }">
+								</c:if>
+							</div>
+							<div id="div2_1">강함 : 
+								<c:if test="${vo.s_type1 != '0' }">
+									<img class="t_img" src="../image/book_image/${vo.s_type1}.jpg">&nbsp;
+								</c:if>
+									<c:if test="${vo.s_type1 == '0' }">
+								</c:if>
+								<c:if test="${vo.s_type2 != '0' }">
+									<img class="t_img" src="../image/book_image/${vo.s_type2 }.jpg"><br/>
+								</c:if>
+								<c:if test="${vo.s_type2 == '0' }">
+								</c:if>
+							</div>
+							<div id="div2_1b">
+								약함 :&nbsp; <img class="t_img" src="../image/book_image/${vo.l_type1 }.jpg">&nbsp;
+								<c:if test="${vo.l_type2 != '0' }">
+									<img class="t_img" src="../image/book_image/${vo.l_type2 }.jpg"><br/>
+								</c:if>
+								<c:if test="${vo.l_type2 == '0' }">
+								</c:if>
+							</div>
 						</div>
 						
 						<div id="div2_">
@@ -211,9 +213,12 @@
 							<div class="div2_2_2">HP : ${vo.hp }</div>
 						</div> --%>
 						
-						<div id="div2_3">포획정보</div>
+						<div id="div2_3">포획정보 ${vo.gps1 }</div>
 					</div>
 			</div>
+			
+			
+			
 			<div id="div0_1">
 				<div id="div3">
 					<div class="div3_1">

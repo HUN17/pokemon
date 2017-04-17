@@ -5,7 +5,7 @@ public class freeVO {
 	private int no;
 	private String id;
 	private String name;
-	private int lev;
+	private int exp;
 	private String subject;
 
 	private String content;
@@ -35,11 +35,11 @@ public class freeVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getLev() {
-		return lev;
+	public int getExp() {
+		return exp;
 	}
-	public void setLev(int lev) {
-		this.lev = lev;
+	public void setExp(int exp) {
+		this.exp = exp;
 	}
 	public String getSubject() {
 		return subject;

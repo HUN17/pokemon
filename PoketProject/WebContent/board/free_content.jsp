@@ -4,8 +4,7 @@
 	String no = request.getParameter("no");
 	freeDAO dao = freeDAO.newInstance();
 	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
-	MemberDAO dao2 = MemberDAO.newInstance();
-	MemberVO vo2 = dao2.getMember(vo.getId());
+	
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,7 +31,11 @@
 	});
 	
 	function levup(){
-		<% dao2.levUp(vo2, 100);%>
+		<% 
+		MemberDAO dao2 = MemberDAO.newInstance();
+		MemberVO vo2 = dao2.getMember(vo.getId());
+		dao2.levUp(vo2, 100,20);
+		%>
 	}
 
 </script>
