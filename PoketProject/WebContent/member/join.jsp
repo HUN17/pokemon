@@ -98,24 +98,9 @@ function send(){
             <tr height="30">
                <td width="15%" align="right">이메일</td>
                <td width="85%" align="left">
-                  <input type="text" size="10" name="email">@
-                  <input type="text" size="15" id="site" name="email1">
-                  <select id="combo">
-                     <option>직접입력</option>
-                     <option>gmail.com</option>
-                     <option>naver.com</option>
-                     <option>daum.net</option>
-                     <option>nate.com</option>
-                  </select>
+                  <input type="text" size="10" name="email">
                </td>
             </tr>   
-            <tr height="30">
-               <td width="15%" align="right">수신동의</td>
-               <td width="85%" align="left">
-                  <input type="radio" name="recv" value="y" checked>동의
-                  <input type="radio" name="recv" value="n">거부
-               </td>
-            </tr>            
             
             <tr>
                <td colspan="2" align="center">

@@ -11,7 +11,6 @@
 	String phone=request.getParameter("phone");
 	String phone1=request.getParameter("phone1");
 	String email=request.getParameter("email");
-	String email1=request.getParameter("email1");
 	String ban=request.getParameter("ban");
 	String exp=request.getParameter("exp");
 	if(exp == null)	exp = "1000";
@@ -26,7 +25,6 @@
 	vo.setPhone(phone);
 	vo.setPhone1(phone1);
 	vo.setEmail(email);
-	vo.setEmail1(email1);
 	vo.setBan(ban);
 	vo.setExp(Integer.parseInt(exp));
 	vo.setPoint(Integer.parseInt(point));
