@@ -46,7 +46,7 @@ public class freeDAO {
 		
 		try{
 			getConnection();
-			String sql="SELECT no,subject,name,lev,regdate,hit,group_tab "
+			String sql="SELECT no,subject,name,Exp,regdate,hit,group_tab "
 					+"FROM pokeBoard "
 					+"ORDER BY group_id DESC,group_step ASC";
 			ps=conn.prepareStatement(sql);
@@ -67,7 +67,7 @@ public class freeDAO {
 					vo.setNo(rs.getInt(1));
 					vo.setSubject(rs.getString(2));
 					vo.setName(rs.getString(3));
-					vo.setLev(rs.getInt(4));
+					vo.setExp(rs.getInt(4));
 					vo.setRegdate(rs.getDate(5));
 					vo.setHit(rs.getInt(6));
 					vo.setGroup_tab(rs.getInt(7));
@@ -152,7 +152,7 @@ public class freeDAO {
 		
 		try{
 			getConnection();
-			String sql="SELECT no,subject,name,lev,regdate,hit,group_tab "
+			String sql="SELECT no,subject,name,Exp,regdate,hit,group_tab "
 					+"FROM pokeBoard "
 					+"WHERE "+fs+" LIKE '%'||?||'%'";
 			ps=conn.prepareStatement(sql);
@@ -164,7 +164,7 @@ public class freeDAO {
 				vo.setNo(rs.getInt(1));
 				vo.setSubject(rs.getString(2));
 				vo.setName(rs.getString(3));
-				vo.setLev(rs.getInt(4));
+				vo.setExp(rs.getInt(4));
 				vo.setRegdate(rs.getDate(5));
 				vo.setHit(rs.getInt(6));
 				vo.setGroup_tab(rs.getInt(7));
@@ -196,7 +196,7 @@ public class freeDAO {
 				ps.close();
 			}
 			
-			sql="SELECT no,name,id,lev,subject,content,regdate,hit "
+			sql="SELECT no,name,id,Exp,subject,content,regdate,hit "
 					+"FROM pokeBoard "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
@@ -206,7 +206,7 @@ public class freeDAO {
 			vo.setNo(rs.getInt(1));
 			vo.setName(rs.getString(2));
 			vo.setId(rs.getString(3));
-			vo.setLev(rs.getInt(4));
+			vo.setExp(rs.getInt(4));
 			vo.setSubject(rs.getString(5));
 			vo.setContent(rs.getString(6));
 			vo.setRegdate(rs.getDate(7));
@@ -248,12 +248,12 @@ public class freeDAO {
 			ps.close();
 			
 
-			sql="INSERT INTO pokeBoard(no,name,id,lev,subject,content,pwd,group_id,group_step,group_tab,root) "
+			sql="INSERT INTO pokeBoard(no,name,id,Exp,subject,content,pwd,group_id,group_step,group_tab,root) "
 					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
 			ps.setString(2, vo.getId());
-			ps.setInt(3, vo.getLev());
+			ps.setInt(3, vo.getExp());
 			ps.setString(4, vo.getSubject());
 			ps.setString(5, vo.getContent());
 			ps.setString(6, vo.getPwd());
@@ -281,13 +281,13 @@ public class freeDAO {
 	public void boardInsert(freeVO vo){
 		try{
 			getConnection();
-			String sql="INSERT INTO pokeBoard(no,name,id,lev,subject,content,pwd,group_id) "
+			String sql="INSERT INTO pokeBoard(no,name,id,Exp,subject,content,pwd,group_id) "
 					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,"
 					+"(SELECT NVL(MAX(group_id)+1,1) FROM pokeBoard))";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
 			ps.setString(2, vo.getId());
-			ps.setInt(3, vo.getLev());
+			ps.setInt(3, vo.getExp());
 			ps.setString(4, vo.getSubject());
 			ps.setString(5, vo.getContent());
 			ps.setString(6, vo.getPwd());
@@ -329,7 +329,7 @@ public class freeDAO {
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, vo.getName());
 				ps.setString(2, vo.getId());
-				ps.setInt(3, vo.getLev());
+				ps.setInt(3, vo.getExp());
 				ps.setString(4, vo.getSubject());
 				ps.setString(5, vo.getContent());
 				ps.setInt(6, vo.getNo());
@@ -363,7 +363,7 @@ public class freeDAO {
 			vo.setNo(rs.getInt(1));
 			vo.setName(rs.getString(2));
 			vo.setId(rs.getString(3));
-			vo.setLev(rs.getInt(4));
+			vo.setExp(rs.getInt(4));
 			vo.setSubject(rs.getString(5));
 			vo.setContent(rs.getString(6));
 			vo.setPwd(rs.getString(7));
@@ -420,7 +420,7 @@ public class freeDAO {
 			/*String sql="SELECT no,subject,name,hit "
 					+"FROM (SELECT * FROM (SELECT * FROM POKEBOARD ORDER BY hit DESC )) "
 					+"ORDER BY group_id DESC,group_step ASC";*/
-			String sql="SELECT no,subject,name,id,lev,hit "
+			String sql="SELECT no,subject,name,id,Exp,hit "
 			+" FROM POKEBOARD WHERE group_step=0 ORDER BY hit DESC ";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
@@ -436,7 +436,7 @@ public class freeDAO {
 					vo.setSubject(rs.getString(2));
 					vo.setName(rs.getString(3));
 					vo.setId(rs.getString(4));
-					vo.setLev(rs.getInt(5));
+					vo.setExp(rs.getInt(5));
 					vo.setHit(rs.getInt(6));
 					list.add(vo);
 					i++;
@@ -454,5 +454,3 @@ public class freeDAO {
 	}
 	
 }
-
-

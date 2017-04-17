@@ -10,6 +10,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+function postsend() {
+	send.submit();
+}
+</script>
 <!-- <script type="text/javascript">
 	$(function(){
 		$('#notice').click(function(){
@@ -86,7 +91,24 @@
 			</li>
 			
 		<li class="menu" id="site"><a href="main.jsp?mode=6">제휴사이트</a></li>
-		<li class="menu" id="mypage"><a href="main.jsp?mode=7">마이페이지</a></li>
+		<li class="menu" id="mypage"><a href="#">마이페이지</a>
+			<c:if test="${id !=null }">
+			<div class="dropdown">
+				<a href="main.jsp?mode=18">수정</a>
+				<form name="send" action="../login_out/logout_ok.jsp" method="post">
+				<!-- <a href="main.jsp?mode=4">로그아웃</a> -->
+				<a style="color:black;" onclick="postsend();">로그아웃</a>
+				</form>
+				<a href="main.jsp?mode=19">포인트 교환</a>
+			</div>
+			</c:if>
+			<c:if test="${id ==null }">
+			<div class="dropdown">
+				<a href="main.jsp?mode=7">로그인</a>
+			</div>	
+			</c:if>
+			
+		</li>
 		</ul>
 		</div>
 </body>

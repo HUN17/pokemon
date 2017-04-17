@@ -13,11 +13,10 @@
 	String email=request.getParameter("email");
 	String email1=request.getParameter("email1");
 	String ban=request.getParameter("ban");
-	String lev=request.getParameter("lev");
-	if(lev == null)	lev = "1";
+	String exp=request.getParameter("exp");
+	if(exp == null)	exp = "1000";
 	String point=request.getParameter("point");
 	if(point == null)	point = "0";
-	String recv=request.getParameter("recv");
 	
 	MemberVO vo=new MemberVO();
 	vo.setId(id);
@@ -29,9 +28,8 @@
 	vo.setEmail(email);
 	vo.setEmail1(email1);
 	vo.setBan(ban);
-	vo.setLev(Integer.parseInt(lev));
+	vo.setExp(Integer.parseInt(exp));
 	vo.setPoint(Integer.parseInt(point));
-	vo.setReceive(recv);
 	
 	//DB¿¬µ¿
 	MemberDAO dao=MemberDAO.newInstance();

@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
     String id = (String)session.getAttribute("id");
+	String name = (String)session.getAttribute("name");
     MemberDAO dao = MemberDAO.newInstance();
     MemberVO vo = dao.getMember(id); 
 %>
@@ -32,8 +33,11 @@
 </head>
 
 <body>
+	<div id="aliHeader">
+               <h1>마이 페이지</h1>
+               <h5><%=name %>님의 정보입니다.</h5>
+     </div>
     <center>
-    <h3>마이페이지</h3>
     <form name="updateform" action="../member/updateForm_ok.jsp" method="post" onSubmit="return checkIt()" class="form-inline">
     <table border="0" width="600" class="table" style="width: 40%">
         <tr height="25">
@@ -92,17 +96,11 @@
         </tr>
     </table>
   
+  
    <button type="submit" class="btn btn-default">
         수정<span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
    </button>
-        <input type="button" name="cancel" value="변경 취소" onclick="self.close()"  class="btn btn-default">
-        
-           <a href="../login_out/logout.jsp">
-           	<input type="button" name="logout" value="로그아웃"  class="btn btn-default">
-           </a>
-               
-          <input type="button" name="cancel" value="포인트 추가" onclick="self.close()"  class="btn btn-default">
-    </form> 
+   
     </center>
 </body>
 </html>

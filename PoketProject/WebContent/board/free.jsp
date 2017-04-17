@@ -91,19 +91,19 @@
 					</td>
 					<td width="15%" align="center">
 					
-					<%if(vo.getLev()==1){ %>
+					<%if((vo.getExp()/1000)==1){ %>
 						<img alt="초급" src="../image/user_image/b1.png" width="15">
 					<%} %>
 					
-					<%if(vo.getLev()==2){ %>
+					<%if((vo.getExp()/1000)==2){ %>
 						<img alt="중급" src="../image/user_image/b2.png" width="15">
 					<%} %>
 					
-					<%if(vo.getLev()==3){ %>
+					<%if((vo.getExp()/1000)==3){ %>
 						<img alt="고급" src="../image/user_image/b3.png" width="15">
 					<%} %>
 					
-					<%if(vo.getLev()==4){ %>
+					<%if((vo.getExp()/1000)==4){ %>
 						<img alt="대급" src="../image/user_image/b4.png" width="15">
 					<%} %>
 					

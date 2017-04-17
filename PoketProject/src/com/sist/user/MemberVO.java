@@ -21,10 +21,8 @@ public class MemberVO {
 	private String email;
 	private String email1;
 	private String ban;
-	private int lev;
 	private int point;
 	private Date regdate;
-	private String receive;
 	private int exp;
 	
 	
@@ -89,12 +87,6 @@ public class MemberVO {
 	public void setBan(String ban) {
 		this.ban = ban;
 	}
-	public int getLev() {
-		return lev;
-	}
-	public void setLev(int lev) {
-		this.lev = lev;
-	}
 	public int getPoint() {
 		return point;
 	}
@@ -107,11 +99,6 @@ public class MemberVO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	public String getReceive() {
-		return receive;
-	}
-	public void setReceive(String receive) {
-		this.receive = receive;
-	}
+
 	
 }
