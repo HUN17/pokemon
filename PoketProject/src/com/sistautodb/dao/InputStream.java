@@ -7,9 +7,10 @@ import java.io.IOException;
 public class InputStream {
 	public static void main(String[] args){
 		BufferedReader br = null;
+		
 		FileReader fr = null;
 		PokemonDAO dao = new PokemonDAO();
-
+						// C:\Users\sist\git\pokemon\PoketProject\src\com\sistautodb\dao\db.txt
 		try {			// C:\\Users\\sist\\git\\project_poket3\\PoketProject\\src\\com\\sistautodb\\dao\\db.txt
 			String path = "C:\\Users\\sist\\git\\pokemon\\PoketProject\\src\\com\\sistautodb\\dao\\db.txt";
 			System.out.println(System.getProperty("user.dir"));
@@ -51,6 +52,9 @@ public class InputStream {
 				vo.setAtt(temp[15]);
 				vo.setDef(temp[16]);
 				vo.setHp(temp[17]);
+				vo.setGps1(temp[18]);
+				vo.setGps2(temp[19]);
+				
 				/*System.out.println(
 						 vo.getNo() + " " 
 						+vo.getName() + " "

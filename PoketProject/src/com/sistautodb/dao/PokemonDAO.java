@@ -69,8 +69,8 @@ public class PokemonDAO {
 		try{
 			getConnection();
 			String sql = "INSERT INTO p_table"
-					+ "(no, name, type1, type2, rev1, rev2, rev3, rev4, rev5, rev6, s_type1, s_type2, l_type1, l_type2, cp, att, def, hp) "
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";
+					+ "(no, name, type1, type2, rev1, rev2, rev3, rev4, rev5, rev6, s_type1, s_type2, l_type1, l_type2, cp, att, def, hp, gps1, gps2) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";
 			
 			//System.out.println("SQL: " + sql);
 			ps = conn.prepareStatement(sql);
@@ -93,6 +93,8 @@ public class PokemonDAO {
 			ps.setString(16, vo.getAtt());
 			ps.setString(17, vo.getDef());
 			ps.setString(18, vo.getHp());
+			ps.setString(19, vo.getGps1());
+			ps.setString(20, vo.getGps2());
 			
 			ps.executeUpdate();
 			//TODO

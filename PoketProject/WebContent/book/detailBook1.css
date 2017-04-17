@@ -35,10 +35,12 @@
 		float: left;
 		margin: 10px 5px 5px 5px;
 	}
-	#div2_z{
+
+	#typediv{
 		width: 465px;
 		height: 140px;
-		margin: 0px;
+		margin: 0px 0px 0px 20px;
+		text-align: left;
 	}
 	#div2_1a{
 		width: 445px;
@@ -78,6 +80,8 @@
 		width: 445px;
 		height: 90px;
 		margin: 10px 5px 10px 5px;
+		text-align: left;
+		vertical-align: middle;
 	}
 
 	#div3{
@@ -95,6 +99,8 @@
 		width: 90%;
 		height: 90%;
 		vertical-align: middle;
+		
+	
 	}
 	#title {
 		font-size: 30px;
@@ -173,7 +179,8 @@
   }
 }
 body {
-  background: gray;
+	/* // #dbf2f2; */
+  background: #bee6e6;
   font-family: arial, sans-serif;
 }
 

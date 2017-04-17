@@ -26,6 +26,8 @@ public class PokemonVO {
 	private String att;
 	private String def;
 	private String hp;
+	private String gps1;
+	private String gps2;
 	public String getNo() {
 		return no;
 	}
@@ -134,6 +136,20 @@ public class PokemonVO {
 	public void setHp(String hp) {
 		this.hp = hp;
 	}
+	public String getGps1() {
+		return gps1;
+	}
+	public void setGps1(String gps1) {
+		this.gps1 = gps1;
+	}
+	public String getGps2() {
+		return gps2;
+	}
+	public void setGps2(String gps2) {
+		this.gps2 = gps2;
+	}
+	
+	
 	
 	
 }

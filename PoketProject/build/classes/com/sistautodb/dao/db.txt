@@ -1,248 +1,248 @@
-1	이상해씨	grass	poison	1	2	3	0	0	0	water	fairy	bug	psycho	981	118	118	90
-2	이상해풀	grass	poison	1	2	3	0	0	0	water	fairy	bug	psycho	1552	151	151	120
-3	이상해꽃	grass	poison	1	2	3	0	0	0	water	fairy	bug	psycho	2568	198	198	160
-4	파이리	fire	0	4	5	6	0	0	0	grass	0	water	0	831	116	96	78
-5	리자드	fire	0	4	5	6	0	0	0	grass	0	water	0	1484	158	129	116
-6	리자몽	fire	flying	4	5	6	0	0	0	grass	fight	water	electric	2686	223	176	156
-7	꼬부기	water	0	7	8	9	0	0	0	fire	0	electric	0	808	94	122	88
-8	어니부기	water	0	7	8	9	0	0	0	fire	0	electric	0	1324	126	155	118
-9	거북왕	water	0	7	8	9	0	0	0	fire	0	electric	0	2291	171	210	158
-10	캐터피	bug	0	10	11	12	0	0	0	grass	0	fire	0	393	55	62	90
-11	단데기	bug	0	10	11	12	0	0	0	grass	0	fire	0	419	45	94	100
-12	버터플	bug	flying	10	11	12	0	0	0	grass	fight	fire	electric	1701	167	151	120
-13	뿔충이	bug	poison	13	14	15	0	0	0	grass	fairy	fire	psycho	397	63	55	80
-14	딱충이	bug	poison	13	14	15	0	0	0	grass	fairy	fire	psycho	392	46	86	90
-15	독침붕	bug	poison	13	14	15	0	0	0	grass	fairy	fire	psycho	1777	169	150	130
-16	구구	normal	flying	16	17	18	0	0	0	0	fight	fight	electric	580	85	76	80
-17	피죤	normal	flying	16	17	18	0	0	0	0	fight	fight	electric	1085	117	108	126
-18	피죤투	normal	flying	16	17	18	0	0	0	0	fight	fight	electric	1994	166	157	166
-19	꼬렛	normal	0	19	20	0	0	0	0	0	0	fight	0	588	103	70	60
-20	레트라	normal	0	19	20	0	0	0	0	0	0	fight	0	1549	161	144	110
-21	깨비참	normal	flying	21	22	0	0	0	0	0	fight	fight	electric	673	112	61	80
-22	깨비드릴조	normal	flying	21	22	0	0	0	0	0	fight	fight	electric	1814	182	135	130
-23	아보	poison	0	23	24	0	0	0	0	fairy	0	psycho	0	778	110	102	70
-24	아보크	poison	0	23	24	0	0	0	0	fairy	0	psycho	0	1737	167	158	120
-25	피카츄	electric	0	172	25	26	0	0	0	water	0	ground	0	787	112	101	70
-26	라이츄	electric	0	172	25	26	0	0	0	water	0	ground	0	2025	193	165	120
-27	모래두지	ground	0	27	28	0	0	0	0	electric	0	grass	0	1194	126	145	100
-28	고지	ground	0	27	28	0	0	0	0	electric	0	grass	0	2328	182	202	150
-29	니드런♀	poison	0	29	30	31	0	0	0	fairy	0	psycho	0	736	86	94	110
-30	니드리나	poison	0	29	30	31	0	0	0	fairy	0	psycho	0	1218	117	126	140
-31	니드퀸	poison	ground	29	30	31	0	0	0	fairy	electric	psycho	grass	2338	180	174	180
-32	니드런♂	poison	0	32	33	34	0	0	0	fairy	0	psycho	0	739	105	76	92
-33	니드리노	poison	0	32	33	34	0	0	0	fairy	0	psycho	0	1252	137	112	122
-34	니드킹	poison	ground	32	33	34	0	0	0	fairy	electric	psycho	grass	2386	204	157	162
-35	삐삐	fairy	0	173	35	36	0	0	0	evil	0	poison	0	1085	107	116	140
-36	픽시	fairy	0	173	35	36	0	0	0	evil	0	poison	0	2353	178	171	190
-37	식스테일	fire	0	37	38	0	0	0	0	grass	0	water	0	774	96	122	76
-38	나인테일	fire	0	37	38	0	0	0	0	grass	0	water	0	2157	169	204	146
-39	푸린	normal	fairy	174	39	40	0	0	0	0	evil	fight	poison	713	80	44	230
-40	푸크린	normal	fairy	174	39	40	0	0	0	0	evil	fight	poison	1906	156	93	280
-41	주뱃	poison	flying	41	42	169	0	0	0	fairy	fight	psycho	electric	569	83	76	80
-42	골뱃	poison	flying	41	42	169	0	0	0	fairy	fight	psycho	electric	1830	161	153	150
-43	뚜벅쵸	grass	poison	43	44	45	182	0	0	water	fairy	bug	psycho	1069	131	116	90
-44	냄새꼬	grass	poison	43	44	45	182	0	0	water	fairy	bug	psycho	1512	153	139	120
-45	라플레시아	grass	poison	43	44	45	182	0	0	water	fairy	bug	psycho	2367	202	170	150
-46	파라스	bug	grass	46	47	0	0	0	0	grass	water	fire	bug	836	121	99	70
-47	파라섹트	bug	grass	46	47	0	0	0	0	grass	water	fire	bug	1657	165	146	120
-48	콘팡	bug	poison	48	49	0	0	0	0	grass	fairy	fire	psycho	902	100	102	120
-49	도나리	bug	poison	48	49	0	0	0	0	grass	fairy	fire	psycho	1937	179	150	140
-50	디그다	ground	0	50	51	0	0	0	0	electric	0	grass	0	465	109	88	20
-51	닥트리오	ground	0	50	51	0	0	0	0	electric	0	grass	0	1333	167	147	70
-52	나옹	normal	0	52	53	0	0	0	0	0	0	fight	0	638	92	81	80
-53	페르시온	normal	0	52	53	0	0	0	0	0	0	fight	0	1539	150	139	130
-54	고라파덕	water	0	54	55	0	0	0	0	fire	0	electric	0	966	122	96	100
-55	골덕	water	0	54	55	0	0	0	0	fire	0	electric	0	2270	191	163	160
-56	망키	fight	0	56	57	0	0	0	0	normal	0	flying	0	1002	148	87	80
-57	성원숭	fight	0	56	57	0	0	0	0	normal	0	flying	0	2105	207	144	130
-58	가디	fire	0	58	59	0	0	0	0	grass	0	water	0	1110	136	96	110
-59	윈디	fire	0	58	59	0	0	0	0	grass	0	water	0	2839	227	166	180
-60	발챙이	water	0	60	0	62	186	0	0	fire	0	electric	0	695	101	82	80
-61	슈륙챙이	water	0	60	0	62	186	0	0	fire	0	electric	0	1313	130	130	130
-62	강챙이	water	fight	60	0	62	186	0	0	fire	normal	electric	flying	2441	182	187	180
-63	캐이시	psycho	0	0	64	65	0	0	0	poison	0	ghost	0	1148	195	103	50
-64	윤겔라	psycho	0	0	64	65	0	0	0	poison	0	ghost	0	1859	232	138	80
-65	후딘	psycho	0	0	64	65	0	0	0	poison	0	ghost	0	2887	271	194	110
-66	알통몬	fight	0	66	67	68	0	0	0	normal	0	flying	0	1199	137	88	140
-67	근육몬	fight	0	66	67	68	0	0	0	normal	0	flying	0	1910	177	130	160
-68	괴력몬	fight	0	66	67	68	0	0	0	normal	0	flying	0	2889	234	162	180
-69	모다피	grass	poison	69	70	71	0	0	0	water	fairy	bug	psycho	916	139	64	100
-70	우츠동	grass	poison	69	70	71	0	0	0	water	fairy	bug	psycho	1475	172	95	130
-71	우츠보트	grass	poison	69	70	71	0	0	0	water	fairy	bug	psycho	2268	207	138	160
-72	왕눈해	water	poison	72	73	0	0	0	0	fire	fairy	electric	psycho	956	97	182	80
-73	독파리	water	poison	72	73	0	0	0	0	fire	fairy	electric	psycho	2374	166	237	160
-74	꼬마돌	rock	ground	74	75	76	0	0	0	ice	electric	water	grass	1193	132	163	80
-75	데구리	rock	ground	74	75	76	0	0	0	ice	electric	water	grass	1815	164	196	110
-76	딱구리	rock	ground	74	75	76	0	0	0	ice	electric	water	grass	2916	211	229	160
-77	포니타	fire	0	77	78	0	0	0	0	grass	0	water	0	1502	170	132	100
-78	날쌩마	fire	0	77	78	0	0	0	0	grass	0	water	0	2252	207	167	130
-79	야돈	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	1204	109	109	180
-80	야도란	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	2482	177	194	190
-81	코일	electric	steel	81	82	0	0	0	0	water	rock	ground	fight	1083	165	128	50
-82	레어코일	electric	steel	81	82	0	0	0	0	water	rock	ground	fight	2237	223	182	100
-83	파오리	normal	flying	0	0	0	0	0	0	0	fight	fight	electric	1092	124	118	104
-84	두두	normal	flying	84	85	0	0	0	0	0	fight	fight	electric	1011	158	88	70
-85	두트리오	normal	flying	84	85	0	0	0	0	0	fight	fight	electric	2138	218	145	120
-86	쥬쥬	water	ice	86	87	0	0	0	0	fire	dragon	electric	fire	899	85	128	130
-87	쥬레곤	water	ice	86	87	0	0	0	0	fire	dragon	electric	fire	1894	139	184	180
-88	질퍽이	poison	0	0	89	0	0	0	0	fairy	0	psycho	0	1269	135	90	160
-89	질뻐기	poison	0	0	89	0	0	0	0	fairy	0	psycho	0	2709	190	184	210
-90	셀러	water	0	90	91	0	0	0	0	fire	0	electric	0	958	116	168	60
-91	파르셀	water	ice	90	91	0	0	0	0	fire	dragon	electric	fire	2475	186	323	100
-92	고오스	ghost	poison	92	93	94	0	0	0	psycho	fairy	evil	psycho	1002	186	70	60
-93	고우스트	ghost	poison	92	93	94	0	0	0	psycho	fairy	evil	psycho	1716	223	112	90
-94	팬텀	ghost	poison	92	93	94	0	0	0	psycho	fairy	evil	psycho	2619	261	156	120
-95	롱스톤	rock	ground	95	208	0	0	0	0	ice	electric	water	grass	1002	85	288	70
-96	슬리프	psycho	0	96	97	0	0	0	0	poison	0	ghost	0	992	89	158	120
-97	슬리퍼	psycho	0	96	97	0	0	0	0	poison	0	ghost	0	2048	144	215	170
-98	크랩	water	0	98	99	0	0	0	0	fire	0	electric	0	1386	181	156	60
-99	킹크랩	water	0	98	99	0	0	0	0	fire	0	electric	0	2694	240	214	110
-100	찌리리공	electric	0	100	101	0	0	0	0	water	0	ground	0	857	109	114	80
-101	붐볼	electric	0	100	101	0	0	0	0	water	0	ground	0	1900	173	179	120
-102	아라리	grass	psycho	102	103	0	0	0	0	water	poison	bug	ghost	1102	107	140	120
-103	나시	grass	psycho	102	103	0	0	0	0	water	poison	bug	ghost	2916	233	158	190
-104	탕구리	ground	0	104	105	0	0	0	0	electric	0	grass	0	943	90	165	100
-105	텅구리	ground	0	104	105	0	0	0	0	electric	0	grass	0	1691	144	200	120
-106	시라소몬	fight	0	0	106	0	0	0	0	normal	0	flying	0	2406	224	211	100
-107	홍수몬	fight	0	0	107	0	0	0	0	normal	0	flying	0	2098	193	212	100
-108	내루미	normal	0	0	0	0	0	0	0	0	0	fight	0	1322	108	137	180
-109	또가스	poison	0	109	110	0	0	0	0	fairy	0	psycho	0	1091	119	164	80
-110	또도가스	poison	0	109	110	0	0	0	0	fairy	0	psycho	0	2183	174	221	130
-111	뿔카노	ground	rock	111	112	0	0	0	0	electric	ice	grass	water	1679	140	157	160
-112	코뿌리	ground	rock	111	112	0	0	0	0	electric	ice	grass	water	3300	222	206	210
-113	럭키	normal	0	113	242	0	0	0	0	0	0	fight	0	1469	60	176	500
-114	덩쿠리	grass	0	0	0	0	0	0	0	water	0	bug	0	2208	183	205	130
-115	캥카	normal	0	0	0	0	0	0	0	0	0	fight	0	2463	181	165	210
-116	쏘드라	water	0	116	117	230	0	0	0	fire	0	electric	0	921	129	125	60
-117	시드라	water	0	116	117	230	0	0	0	fire	0	electric	0	1979	187	182	110
-118	콘치	water	0	118	119	0	0	0	0	fire	0	electric	0	1006	123	115	90
-119	왕콘치	water	0	118	119	0	0	0	0	fire	0	electric	0	2040	175	154	160
-120	별가사리	water	0	120	121	0	0	0	0	fire	0	electric	0	926	137	112	60
-121	아쿠스타	water	psycho	120	121	0	0	0	0	fire	poison	electric	ghost	2303	210	184	120
-122	마임맨	psycho	fairy	0	0	0	0	0	0	poison	evil	ghost	poison	1984	192	233	80
-123	스라크	bug	flying	123	212	0	0	0	0	grass	fight	fire	electric	2464	218	170	140
-124	루주라	ice	psycho	238	124	0	0	0	0	dragon	poison	fire	ghost	2512	223	182	130
-125	에레브	electric	0	239	125	0	0	0	0	water	0	ground	0	2196	198	173	130
-126	마그마	fire	0	240	126	0	0	0	0	grass	0	water	0	2254	206	169	130
-127	쁘사이저	bug	0	0	0	0	0	0	0	grass	0	fire	0	2770	238	197	130
-128	켄타로스	normal	0	0	0	0	0	0	0	0	0	fight	0	2488	198	197	150
-129	잉어킹	water	0	129	130	0	0	0	0	fire	0	electric	0	220	29	102	40
-130	갸라도스	water	flying	129	130	0	0	0	0	fire	fight	electric	electric	3281	237	197	190
-131	라프라스	water	ice	0	0	0	0	0	0	fire	dragon	electric	fire	2603	165	180	260
-132	메타몽	normal	0	0	0	0	0	0	0	0	0	fight	0	718	91	91	96
-133	이브이	normal	0	133	134	135	136	196	197	0	0	fight	0	969	104	121	110
-134	샤미드	water	0	133	134	0	0	0	0	fire	0	electric	0	3157	205	177	260
-135	쥬피썬더	electric	0	133	135	0	0	0	0	water	0	ground	0	2730	232	201	130
-136	부스터	fire	0	133	136	0	0	0	0	grass	0	water	0	2904	246	204	130
-137	폴리곤	normal	0	0	0	0	0	0	0	0	0	fight	0	1567	153	139	130
-138	암나이트	rock	water	138	139	0	0	0	0	ice	fire	water	electric	1345	155	174	70
-139	암스타	rock	water	138	139	0	0	0	0	ice	fire	water	electric	2685	207	227	140
-140	투구	rock	water	140	141	0	0	0	0	ice	fire	water	electric	1172	148	162	60
-141	투구푸스	rock	water	140	141	0	0	0	0	ice	fire	water	electric	2517	220	203	120
-142	프테라	rock	flying	0	0	0	0	0	0	ice	fight	water	electric	2608	221	164	160
-143	잠만보	normal	0	0	0	0	0	0	0	0	0	fight	0	3355	190	190	320
-144	프리져	ice	flying	0	0	0	0	0	0	dragon	fight	fire	eletric	0	0	0	0
-145	썬더	electric	flying	0	0	0	0	0	0	water	fight	grass	eletric	0	0	0	0
-146	파이어	fire	flying	0	0	0	0	0	0	grass	fight	water	eletric	0	0	0	0
-147	미뇽	dragon	0	147	148	149	0	0	0	dragon	0	dragon	0	860	119	94	82
-148	신뇽	dragon	0	147	148	149	0	0	0	dragon	0	dragon	0	1609	163	138	122
-149	망나뇽	dragon	flying	147	148	149	0	0	0	dragon	fight	dragon	electric	3581	263	201	182
-150	뮤츠	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	0	0	0	0
-151	뮤	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	0	0	0	0
-152	치코리타	grass	0	152	153	154	0	0	0	water	0	bug	0	801	92	122	90
-153	베이리프	grass	0	152	153	154	0	0	0	water	0	bug	0	1296	122	155	120
-154	메가니움	grass	0	152	153	154	0	0	0	water	0	bug	0	2227	168	202	160
-155	브케인	fire	0	155	156	157	0	0	0	grass	0	water	0	831	116	96	78
-156	마그케인	fire	0	155	156	157	0	0	0	grass	0	water	0	1484	158	129	116
-157	블레이범	fire	0	155	156	157	0	0	0	grass	0	water	0	2686	223	176	156
-158	리아코	water	0	158	159	160	0	0	0	fire	0	electric	0	1011	117	116	100
-159	엘리게이	water	0	158	159	160	0	0	0	fire	0	electric	0	1598	150	151	130
-160	장크로다일	water	0	158	159	160	0	0	0	fire	0	electric	0	2721	205	197	170
-161	꼬리선	normal	0	161	162	0	0	0	0	0	0	fight	0	519	79	77	70
-162	다꼬리	normal	0	161	162	0	0	0	0	0	0	fight	0	1667	148	130	170
-163	부우부	normal	flying	163	164	0	0	0	0	0	fight	fight	electric	640	67	101	120
-164	야부엉	normal	flying	163	164	0	0	0	0	0	fight	fight	electric	2040	145	179	200
-165	레디바	bug	flying	165	166	0	0	0	0	grass	fight	fire	electric	663	72	142	80
-166	레디안	bug	flying	165	166	0	0	0	0	grass	fight	fire	electric	1275	107	209	110
-167	페이검	bug	poison	167	168	0	0	0	0	grass	fairy	fire	psycho	685	105	73	80
-168	아리아도스	bug	poison	167	168	0	0	0	0	grass	fairy	fire	psycho	1636	161	128	140
-169	크로뱃	poison	flying	41	42	169	0	0	0	fairy	fight	psycho	electric	2466	194	178	170
-170	초라기	water	electric	170	171	0	0	0	0	fire	water	electric	ground	1067	106	106	150
-171	랜턴	water	electric	170	171	0	0	0	0	fire	water	electric	ground	2077	146	146	250
-172	피츄	electric	0	172	25	26	0	0	0	water	0	ground	0	376	77	63	40
-173	삐	fairy	0	173	35	36	0	0	0	evil	0	poison	0	620	75	91	100
-174	푸푸린	normal	fairy	174	39	40	0	0	0	0	evil	fight	poison	512	69	34	180
-175	토게피	fairy	0	175	176	0	0	0	0	evil	0	poison	0	540	67	116	70
-176	토게틱	fairy	flying	175	176	0	0	0	0	evil	fight	poison	electric	1543	139	191	110
-177	네이티	psycho	flying	177	178	0	0	0	0	poison	fight	ghost	electric	925	134	89	80
-178	네이티오	psycho	flying	177	178	0	0	0	0	poison	fight	ghost	electric	1975	192	146	130
-179	메리프	electric	0	179	180	181	0	0	0	water	0	ground	0	887	114	82	110
-180	보송송	electric	0	179	180	181	0	0	0	water	0	ground	0	1402	145	112	140
-181	전룡	electric	0	179	180	181	0	0	0	water	0	ground	0	2695	211	172	180
-182	아르코	grass	0	43	44	45	182	0	0	water	0	bug	0	2108	169	189	150
-183	마릴	water	fairy	183	184	0	0	0	0	fire	evil	electric	poison	420	37	93	140
-184	마릴리	water	fairy	183	184	0	0	0	0	fire	evil	electric	poison	1503	112	152	200
-185	꼬지모	rock	0	0	0	0	0	0	0	ice	0	water	0	2065	167	198	140
-186	왕구리	water	0	60	0	62	186	0	0	fire	0	electric	0	2371	174	192	180
-187	통통코	grass	flying	187	188	189	0	0	0	water	fight	bug	electric	508	67	101	70
-188	두코	grass	flying	187	188	189	0	0	0	water	fight	bug	electric	882	91	127	110
-189	솜솜코	grass	flying	187	188	189	0	0	0	water	fight	bug	electric	1553	118	197	150
-190	에이팜	normal	0	0	0	0	0	0	0	0	0	fight	0	1188	136	112	110
-191	해너츠	grass	0	191	192	0	0	0	0	water	0	bug	0	316	55	55	60
-192	해루미	grass	0	191	192	0	0	0	0	water	0	bug	0	2048	185	148	150
-193	왕자리	bug	flying	0	0	0	0	0	0	grass	fight	fire	electric	1326	154	94	130
-194	우파	water	ground	194	195	0	0	0	0	fire	electric	electric	grass	596	75	75	110
-195	누오	water	ground	194	195	0	0	0	0	fire	electric	electric	grass	1929	152	152	190
-196	에브이	psycho	0	133	196	0	0	0	0	poison	0	ghost	0	3000	261	194	130
-197	블래키	evil	0	133	197	0	0	0	0	ghost	0	fairy	0	2052	126	250	190
-198	니로우	evil	flying	0	0	0	0	0	0	ghost	fight	fairy	electric	1392	175	87	120
-199	야도킹	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	2482	177	194	190
-200	무우마	ghost	0	0	0	0	0	0	0	psycho	0	evil	0	1781	167	167	120
-201	안농	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	1022	136	91	96
-202	마자용	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	1024	60	106	380
-203	키링키	normal	psycho	0	0	0	0	0	0	0	poison	fight	ghost	1863	182	133	140
-204	피콘	bug	0	204	205	0	0	0	0	grass	0	fire	0	1045	108	146	100
-205	쏘콘	bug	steel	204	205	0	0	0	0	grass	rock	fire	fight	2263	161	242	150
-206	노고치	normal	0	0	0	0	0	0	0	0	0	fight	0	1615	131	131	200
-207	글라이거	ground	flying	0	0	0	0	0	0	electric	fight	grass	electric	1758	143	204	130
-208	강철톤	steel	ground	95	208	0	0	0	0	rock	electric	fight	grass	2439	148	333	150
-209	블루	fairy	0	209	210	0	0	0	0	evil	0	poison	0	1124	137	89	120
-210	그랑블루	fairy	0	209	210	0	0	0	0	evil	0	poison	0	2440	212	137	180
-211	침바루	water	poison	0	0	0	0	0	0	fire	fairy	electric	psycho	1910	184	148	130
-212	핫삼	bug	steel	123	212	0	0	0	0	grass	rock	fire	fight	2801	236	191	140
-213	단단지	bug	rock	0	0	0	0	0	0	grass	ice	fire	water	300	17	396	40
-214	헤라크로스	bug	fight	0	0	0	0	0	0	grass	normal	fire	flying	2938	234	189	160
-215	포푸니	evil	ice	0	0	0	0	0	0	ghost	dragon	fairy	fire	1868	189	157	110
-216	깜지곰	normal	0	216	217	0	0	0	0	0	0	fight	0	1184	142	93	120
-217	링곰	normal	0	216	217	0	0	0	0	0	0	fight	0	2760	236	144	180
-218	마그마그	fire	0	218	219	0	0	0	0	grass	0	water	0	750	118	71	80
-219	마그카르고	fire	rock	218	219	0	0	0	0	grass	ice	water	water	1543	139	209	100
-220	꾸꾸리	ice	ground	220	221	0	0	0	0	dragon	electric	fire	grass	663	90	74	100
-221	메꾸리	ice	ground	220	221	0	0	0	0	dragon	electric	fire	grass	2284	181	147	200
-222	코산호	water	rock	0	0	0	0	0	0	fire	ice	electric	water	1214	118	156	110
-223	총어	water	0	223	224	0	0	0	0	fire	0	electric	0	749	127	69	70
-224	대포무노	water	0	223	224	0	0	0	0	fire	0	electric	0	2124	197	141	150
-225	딜리버드	ice	flying	0	0	0	0	0	0	dragon	fight	fire	electric	0	0	0	0
-226	만타인	water	flying	0	0	0	0	0	0	fire	fight	electric	electric	2032	148	260	130
-227	무장조	steel	flying	0	0	0	0	0	0	rock	fight	fight	electric	2032	148	260	130
-228	델빌	evil	fire	228	229	0	0	0	0	ghost	grass	fairy	water	1110	152	93	90
-229	헬가	evil	fire	228	229	0	0	0	0	ghost	grass	fairy	water	2529	224	159	150
-230	킹드라	water	dragon	116	117	230	0	0	0	fire	dragon	electric	dragon	2424	194	194	150
-231	코코리	ground	0	231	232	0	0	0	0	electric	0	grass	0	1175	107	107	180
-232	코리갑	ground	0	231	232	0	0	0	0	electric	0	grass	0	3022	214	214	180
-233	폴리곤2	normal	0	0	0	0	0	0	0	0	0	fight	0	2546	198	183	170
-234	노라키	normal	0	0	0	0	0	0	0	0	0	fight	0	1988	192	132	146
-235	루브도	normal	0	0	0	0	0	0	0	0	0	fight	0	0	0	0	0
-236	배루키	fight	0	0	106	107	237	0	0	normal	0	flying	0	404	64	64	70
-237	카포에라	fight	0	0	237	0	0	0	0	normal	0	flying	0	1905	173	214	100
-238	뽀뽀라	ice	psycho	238	124	0	0	0	0	dragon	poison	fire	ghost	1230	153	116	90
-239	에레키드	electric	0	239	125	0	0	0	0	water	0	ground	0	1073	135	110	90
-240	마그비	fire	0	240	126	0	0	0	0	grass	0	water	0	1178	151	108	90
-241	밀탱크	normal	0	0	0	0	0	0	0	0	0	fight	0	2312	157	211	190
-242	해피너스	normal	0	113	0	0	0	0	0	0	0	fight	0	3219	129	229	510
-243	라이코	electric	water	0	0	0	0	0	0	electric	ground	water	grass	0	0	0	0
-244	엔테이	fire	0	0	0	0	0	0	0	electric	0	water	grass	0	0	0	0
-245	스이쿤	water	0	0	0	0	0	0	0	grass	0	electric	grass	0	0	0	0
-246	애버라스	rock	ground	246	247	248	0	0	0	ice	electric	water	grass	904	115	93	100
-247	데기라스	rock	ground	246	247	248	0	0	0	electric	electric	water	grass	1608	155	133	140
-248	마기라스	rock	evil	246	247	248	0	0	0	ice	ghost	water	fairy	3670	251	212	200
+1	이상해씨	grass	poison	1	2	3	0	0	0	water	fairy	bug	psycho	981	118	118	90	추적중	0
+2	이상해풀	grass	poison	1	2	3	0	0	0	water	fairy	bug	psycho	1552	151	151	120	추적중	0
+3	이상해꽃	grass	poison	1	2	3	0	0	0	water	fairy	bug	psycho	2568	198	198	160	추적중	0
+4	파이리	fire	0	4	5	6	0	0	0	grass	0	water	0	831	116	96	78	수원 효원공원	경기 수원 효원공원
+5	리자드	fire	0	4	5	6	0	0	0	grass	0	water	0	1484	158	129	116	추적중	0
+6	리자몽	fire	flying	4	5	6	0	0	0	grass	fight	water	electric	2686	223	176	156	추적중	0
+7	꼬부기	water	0	7	8	9	0	0	0	fire	0	electric	0	808	94	122	88	서울 종로구 낙산공원	서울 중구 덕수궁
+8	어니부기	water	0	7	8	9	0	0	0	fire	0	electric	0	1324	126	155	118	추적중	0
+9	거북왕	water	0	7	8	9	0	0	0	fire	0	electric	0	2291	171	210	158	추적중	0
+10	캐터피	bug	0	10	11	12	0	0	0	grass	0	fire	0	393	55	62	90	추적중	0
+11	단데기	bug	0	10	11	12	0	0	0	grass	0	fire	0	419	45	94	100	추적중	0
+12	버터플	bug	flying	10	11	12	0	0	0	grass	fight	fire	electric	1701	167	151	120	추적중	0
+13	뿔충이	bug	poison	13	14	15	0	0	0	grass	fairy	fire	psycho	397	63	55	80	추적중	0
+14	딱충이	bug	poison	13	14	15	0	0	0	grass	fairy	fire	psycho	392	46	86	90	추적중	0
+15	독침붕	bug	poison	13	14	15	0	0	0	grass	fairy	fire	psycho	1777	169	150	130	추적중	0
+16	구구	normal	flying	16	17	18	0	0	0	0	fight	fight	electric	580	85	76	80	추적중	0
+17	피죤	normal	flying	16	17	18	0	0	0	0	fight	fight	electric	1085	117	108	126	추적중	0
+18	피죤투	normal	flying	16	17	18	0	0	0	0	fight	fight	electric	1994	166	157	166	추적중	0
+19	꼬렛	normal	0	19	20	0	0	0	0	0	0	fight	0	588	103	70	60	추적중	0
+20	레트라	normal	0	19	20	0	0	0	0	0	0	fight	0	1549	161	144	110	추적중	0
+21	깨비참	normal	flying	21	22	0	0	0	0	0	fight	fight	electric	673	112	61	80	추적중	0
+22	깨비드릴조	normal	flying	21	22	0	0	0	0	0	fight	fight	electric	1814	182	135	130	추적중	0
+23	아보	poison	0	23	24	0	0	0	0	fairy	0	psycho	0	778	110	102	70	경남 진주 진주성	0
+24	아보크	poison	0	23	24	0	0	0	0	fairy	0	psycho	0	1737	167	158	120	추적중	0
+25	피카츄	electric	0	172	25	26	0	0	0	water	0	ground	0	787	112	101	70	대구 수성구 화랑공원	0
+26	라이츄	electric	0	172	25	26	0	0	0	water	0	ground	0	2025	193	165	120	추적중	0
+27	모래두지	ground	0	27	28	0	0	0	0	electric	0	grass	0	1194	126	145	100	추적중	0
+28	고지	ground	0	27	28	0	0	0	0	electric	0	grass	0	2328	182	202	150	추적중	0
+29	니드런♀	poison	0	29	30	31	0	0	0	fairy	0	psycho	0	736	86	94	110	추적중	0
+30	니드리나	poison	0	29	30	31	0	0	0	fairy	0	psycho	0	1218	117	126	140	추적중	0
+31	니드퀸	poison	ground	29	30	31	0	0	0	fairy	electric	psycho	grass	2338	180	174	180	추적중	0
+32	니드런♂	poison	0	32	33	34	0	0	0	fairy	0	psycho	0	739	105	76	92	추적중	0
+33	니드리노	poison	0	32	33	34	0	0	0	fairy	0	psycho	0	1252	137	112	122	추적중	0
+34	니드킹	poison	ground	32	33	34	0	0	0	fairy	electric	psycho	grass	2386	204	157	162	추적중	0
+35	삐삐	fairy	0	173	35	36	0	0	0	evil	0	poison	0	1085	107	116	140	추적중	0
+36	픽시	fairy	0	173	35	36	0	0	0	evil	0	poison	0	2353	178	171	190	추적중	0
+37	식스테일	fire	0	37	38	0	0	0	0	grass	0	water	0	774	96	122	76	서울 송파구 방이백제고분	경기 부천 상동호수공원
+38	나인테일	fire	0	37	38	0	0	0	0	grass	0	water	0	2157	169	204	146	추적중	0
+39	푸린	normal	fairy	174	39	40	0	0	0	0	evil	fight	poison	713	80	44	230	추적중	0
+40	푸크린	normal	fairy	174	39	40	0	0	0	0	evil	fight	poison	1906	156	93	280	추적중	0
+41	주뱃	poison	flying	41	42	169	0	0	0	fairy	fight	psycho	electric	569	83	76	80	추적중	0
+42	골뱃	poison	flying	41	42	169	0	0	0	fairy	fight	psycho	electric	1830	161	153	150	추적중	0
+43	뚜벅쵸	grass	poison	43	44	45	182	0	0	water	fairy	bug	psycho	1069	131	116	90	서울 강북구 북서울꿈의숲	충남 천안축구센터
+44	냄새꼬	grass	poison	43	44	45	182	0	0	water	fairy	bug	psycho	1512	153	139	120	추적중	0
+45	라플레시아	grass	poison	43	44	45	182	0	0	water	fairy	bug	psycho	2367	202	170	150	추적중	0
+46	파라스	bug	grass	46	47	0	0	0	0	grass	water	fire	bug	836	121	99	70	추적중	0
+47	파라섹트	bug	grass	46	47	0	0	0	0	grass	water	fire	bug	1657	165	146	120	추적중	0
+48	콘팡	bug	poison	48	49	0	0	0	0	grass	fairy	fire	psycho	902	100	102	120	추적중	0
+49	도나리	bug	poison	48	49	0	0	0	0	grass	fairy	fire	psycho	1937	179	150	140	추적중	0
+50	디그다	ground	0	50	51	0	0	0	0	electric	0	grass	0	465	109	88	20	서울 용산구 이촌한강공원	부산 강서구 하이스트 CC
+51	닥트리오	ground	0	50	51	0	0	0	0	electric	0	grass	0	1333	167	147	70	추적중	0
+52	나옹	normal	0	52	53	0	0	0	0	0	0	fight	0	638	92	81	80	서울 중구 응봉근린공원	0
+53	페르시온	normal	0	52	53	0	0	0	0	0	0	fight	0	1539	150	139	130	추적중	0
+54	고라파덕	water	0	54	55	0	0	0	0	fire	0	electric	0	966	122	96	100	추적중	0
+55	골덕	water	0	54	55	0	0	0	0	fire	0	electric	0	2270	191	163	160	추적중	0
+56	망키	fight	0	56	57	0	0	0	0	normal	0	flying	0	1002	148	87	80	인천 연수구 미추홀공원	0
+57	성원숭	fight	0	56	57	0	0	0	0	normal	0	flying	0	2105	207	144	130	추적중	0
+58	가디	fire	0	58	59	0	0	0	0	grass	0	water	0	1110	136	96	110	서울 구로구 계남근린공원	부산 강서구 맥도
+59	윈디	fire	0	58	59	0	0	0	0	grass	0	water	0	2839	227	166	180	추적중	0
+60	발챙이	water	0	60	0	62	186	0	0	fire	0	electric	0	695	101	82	80	추적중	0
+61	슈륙챙이	water	0	60	0	62	186	0	0	fire	0	electric	0	1313	130	130	130	추적중	0
+62	강챙이	water	fight	60	0	62	186	0	0	fire	normal	electric	flying	2441	182	187	180	추적중	0
+63	캐이시	psycho	0	0	64	65	0	0	0	poison	0	ghost	0	1148	195	103	50	경기 광명스피돔	0
+64	윤겔라	psycho	0	0	64	65	0	0	0	poison	0	ghost	0	1859	232	138	80	추적중	0
+65	후딘	psycho	0	0	64	65	0	0	0	poison	0	ghost	0	2887	271	194	110	추적중	0
+66	알통몬	fight	0	66	67	68	0	0	0	normal	0	flying	0	1199	137	88	140	서울 구로구 도림천역공원	0
+67	근육몬	fight	0	66	67	68	0	0	0	normal	0	flying	0	1910	177	130	160	추적중	0
+68	괴력몬	fight	0	66	67	68	0	0	0	normal	0	flying	0	2889	234	162	180	추적중	0
+69	모다피	grass	poison	69	70	71	0	0	0	water	fairy	bug	psycho	916	139	64	100	추적중	0
+70	우츠동	grass	poison	69	70	71	0	0	0	water	fairy	bug	psycho	1475	172	95	130	추적중	0
+71	우츠보트	grass	poison	69	70	71	0	0	0	water	fairy	bug	psycho	2268	207	138	160	추적중	0
+72	왕눈해	water	poison	72	73	0	0	0	0	fire	fairy	electric	psycho	956	97	182	80	서울 광진구 뚝섬한강공원	0
+73	독파리	water	poison	72	73	0	0	0	0	fire	fairy	electric	psycho	2374	166	237	160	추적중	0
+74	꼬마돌	rock	ground	74	75	76	0	0	0	ice	electric	water	grass	1193	132	163	80	서울 용산구 남산공원	0
+75	데구리	rock	ground	74	75	76	0	0	0	ice	electric	water	grass	1815	164	196	110	추적중	0
+76	딱구리	rock	ground	74	75	76	0	0	0	ice	electric	water	grass	2916	211	229	160	추적중	0
+77	포니타	fire	0	77	78	0	0	0	0	grass	0	water	0	1502	170	132	100	추적중	0
+78	날쌩마	fire	0	77	78	0	0	0	0	grass	0	water	0	2252	207	167	130	추적중	0
+79	야돈	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	1204	109	109	180	추적중	0
+80	야도란	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	2482	177	194	190	추적중	0
+81	코일	electric	steel	81	82	0	0	0	0	water	rock	ground	fight	1083	165	128	50	서울 동작구 중앙대학교	경기 일산 호수공원
+82	레어코일	electric	steel	81	82	0	0	0	0	water	rock	ground	fight	2237	223	182	100	추적중	0
+83	파오리	normal	flying	0	0	0	0	0	0	0	fight	fight	electric	1092	124	118	104	추적중	0
+84	두두	normal	flying	84	85	0	0	0	0	0	fight	fight	electric	1011	158	88	70	서울 마포구 평화의공원	대전 유성구 유림공원
+85	두트리오	normal	flying	84	85	0	0	0	0	0	fight	fight	electric	2138	218	145	120	추적중	0
+86	쥬쥬	water	ice	86	87	0	0	0	0	fire	dragon	electric	fire	899	85	128	130	서울 동작구 보라매공원	0
+87	쥬레곤	water	ice	86	87	0	0	0	0	fire	dragon	electric	fire	1894	139	184	180	추적중	0
+88	질퍽이	poison	0	0	89	0	0	0	0	fairy	0	psycho	0	1269	135	90	160	추적중	0
+89	질뻐기	poison	0	0	89	0	0	0	0	fairy	0	psycho	0	2709	190	184	210	추적중	0
+90	셀러	water	0	90	91	0	0	0	0	fire	0	electric	0	958	116	168	60	서울 파포구 노을공원 인근	경기 수원 만석공원
+91	파르셀	water	ice	90	91	0	0	0	0	fire	dragon	electric	fire	2475	186	323	100	추적중	0
+92	고오스	ghost	poison	92	93	94	0	0	0	psycho	fairy	evil	psycho	1002	186	70	60	추적중	0
+93	고우스트	ghost	poison	92	93	94	0	0	0	psycho	fairy	evil	psycho	1716	223	112	90	추적중	0
+94	팬텀	ghost	poison	92	93	94	0	0	0	psycho	fairy	evil	psycho	2619	261	156	120	추적중	0
+95	롱스톤	rock	ground	95	208	0	0	0	0	ice	electric	water	grass	1002	85	288	70	서울 종로구 창덕궁	경기 수원 숙지공원
+96	슬리프	psycho	0	96	97	0	0	0	0	poison	0	ghost	0	992	89	158	120	서울 마포구 망원한강공원	경기 수원 인계예술공원
+97	슬리퍼	psycho	0	96	97	0	0	0	0	poison	0	ghost	0	2048	144	215	170	추적중	0
+98	크랩	water	0	98	99	0	0	0	0	fire	0	electric	0	1386	181	156	60	추적중	0
+99	킹크랩	water	0	98	99	0	0	0	0	fire	0	electric	0	2694	240	214	110	추적중	0
+100	찌리리공	electric	0	100	101	0	0	0	0	water	0	ground	0	857	109	114	80	서울 동작구 중앙대학교	0
+101	붐볼	electric	0	100	101	0	0	0	0	water	0	ground	0	1900	173	179	120	추적중	0
+102	아라리	grass	psycho	102	103	0	0	0	0	water	poison	bug	ghost	1102	107	140	120	부산 중구 용두산공원	0
+103	나시	grass	psycho	102	103	0	0	0	0	water	poison	bug	ghost	2916	233	158	190	추적중	0
+104	탕구리	ground	0	104	105	0	0	0	0	electric	0	grass	0	943	90	165	100	서울 영등포구 선유도	서울 동작구 까치산근린공원
+105	텅구리	ground	0	104	105	0	0	0	0	electric	0	grass	0	1691	144	200	120	추적중	0
+106	시라소몬	fight	0	0	106	0	0	0	0	normal	0	flying	0	2406	224	211	100	추적중	0
+107	홍수몬	fight	0	0	107	0	0	0	0	normal	0	flying	0	2098	193	212	100	추적중	0
+108	내루미	normal	0	0	0	0	0	0	0	0	0	fight	0	1322	108	137	180	추적중	0
+109	또가스	poison	0	109	110	0	0	0	0	fairy	0	psycho	0	1091	119	164	80	추적중	0
+110	또도가스	poison	0	109	110	0	0	0	0	fairy	0	psycho	0	2183	174	221	130	추적중	0
+111	뿔카노	ground	rock	111	112	0	0	0	0	electric	ice	grass	water	1679	140	157	160	서울 종로구 경복궁	서울 강남구 선정릉
+112	코뿌리	ground	rock	111	112	0	0	0	0	electric	ice	grass	water	3300	222	206	210	추적중	0
+113	럭키	normal	0	113	242	0	0	0	0	0	0	fight	0	1469	60	176	500	추적중	0
+114	덩쿠리	grass	0	0	0	0	0	0	0	water	0	bug	0	2208	183	205	130	추적중	0
+115	캥카	normal	0	0	0	0	0	0	0	0	0	fight	0	2463	181	165	210	추적중	0
+116	쏘드라	water	0	116	117	230	0	0	0	fire	0	electric	0	921	129	125	60	서울 노원구 등나무근린공원	인천 부평구 부평공원
+117	시드라	water	0	116	117	230	0	0	0	fire	0	electric	0	1979	187	182	110	추적중	0
+118	콘치	water	0	118	119	0	0	0	0	fire	0	electric	0	1006	123	115	90	추적중	0
+119	왕콘치	water	0	118	119	0	0	0	0	fire	0	electric	0	2040	175	154	160	추적중	0
+120	별가사리	water	0	120	121	0	0	0	0	fire	0	electric	0	926	137	112	60	추적중	0
+121	아쿠스타	water	psycho	120	121	0	0	0	0	fire	poison	electric	ghost	2303	210	184	120	추적중	0
+122	마임맨	psycho	fairy	0	0	0	0	0	0	poison	evil	ghost	poison	1984	192	233	80	추적중	0
+123	스라크	bug	flying	123	212	0	0	0	0	grass	fight	fire	electric	2464	218	170	140	서울 송파구 석촌동백제고분	0
+124	루주라	ice	psycho	238	124	0	0	0	0	dragon	poison	fire	ghost	2512	223	182	130	서울 노원구 노해근린공원	경기 고양시 뉴코리아 CC
+125	에레브	electric	0	239	125	0	0	0	0	water	0	ground	0	2196	198	173	130	경남 창원 진해구 용원 CC	0
+126	마그마	fire	0	240	126	0	0	0	0	grass	0	water	0	2254	206	169	130	서울 양천구 목동테니스장	대전 서구 샘머리공원
+127	쁘사이저	bug	0	0	0	0	0	0	0	grass	0	fire	0	2770	238	197	130	서울 송파구 아시아근린공원	0
+128	켄타로스	normal	0	0	0	0	0	0	0	0	0	fight	0	2488	198	197	150	추적중	0
+129	잉어킹	water	0	129	130	0	0	0	0	fire	0	electric	0	220	29	102	40	서울 송파구 올림픽공원	0
+130	갸라도스	water	flying	129	130	0	0	0	0	fire	fight	electric	electric	3281	237	197	190	추적중	0
+131	라프라스	water	ice	0	0	0	0	0	0	fire	dragon	electric	fire	2603	165	180	260	추적중	0
+132	메타몽	normal	0	0	0	0	0	0	0	0	0	fight	0	718	91	91	96	추적중	0
+133	이브이	normal	0	133	134	135	136	196	197	0	0	fight	0	969	104	121	110	추적중	0
+134	샤미드	water	0	133	134	0	0	0	0	fire	0	electric	0	3157	205	177	260	추적중	0
+135	쥬피썬더	electric	0	133	135	0	0	0	0	water	0	ground	0	2730	232	201	130	추적중	0
+136	부스터	fire	0	133	136	0	0	0	0	grass	0	water	0	2904	246	204	130	추적중	0
+137	폴리곤	normal	0	0	0	0	0	0	0	0	0	fight	0	1567	153	139	130	추적중	0
+138	암나이트	rock	water	138	139	0	0	0	0	ice	fire	water	electric	1345	155	174	70	추적중	0
+139	암스타	rock	water	138	139	0	0	0	0	ice	fire	water	electric	2685	207	227	140	추적중	0
+140	투구	rock	water	140	141	0	0	0	0	ice	fire	water	electric	1172	148	162	60	추적중	0
+141	투구푸스	rock	water	140	141	0	0	0	0	ice	fire	water	electric	2517	220	203	120	추적중	0
+142	프테라	rock	flying	0	0	0	0	0	0	ice	fight	water	electric	2608	221	164	160	추적중	0
+143	잠만보	normal	0	0	0	0	0	0	0	0	0	fight	0	3355	190	190	320	추적중	0
+144	프리져	ice	flying	0	0	0	0	0	0	dragon	fight	fire	eletric	0	0	0	0	추적중	0
+145	썬더	electric	flying	0	0	0	0	0	0	water	fight	grass	eletric	0	0	0	0	추적중	0
+146	파이어	fire	flying	0	0	0	0	0	0	grass	fight	water	eletric	0	0	0	0	추적중	0
+147	미뇽	dragon	0	147	148	149	0	0	0	dragon	0	dragon	0	860	119	94	82	추적중	0
+148	신뇽	dragon	0	147	148	149	0	0	0	dragon	0	dragon	0	1609	163	138	122	추적중	0
+149	망나뇽	dragon	flying	147	148	149	0	0	0	dragon	fight	dragon	electric	3581	263	201	182	추적중	0
+150	뮤츠	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	0	0	0	0	추적중	0
+151	뮤	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	0	0	0	0	추적중	0
+152	치코리타	grass	0	152	153	154	0	0	0	water	0	bug	0	801	92	122	90	추적중	0
+153	베이리프	grass	0	152	153	154	0	0	0	water	0	bug	0	1296	122	155	120	추적중	0
+154	메가니움	grass	0	152	153	154	0	0	0	water	0	bug	0	2227	168	202	160	추적중	0
+155	브케인	fire	0	155	156	157	0	0	0	grass	0	water	0	831	116	96	78	서울 동대문구 용두근린공원	대구 달서구 두류공원
+156	마그케인	fire	0	155	156	157	0	0	0	grass	0	water	0	1484	158	129	116	추적중	0
+157	블레이범	fire	0	155	156	157	0	0	0	grass	0	water	0	2686	223	176	156	추적중	0
+158	리아코	water	0	158	159	160	0	0	0	fire	0	electric	0	1011	117	116	100	추적중	0
+159	엘리게이	water	0	158	159	160	0	0	0	fire	0	electric	0	1598	150	151	130	추적중	0
+160	장크로다일	water	0	158	159	160	0	0	0	fire	0	electric	0	2721	205	197	170	추적중	0
+161	꼬리선	normal	0	161	162	0	0	0	0	0	0	fight	0	519	79	77	70	추적중	0
+162	다꼬리	normal	0	161	162	0	0	0	0	0	0	fight	0	1667	148	130	170	추적중	0
+163	부우부	normal	flying	163	164	0	0	0	0	0	fight	fight	electric	640	67	101	120	인천 남동구 인천대공원	광주 북구 어린이대공원
+164	야부엉	normal	flying	163	164	0	0	0	0	0	fight	fight	electric	2040	145	179	200	추적중	0
+165	레디바	bug	flying	165	166	0	0	0	0	grass	fight	fire	electric	663	72	142	80	추적중	0
+166	레디안	bug	flying	165	166	0	0	0	0	grass	fight	fire	electric	1275	107	209	110	추적중	0
+167	페이검	bug	poison	167	168	0	0	0	0	grass	fairy	fire	psycho	685	105	73	80	추적중	0
+168	아리아도스	bug	poison	167	168	0	0	0	0	grass	fairy	fire	psycho	1636	161	128	140	추적중	0
+169	크로뱃	poison	flying	41	42	169	0	0	0	fairy	fight	psycho	electric	2466	194	178	170	추적중	0
+170	초라기	water	electric	170	171	0	0	0	0	fire	water	electric	ground	1067	106	106	150	추적중	0
+171	랜턴	water	electric	170	171	0	0	0	0	fire	water	electric	ground	2077	146	146	250	추적중	0
+172	피츄	electric	0	172	25	26	0	0	0	water	0	ground	0	376	77	63	40	추적중	0
+173	삐	fairy	0	173	35	36	0	0	0	evil	0	poison	0	620	75	91	100	추적중	0
+174	푸푸린	normal	fairy	174	39	40	0	0	0	0	evil	fight	poison	512	69	34	180	추적중	0
+175	토게피	fairy	0	175	176	0	0	0	0	evil	0	poison	0	540	67	116	70	추적중	0
+176	토게틱	fairy	flying	175	176	0	0	0	0	evil	fight	poison	electric	1543	139	191	110	추적중	0
+177	네이티	psycho	flying	177	178	0	0	0	0	poison	fight	ghost	electric	925	134	89	80	추적중	0
+178	네이티오	psycho	flying	177	178	0	0	0	0	poison	fight	ghost	electric	1975	192	146	130	추적중	0
+179	메리프	electric	0	179	180	181	0	0	0	water	0	ground	0	887	114	82	110	추적중	0
+180	보송송	electric	0	179	180	181	0	0	0	water	0	ground	0	1402	145	112	140	추적중	0
+181	전룡	electric	0	179	180	181	0	0	0	water	0	ground	0	2695	211	172	180	추적중	0
+182	아르코	grass	0	43	44	45	182	0	0	water	0	bug	0	2108	169	189	150	추적중	0
+183	마릴	water	fairy	183	184	0	0	0	0	fire	evil	electric	poison	420	37	93	140	대전 서구 정부청사광장	0
+184	마릴리	water	fairy	183	184	0	0	0	0	fire	evil	electric	poison	1503	112	152	200	추적중	0
+185	꼬지모	rock	0	0	0	0	0	0	0	ice	0	water	0	2065	167	198	140	추적중	0
+186	왕구리	water	0	60	0	62	186	0	0	fire	0	electric	0	2371	174	192	180	추적중	0
+187	통통코	grass	flying	187	188	189	0	0	0	water	fight	bug	electric	508	67	101	70	추적중	0
+188	두코	grass	flying	187	188	189	0	0	0	water	fight	bug	electric	882	91	127	110	추적중	0
+189	솜솜코	grass	flying	187	188	189	0	0	0	water	fight	bug	electric	1553	118	197	150	추적중	0
+190	에이팜	normal	0	0	0	0	0	0	0	0	0	fight	0	1188	136	112	110	서울 성북구 고려대 안암캠퍼스	0
+191	해너츠	grass	0	191	192	0	0	0	0	water	0	bug	0	316	55	55	60	추적중	0
+192	해루미	grass	0	191	192	0	0	0	0	water	0	bug	0	2048	185	148	150	추적중	0
+193	왕자리	bug	flying	0	0	0	0	0	0	grass	fight	fire	electric	1326	154	94	130	추적중	0
+194	우파	water	ground	194	195	0	0	0	0	fire	electric	electric	grass	596	75	75	110	추적중	0
+195	누오	water	ground	194	195	0	0	0	0	fire	electric	electric	grass	1929	152	152	190	추적중	0
+196	에브이	psycho	0	133	134	135	136	196	197	poison	0	ghost	0	3000	261	194	130	추적중	0
+197	블래키	evil	0	133	134	135	136	196	197	ghost	0	fairy	0	2052	126	250	190	추적중	0
+198	니로우	evil	flying	0	0	0	0	0	0	ghost	fight	fairy	electric	1392	175	87	120	추적중	0
+199	야도킹	water	psycho	79	80	199	0	0	0	fire	poison	electric	ghost	2482	177	194	190	추적중	0
+200	무우마	ghost	0	0	0	0	0	0	0	psycho	0	evil	0	1781	167	167	120	추적중	0
+201	안농	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	1022	136	91	96	추적중	0
+202	마자용	psycho	0	0	0	0	0	0	0	poison	0	ghost	0	1024	60	106	380	서울 광진구 아차산배수지공원	경기 이천 설봉공원
+203	키링키	normal	psycho	0	0	0	0	0	0	0	poison	fight	ghost	1863	182	133	140	서울 서초구 서래섬	대전 서구 남선공원
+204	피콘	bug	0	204	205	0	0	0	0	grass	0	fire	0	1045	108	146	100	추적중	0
+205	쏘콘	bug	steel	204	205	0	0	0	0	grass	rock	fire	fight	2263	161	242	150	추적중	0
+206	노고치	normal	0	0	0	0	0	0	0	0	0	fight	0	1615	131	131	200	서울 광진구 어린이대공원	0
+207	글라이거	ground	flying	0	0	0	0	0	0	electric	fight	grass	electric	1758	143	204	130	추적중	0
+208	강철톤	steel	ground	95	208	0	0	0	0	rock	electric	fight	grass	2439	148	333	150	추적중	0
+209	블루	fairy	0	209	210	0	0	0	0	evil	0	poison	0	1124	137	89	120	추적중	0
+210	그랑블루	fairy	0	209	210	0	0	0	0	evil	0	poison	0	2440	212	137	180	추적중	0
+211	침바루	water	poison	0	0	0	0	0	0	fire	fairy	electric	psycho	1910	184	148	130	서울 양천구 목동종합운동장	서울 동개문구 홍릉근린공원
+212	핫삼	bug	steel	123	212	0	0	0	0	grass	rock	fire	fight	2801	236	191	140	추적중	0
+213	단단지	bug	rock	0	0	0	0	0	0	grass	ice	fire	water	300	17	396	40	서울 송파구 오금공원	서울 강동구 천호공원
+214	헤라크로스	bug	fight	0	0	0	0	0	0	grass	normal	fire	flying	2938	234	189	160	추적중	0
+215	포푸니	evil	ice	0	0	0	0	0	0	ghost	dragon	fairy	fire	1868	189	157	110	서울 송파구 석촌호수공원	0
+216	깜지곰	normal	0	216	217	0	0	0	0	0	0	fight	0	1184	142	93	120	서울 강남구 학동근린공원	광주 서구518기념공원
+217	링곰	normal	0	216	217	0	0	0	0	0	0	fight	0	2760	236	144	180	추적중	0
+218	마그마그	fire	0	218	219	0	0	0	0	grass	0	water	0	750	118	71	80	서울 중구 장충단공원	0
+219	마그카르고	fire	rock	218	219	0	0	0	0	grass	ice	water	water	1543	139	209	100	추적중	0
+220	꾸꾸리	ice	ground	220	221	0	0	0	0	dragon	electric	fire	grass	663	90	74	100	경기 파주 운정건강공원	0
+221	메꾸리	ice	ground	220	221	0	0	0	0	dragon	electric	fire	grass	2284	181	147	200	추적중	0
+222	코산호	water	rock	0	0	0	0	0	0	fire	ice	electric	water	1214	118	156	110	추적중	0
+223	총어	water	0	223	224	0	0	0	0	fire	0	electric	0	749	127	69	70	추적중	0
+224	대포무노	water	0	223	224	0	0	0	0	fire	0	electric	0	2124	197	141	150	추적중	0
+225	딜리버드	ice	flying	0	0	0	0	0	0	dragon	fight	fire	electric	0	0	0	0	추적중	0
+226	만타인	water	flying	0	0	0	0	0	0	fire	fight	electric	electric	2032	148	260	130	추적중	0
+227	무장조	steel	flying	0	0	0	0	0	0	rock	fight	fight	electric	2032	148	260	130	추적중	0
+228	델빌	evil	fire	228	229	0	0	0	0	ghost	grass	fairy	water	1110	152	93	90	서울 중랑구 용마폭포공원	부산 기장군 아시아드 CC
+229	헬가	evil	fire	228	229	0	0	0	0	ghost	grass	fairy	water	2529	224	159	150	추적중	0
+230	킹드라	water	dragon	116	117	230	0	0	0	fire	dragon	electric	dragon	2424	194	194	150	추적중	0
+231	코코리	ground	0	231	232	0	0	0	0	electric	0	grass	0	1175	107	107	180	추적중	0
+232	코리갑	ground	0	231	232	0	0	0	0	electric	0	grass	0	3022	214	214	180	추적중	0
+233	폴리곤2	normal	0	0	0	0	0	0	0	0	0	fight	0	2546	198	183	170	추적중	0
+234	노라키	normal	0	0	0	0	0	0	0	0	0	fight	0	1988	192	132	146	추적중	0
+235	루브도	normal	0	0	0	0	0	0	0	0	0	fight	0	0	0	0	0	추적중	0
+236	배루키	fight	0	0	106	107	237	0	0	normal	0	flying	0	404	64	64	70	추적중	0
+237	카포에라	fight	0	0	237	0	0	0	0	normal	0	flying	0	1905	173	214	100	추적중	0
+238	뽀뽀라	ice	psycho	238	124	0	0	0	0	dragon	poison	fire	ghost	1230	153	116	90	추적중	0
+239	에레키드	electric	0	239	125	0	0	0	0	water	0	ground	0	1073	135	110	90	추적중	0
+240	마그비	fire	0	240	126	0	0	0	0	grass	0	water	0	1178	151	108	90	추적중	0
+241	밀탱크	normal	0	0	0	0	0	0	0	0	0	fight	0	2312	157	211	190	추적중	0
+242	해피너스	normal	0	113	0	0	0	0	0	0	0	fight	0	3219	129	229	510	추적중	0
+243	라이코	electric	water	0	0	0	0	0	0	electric	ground	water	grass	0	0	0	0	서울 성동구 응봉공원	0
+244	엔테이	fire	0	0	0	0	0	0	0	electric	0	water	grass	0	0	0	0	추적중	0
+245	스이쿤	water	0	0	0	0	0	0	0	grass	0	electric	grass	0	0	0	0	추적중	0
+246	애버라스	rock	ground	246	247	248	0	0	0	ice	electric	water	grass	904	115	93	100	추적중	0
+247	데기라스	rock	ground	246	247	248	0	0	0	electric	electric	water	grass	1608	155	133	140	추적중	0
+248	마기라스	rock	evil	246	247	248	0	0	0	ice	ghost	water	fairy	3670	251	212	200	추적중	0
