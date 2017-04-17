@@ -25,7 +25,15 @@ public class MemberVO {
 	private int point;
 	private Date regdate;
 	private String receive;
+	private int exp;
 	
+	
+	public int getExp() {
+		return exp;
+	}
+	public void setExp(int exp) {
+		this.exp = exp;
+	}
 	
 	public String getId() {
 		return id;
@@ -106,38 +114,4 @@ public class MemberVO {
 		this.receive = receive;
 	}
 	
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

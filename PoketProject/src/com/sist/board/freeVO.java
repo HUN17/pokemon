@@ -3,8 +3,11 @@ import java.util.Date;
 
 public class freeVO {   
 	private int no;
+	private String id;
 	private String name;
+	private int lev;
 	private String subject;
+
 	private String content;
 	private String pwd;
 	private Date regdate;
@@ -14,6 +17,12 @@ public class freeVO {
 	private int group_tab;
 	private int root;
 	private int depth;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public int getNo() {
 		return no;
 	}
@@ -25,6 +34,12 @@ public class freeVO {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public int getLev() {
+		return lev;
+	}
+	public void setLev(int lev) {
+		this.lev = lev;
 	}
 	public String getSubject() {
 		return subject;
@@ -86,6 +101,7 @@ public class freeVO {
 	public void setDepth(int depth) {
 		this.depth = depth;
 	}
+	
 	
 
 }

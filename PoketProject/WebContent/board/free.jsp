@@ -43,12 +43,13 @@
 	 	<img alt="커뮤니티" src="../image/board_image/po.png" width="1000" >
 		<p>
 		<table class="table table-hover" style="width: 70%" >
+			
 			<tr bgcolor="#f5f5f5">
-				<th width="10%" style="font-size: 13px;">번호</th>
-				<th width="45%" style="font-size: 13px;">제목</th>
-				<th width="15%" style="font-size: 13px;">이름</th>
-				<th width="20%" style="font-size: 13px;">작성일</th>
-				<th width="10%" style="font-size: 13px;">조회수</th>
+				<th width="10%" style="text-align: center; font-size: 13px;" >번호</th>
+				<th width="45%" style="text-align: center; font-size: 13px;">제목</th>
+				<th width="15%" style="text-align: center; font-size: 13px;">이름</th>
+				<th width="20%" style="text-align: center; font-size: 13px;">작성일</th>
+				<th width="10%" style="text-align: center; font-size: 13px;">조회수</th>
 			</tr>
 
 			<%
@@ -88,7 +89,26 @@
 							}
 						%>
 					</td>
-					<td width="15%" align="center"><%=vo.getName() %></td>
+					<td width="15%" align="center">
+					
+					<%if(vo.getLev()==1){ %>
+						<img alt="초급" src="../image/user_image/b1.png" width="15">
+					<%} %>
+					
+					<%if(vo.getLev()==2){ %>
+						<img alt="중급" src="../image/user_image/b2.png" width="15">
+					<%} %>
+					
+					<%if(vo.getLev()==3){ %>
+						<img alt="고급" src="../image/user_image/b3.png" width="15">
+					<%} %>
+					
+					<%if(vo.getLev()==4){ %>
+						<img alt="대급" src="../image/user_image/b4.png" width="15">
+					<%} %>
+					
+					<%=vo.getName() %>
+					</td>
 					<td width="20%" align="center"><%=vo.getRegdate().toString() %></td>
 					<td width="10%" align="center"><%=vo.getHit() %></td>
 				</tr>

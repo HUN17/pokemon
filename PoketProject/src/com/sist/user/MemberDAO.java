@@ -132,7 +132,7 @@ public class MemberDAO {
 	public void MemberInsert(MemberVO vo) {
 		try {
 			getConnection();
-			String sql = "INSERT INTO join_user VALUES(" + "?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO join_user VALUES(" + "?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());
@@ -145,8 +145,9 @@ public class MemberDAO {
 			ps.setString(8, vo.getEmail1());
 			ps.setString(9, vo.getBan());
 			ps.setInt(10, vo.getLev());
-			ps.setInt(11, vo.getPoint());
-			ps.setString(12, vo.getReceive());
+			ps.setInt(11, vo.getExp());
+			ps.setInt(12, vo.getPoint());
+			ps.setString(13, vo.getReceive());
 			ps.executeUpdate();
 
 		} catch (Exception ex) {
@@ -177,6 +178,7 @@ public class MemberDAO {
 	}
 	
 	public MemberVO getMember(String id) {
+		System.out.println(id);
 		MemberVO vo = new MemberVO();
 		try {
 			getConnection();
@@ -198,8 +200,9 @@ public class MemberDAO {
 			vo.setEmail1(rs.getString(8));
 			vo.setBan(rs.getString(9));
 			vo.setLev(rs.getInt(10));
-			vo.setPoint(rs.getInt(11));
-			vo.setReceive(rs.getString(12));
+			vo.setExp(rs.getInt(11));
+			vo.setPoint(rs.getInt(12));
+			vo.setReceive(rs.getString(13));
 			rs.close();
 			ps.close();
 			
@@ -254,6 +257,28 @@ public class MemberDAO {
 			disConnection();
 		}
 		
+	}
+	
+	public void levUp(MemberVO vo, int point) {
+		
+		try {
+			getConnection();
+			String sql = "UPDATE JOIN_USER SET point=?"
+					+ "WHERE id=?";
+			ps=conn.prepareStatement(sql);
+			
+			ps.setInt(1, vo.getPoint()+point);
+			ps.setString(2, vo.getId());		
+
+			ps.executeUpdate();
+			ps.close();
+
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		} finally {
+			disConnection();
+		}
+
 	}
 
 }

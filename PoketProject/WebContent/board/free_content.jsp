@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="com.sist.board.*"%>
+    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*"%>
 <%
 	String no = request.getParameter("no");
 	freeDAO dao = freeDAO.newInstance();
 	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
+	MemberDAO dao2 = MemberDAO.newInstance();
+	MemberVO vo2 = dao2.getMember(vo.getId());
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -26,9 +28,22 @@
 				$('#del').hide();
 				i=0;
 			}
-		});
+		});	
 	});
+	
+	function levup(){
+		<% dao2.levUp(vo2, 100);%>
+	}
+
 </script>
+<!-- 
+<script type="text/javascript">
+	    function open_pop2(detail){
+	        var url = '../book/detailBook1.jsp?detail='+detail;
+	        var set = "width=1050,height=650";
+	        window.open(url,'popupView',set); 
+	    }
+</script> -->
 
 </head>
 <body>
@@ -62,7 +77,12 @@
 		
 		<table class="table table-bordered" style="width: 60%">
 			<tr>
-				<td align="right">
+				<td align="left">
+				 <input type="button" value="추천"  class="btn btn-default" onclick="levup();">
+				</td>
+				
+				
+				<td align="right">		
 					<a href="main.jsp?mode=12&no=<%=no%>">
 						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
 						 <input type="button" value="답글쓰기"  class="btn btn-default">
@@ -75,6 +95,8 @@
 						<input type="button" value="목록" class="btn btn-default">
 					</a>
 				</td>
+				
+				
 					
 			</tr>
 			
