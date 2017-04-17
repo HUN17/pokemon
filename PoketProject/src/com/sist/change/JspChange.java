@@ -19,8 +19,9 @@ public class JspChange {
 			"../board/notice_content.jsp",	
 			"../board/notice_insert.jsp",			//15
 			"../board/notice_update.jsp",
-			"../board/notice_reply.jsp"
-			
+			"../board/notice_reply.jsp",
+			"../member/modify.jsp",
+			"../mypage/point.jsp"
 	};
 	
 	public static String change(int no){

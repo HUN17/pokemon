@@ -97,6 +97,10 @@
 		display: block !important;
 	}
 	
+	#mypage:HOVER .dropdown {
+		display: block !important;
+	}
+	
 	
 	<!-- 메인화면 게시판 -->
 	/*     #chatContent_board_mini{

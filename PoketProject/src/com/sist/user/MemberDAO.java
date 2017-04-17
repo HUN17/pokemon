@@ -132,7 +132,7 @@ public class MemberDAO {
 	public void MemberInsert(MemberVO vo) {
 		try {
 			getConnection();
-			String sql = "INSERT INTO join_user VALUES(" + "?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO join_user VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());
@@ -146,7 +146,6 @@ public class MemberDAO {
 			ps.setString(9, vo.getBan());
 			ps.setInt(10, vo.getExp());
 			ps.setInt(11, vo.getPoint());
-			ps.setString(12, vo.getReceive());
 			ps.executeUpdate();
 
 		} catch (Exception ex) {
@@ -199,7 +198,6 @@ public class MemberDAO {
 			vo.setBan(rs.getString(9));
 			vo.setExp(rs.getInt(10));
 			vo.setPoint(rs.getInt(11));
-			vo.setReceive(rs.getString(12));
 			rs.close();
 			ps.close();
 			
@@ -272,7 +270,7 @@ public class MemberDAO {
 
 			ps.executeUpdate();
 			ps.close();
-			System.out.println("성공");
+
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		} finally {

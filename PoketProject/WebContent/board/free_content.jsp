@@ -104,7 +104,7 @@
 			</tr>
 			
 			<tr id="del" style="display: none;">
-				<td align="right">
+				<td colspan="2" align="right">
 					<form action="../board/free_delete_ok.jsp" method="post">
 						비밀번호 : <input type="password" size="10" name="pwd">
 								<input type="hidden" name="no" value="<%=no%>">

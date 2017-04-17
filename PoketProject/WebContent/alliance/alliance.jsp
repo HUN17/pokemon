@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%
+	String name = (String)session.getAttribute("name");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +14,7 @@
       <!-- outer div -->
          <div id="aliHeader">
                <h1>제휴 사이트 정보</h1>
-               <h5>회원님께 유용한 사이트들을 모았습니다.</h5>
+               <h5><%=name %>님께 유용한 사이트들을 모았습니다.</h5>
          </div>
          <div style="width:100%; height:1300px;">
          <hr width="1000">
