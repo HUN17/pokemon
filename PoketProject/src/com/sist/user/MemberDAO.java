@@ -86,16 +86,19 @@ public class MemberDAO {
 		return result;
 	}
 
-	public String getLogData(String id) {
-		String result = "";
+	public MemberVO getLogData(String id) {
+		MemberVO result=new MemberVO();
 		try {
 			getConnection();
-			String sql = "SELECT nickname FROM join_user WHERE id=?";
+			String sql = "SELECT nickname,email,point FROM join_user WHERE id=?";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, id);
 			ResultSet rs = ps.executeQuery();
 			rs.next();
-			result = rs.getString(1);
+			result.setNickname(rs.getString(1));
+			result.setEmail(rs.getString(2));
+			result.setPoint(rs.getInt(3));
+			
 			rs.close();
 
 		} catch (Exception ex) {
@@ -277,6 +280,28 @@ public class MemberDAO {
 			disConnection();
 		}
 
+	}
+	
+	//포인트 차감
+	public void minusPoint(int point, String id){
+		try{
+			getConnection();
+			String sql = "UPDATE JOIN_USER SET point=point-? WHERE id=?";
+			
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, point);
+			ps.setString(2, id);
+			
+			ps.executeUpdate();
+			ps.close();
+			
+			System.out.println("minusPoint");
+			
+		}catch(Exception ex){
+			System.out.println("minusPoint()"+ex.getMessage());
+		}finally{
+			disConnection();
+		}
 	}
 
 }
