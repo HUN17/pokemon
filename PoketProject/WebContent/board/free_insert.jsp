@@ -14,6 +14,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <!-- <link rel="stylesheet" href="table.css" type="text/css"> -->
+
+<!-- SmartEditor를 사용하기 위해서 다음 js파일을 추가 (경로 확인) -->
+<script type="text/javascript" src="../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+
 </head>
 <body>
 	<center>
@@ -38,8 +42,18 @@
 				<tr>
 					<td width="20%" align="right">내용</td>
 					<td width="80%" align="left">
-						<textarea rows="10" cols="60" name="content" class="form-control" style="width: 60%" placeholder="내용을 입력하세요">
-						</textarea>
+						<!-- <textarea rows="10" cols="60" name="content" class="form-control" style="width: 60%" placeholder="내용을 입력하세요"> -->
+						<textarea name="content" id="ir1" rows="15" cols="40" style="width: 600px;" placeholder="내용을 입력하세요" ></textarea>
+						<script type="text/javascript">
+								var oEditors = [];
+								nhn.husky.EZCreator.createInIFrame({
+								    oAppRef: oEditors,
+								    elPlaceHolder: "ir1",
+								    sSkinURI: "../se2/SmartEditor2Skin.html",
+								    fCreator: "createSEditor2"
+								});
+						</script> 
+						<!-- </textarea> -->
 					</td>
 				</tr>
 				<tr>

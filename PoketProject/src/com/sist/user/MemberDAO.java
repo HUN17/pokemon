@@ -135,7 +135,8 @@ public class MemberDAO {
 	public void MemberInsert(MemberVO vo) {
 		try {
 			getConnection();
-			String sql = "INSERT INTO join_user VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO join_user VALUES(?,?,?,?,?,?,?,?,?)";
+			System.out.println(sql);
 
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());
@@ -145,10 +146,8 @@ public class MemberDAO {
 			ps.setString(5, vo.getPhone());
 			ps.setString(6, vo.getPhone1());
 			ps.setString(7, vo.getEmail());
-			ps.setString(8, vo.getEmail1());
-			ps.setString(9, vo.getBan());
-			ps.setInt(10, vo.getExp());
-			ps.setInt(11, vo.getPoint());
+			ps.setInt(8, vo.getExp());
+			ps.setInt(9, vo.getPoint());
 			ps.executeUpdate();
 
 		} catch (Exception ex) {
@@ -197,10 +196,8 @@ public class MemberDAO {
 			vo.setPhone(rs.getString(5));
 			vo.setPhone1(rs.getString(6));
 			vo.setEmail(rs.getString(7));
-			vo.setEmail1(rs.getString(8));
-			vo.setBan(rs.getString(9));
-			vo.setExp(rs.getInt(10));
-			vo.setPoint(rs.getInt(11));
+			vo.setExp(rs.getInt(8));
+			vo.setPoint(rs.getInt(9));
 			rs.close();
 			ps.close();
 			
@@ -229,7 +226,7 @@ public class MemberDAO {
 //		ps=conn.prepareStatement(sql);
 		
 		String sql = "UPDATE JOIN_USER "
-			+ "SET PWD=?,NICKNAME=?,GENDER=?,PHONE=?,PHONE1=?,EMAIL=?,EMAIL1=? "
+			+ "SET PWD=?,NICKNAME=?,GENDER=?,PHONE=?,PHONE1=?,EMAIL=? "
 			+ "WHERE id=?" ;
 		
 		System.out.println(sql);
@@ -241,7 +238,6 @@ public class MemberDAO {
 		ps.setString(4, vo.getPhone());
 		ps.setString(5, vo.getPhone1());
 		ps.setString(6, vo.getEmail());
-		ps.setString(7, vo.getEmail1());
 		ps.setString(8, vo.getId());
 		
 		ps.executeUpdate();
@@ -273,7 +269,7 @@ public class MemberDAO {
 
 			ps.executeUpdate();
 			ps.close();
-			System.out.println("성공");
+
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		} finally {
@@ -283,7 +279,8 @@ public class MemberDAO {
 	}
 	
 	//포인트 차감
-	public void minusPoint(int point, String id){
+	public MemberVO minusPoint(int point, String id){	
+		MemberVO vo = new MemberVO();
 		try{
 			getConnection();
 			String sql = "UPDATE JOIN_USER SET point=point-? WHERE id=?";
@@ -291,8 +288,18 @@ public class MemberDAO {
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, point);
 			ps.setString(2, id);
-			
 			ps.executeUpdate();
+			ps.close();
+			
+			sql = "SELECT id,email,point FROM JOIN_USER WHERE id=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ResultSet rs = ps.executeQuery();
+			rs.next();
+			vo.setId(rs.getString(1));
+			vo.setEmail(rs.getString(2));
+			vo.setPoint(rs.getInt(3));
+			rs.close();
 			ps.close();
 			
 			System.out.println("minusPoint");
@@ -302,6 +309,7 @@ public class MemberDAO {
 		}finally{
 			disConnection();
 		}
+		return vo;
 	}
 
 }

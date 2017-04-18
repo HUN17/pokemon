@@ -75,6 +75,8 @@ public class poketmonDAO {
 				vo.setAtt(rs.getString(16));
 				vo.setDef(rs.getString(17));
 				vo.setHp(rs.getString(18));
+				vo.setGps1(rs.getString(19));
+				vo.setGps2(rs.getString(20));
 				list.add(vo);	
 			}
 		} catch (Exception ex) {
@@ -113,6 +115,9 @@ public class poketmonDAO {
 				vo.setAtt(rs.getString(16));
 				vo.setDef(rs.getString(17));
 				vo.setHp(rs.getString(18));
+				vo.setGps1(rs.getString(19));
+				vo.setGps2(rs.getString(20));
+				
 				list.add(vo);	
 			}
 		} catch (Exception ex) {
@@ -153,6 +158,8 @@ public class poketmonDAO {
 				vo.setAtt(rs.getString(16));
 				vo.setDef(rs.getString(17));
 				vo.setHp(rs.getString(18));
+				vo.setGps1(rs.getString(19));
+				vo.setGps2(rs.getString(20));
 				list.add(vo);	
 			}
 		} catch (Exception ex) {
@@ -191,6 +198,8 @@ public class poketmonDAO {
 				vo.setAtt(rs.getString(16));
 				vo.setDef(rs.getString(17));
 				vo.setHp(rs.getString(18));
+				vo.setGps1(rs.getString(19));
+				vo.setGps2(rs.getString(20));
 				list.add(vo);	
 			}
 		} catch (Exception ex) {
@@ -205,7 +214,7 @@ public class poketmonDAO {
 			poketmonVO vo = new poketmonVO();
 		try {
 			getConnection();
-			String sql="SELECT no,name,rev1,rev2,rev3,rev4,rev5,rev6,type1,type2,s_type1,s_type2,l_type1,l_type2,cp,att,def,hp FROM p_table WHERE no=?";
+			String sql="SELECT no,name,rev1,rev2,rev3,rev4,rev5,rev6,type1,type2,s_type1,s_type2,l_type1,l_type2,cp,att,def,hp,gps1,gps2 FROM p_table WHERE no=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, no);
 			ResultSet rs = ps.executeQuery();
@@ -229,6 +238,8 @@ public class poketmonDAO {
 			vo.setAtt(rs.getString(16));
 			vo.setDef(rs.getString(17));
 			vo.setHp(rs.getString(18));
+			vo.setGps1(rs.getString(19));
+			vo.setGps2(rs.getString(20));
 	
 			rs.close();
 			

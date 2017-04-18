@@ -54,7 +54,7 @@
             <tr>
                 <td id="title">¿Ã∏ﬁ¿œ</td>
                 <td>
-                    <%=MemberVO.getEmail() %>@<%=MemberVO.getEmail1() %>
+                    <%=MemberVO.getEmail()%>
                 </td>
             </tr>
                     

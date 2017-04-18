@@ -90,6 +90,7 @@
 						%>
 					</td>
 					<td width="15%" align="center">
+					<% %>
 					
 					<%if((vo.getExp()/1000)==1){ %>
 						<img alt="УЪБо" src="../image/user_image/b1.png" width="15">

@@ -19,7 +19,7 @@
 		
 		//30초 이상 접속 안한 경우 접속자 리스트에서 제거
 		//1. 브라우저를 닫은 경우
-		if((System.currentTimeMillis()-Long.parseLong(String.valueOf(tmpMap.get("accessTime")))) > 30000){
+		if((System.currentTimeMillis()-Long.parseLong(String.valueOf(tmpMap.get("accessTime")))) > 10000){
 			System.out.println("브라우저 닫은 유저 제거");
 			accessUserCount.remove(i);
 		}

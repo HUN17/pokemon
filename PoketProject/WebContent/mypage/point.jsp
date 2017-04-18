@@ -1,6 +1,8 @@
+<%@page import="com.sist.user.MemberVO"%>
 <%@page import="com.sist.user.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	MemberDAO dao = new MemberDAO();
 	
@@ -8,16 +10,20 @@
 	String name = (String)session.getAttribute("name");
 	String email = (String)session.getAttribute("email");
 	int point = (int)session.getAttribute("point");
+	//int point = Integer.parseInt(request.getParameter("point"));
 	int a = 10000;
 	int b = 50000;
 	int c = 100000;
+	System.out.println(point);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
+	$('.exchange').click(
 	function compare(){	
 		<% 
 		if (point<a){
@@ -29,7 +35,10 @@
 		if(confirm("포인트를 교환하시겠습니까?")){
 			alert("포인트를 교환합니다.");
 		<%
-			dao.minusPoint(a,id);
+			MemberVO pvo = new MemberVO();
+			pvo = dao.minusPoint(a,id);
+			System.out.println(pvo.getId());
+			System.out.println(pvo.getPoint());
 		%>	
 		}else{
 			history(-1);
@@ -37,7 +46,7 @@
 		<%
 		};
 		%>
-};
+});
 </script>
 </head>
 <body>
