@@ -8,8 +8,8 @@
 		request.setCharacterEncoding("EUC-KR");
 		String no = request.getParameter("detail");
 		poketmonDAO dao = poketmonDAO.newInstance();
-		/* poketmonVO vo = dao.detailData(Integer.parseInt(no)); */
-		 poketmonVO vo = dao.detailData(1);  
+		poketmonVO vo = dao.detailData(Integer.parseInt(no));
+		/* //poketmonVO vo = dao.detailData(1);  // */
 %>
 <c:set var="vo" value="<%=vo %>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -21,20 +21,34 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script type="text/javascript" src="../main/js/jquery.bounce.js"></script>
+
+
 <!-- 
 <link href="www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> 
  -->
 <script type="text/javascript">
 	$(function(){
 		$('.bounce').bounce();
-	})
+});
 </script>
-
-
+<script type="text/javascript">
+	function send(number) {
+		number = number+1; 
+		location.href="../book/detailBook1.jsp?detail="+number;
+	};
+	
+	function send2(number) {
+		number = number-1; 
+		location.href="../book/detailBook1.jsp?detail="+number;
+	};
+</script>
 </head>
 <body>
 	<center>
 		<div id="rootDiv">
+			
+			
+			
 				<div id="div0_0">
 					<div id="div1">
 						<div>
@@ -267,16 +281,13 @@
 							<c:if test="${vo.gps2 =='0' }">
 							</c:if>
 				
-						</div>
-						
-
-						
-
 					</div>
+				</div>	
 			</div>
 			
-			
-			
+
+
+	
 			<div id="div0_1">
 				<div id="div3">
 					<div class="div3_1">
@@ -318,6 +329,14 @@
 				</div>
 			</div>
 		</div>
+			<div class="left_button" >
+			<span onclick="send2(${vo.no});"><<<</span>
+			</div>
+			<div class="right_button" >
+			<span onclick="send(${vo.no});">>>></span>
+			</div>	
+				
 	</center>
+
 </body>
 </html>
