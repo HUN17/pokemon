@@ -8,6 +8,9 @@ public class replyVO {
 	private String name;
 	private Date date;
 	private int p_no;
+	private String pwd;
+	private String id;
+	
 	public int getNo() {
 		return no;
 	}
@@ -37,6 +40,18 @@ public class replyVO {
 	}
 	public void setP_no(int p_no) {
 		this.p_no = p_no;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	

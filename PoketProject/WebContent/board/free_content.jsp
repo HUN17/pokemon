@@ -2,12 +2,13 @@
     pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*,java.util.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
+	request.setCharacterEncoding("EUC-KR");
 	String no = request.getParameter("no");
 	freeDAO dao = freeDAO.newInstance();
 	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
 	replyDAO dao3 = replyDAO.newInstance();
 	List<replyVO> list = dao3.getList(Integer.parseInt(no));
-	System.out.println(vo.getNo());
+	String str = (String)session.getAttribute("id");
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,14 +33,25 @@
 			}
 		});	
 	});
-	
+	var p=0;
+	$(function(){
+		$('#up_del_btn').click(function(){
+			if(p==0){
+				$('#up_del').show();
+				p=1;
+			}else{
+				$('#up_del').hide();
+				p=0;
+			}
+		});	
+	});
 	function levup(){
 		<% 
 		MemberDAO dao2 = MemberDAO.newInstance();
 		MemberVO vo2 = dao2.getMember(vo.getId());
 		dao2.levUp(vo2, 100,20);
 		%>
-	}
+	};
 
 </script>
 </head>
@@ -104,27 +116,45 @@
 			<table  class="table table-bordered" style="width: 60%" border="1">
 				<tr>
 					<td width="85%">
-						<textarea name="content" rows="5" cols="100"></textarea>
+						<textarea name="content" rows="3" cols="100"></textarea>
 					</td>
+					
 					<td width="15%">
+						<%if(session.getAttribute("name") != null){ %>
 						<input type="hidden" name="c_no" value="<%=vo.getNo() %>">
 						<input type="hidden" name="name" value="<%=session.getAttribute("name") %>">
+						Pwd : <input type="password" name="c_pwd" size="8"></br>
 						<input type="submit" value="등록" width="50" height="40">
+						<% } else { %>
+						로그인 해주세요
+						<a href="main.jsp?mode=7"><input type="button" value="Login"></a>
+						<% } %>
 					</td>
 				</tr>
 				</table>
 		</form>
+		
 				<table  class="table table-bordered" style="width: 60%" border="1">
 				<c:forEach var="vo" items="<%=list %>">
 					<tr>
 						<td width="85%">
-							${vo.content }
+							<textarea name="content" rows="3" cols="100" >${vo.content }</textarea>
 						</td>
 						<td width="15%">
 							${vo.name }</br>
 							${vo.date}</br>
-							<input type="button" value="수정">
-							<input type="button" value="삭제">
+							<input type="button" id="up_del_btn" value="수정/삭제">
+						</td>
+					</tr>
+					<tr id="up_del" style="display: none;">
+						<td colspan="2" align="right">
+						<form action="../board/re_delete.jsp" method="post">
+							Pwd : <input type="password" size="10" name="d_pwd">
+							<input type="hidden" name="d_id" value="<%=str%>">
+							<input type="hidden" name="d_no" value="${vo.no }">
+							<input type="hidden" name="content_no" value="<%=vo.getNo()%>">
+							<input type="submit" value="삭제">
+						</form>
 						</td>
 					</tr>
 				</c:forEach>

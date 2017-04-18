@@ -50,7 +50,7 @@ public class replyDAO {
 		List<replyVO> list=new ArrayList<>();
 		try{
 			getConnection();
-			String sql = "SELECT recontent.content, recontent.name, recontent.p_no "
+			String sql = "SELECT recontent.no, recontent.id, recontent.content, recontent.name, recontent.p_no "
 					+ "FROM recontent, pokeBoard "
 					+ "WHERE pokeBoard.no = ? AND recontent.p_no = ?";
 //			String sql = "select no, content, name, p_no from recontent";
@@ -60,9 +60,11 @@ public class replyDAO {
 			ResultSet rs=ps.executeQuery();
 			while(rs.next()){
 				replyVO vo = new replyVO();
-				vo.setContent(rs.getString(1));
-				vo.setName(rs.getString(2));
-				vo.setP_no(rs.getInt(3));
+				vo.setNo(rs.getInt(1));
+				vo.setId(rs.getString(2));
+				vo.setContent(rs.getString(3));
+				vo.setName(rs.getString(4));
+				vo.setP_no(rs.getInt(5));
 				list.add(vo);
 			}       
 			rs.close();
@@ -78,11 +80,55 @@ public class replyDAO {
 	public void reInsert(replyVO vo) {
 		try {
 			getConnection();
-			String sql = "INSERT INTO recontent VALUES (?,?,sysdate,?)";
+			String sql = "INSERT INTO  recontent VALUES (seq_re.nextval, ?, ?, ?, sysdate, ?, ?)";
 			ps=conn.prepareStatement(sql);
-			ps.setString(1, vo.getContent());
-			ps.setString(2, vo.getName());
-			ps.setInt(3, vo.getP_no());
+			ps.setString(1, vo.getId());
+			ps.setString(2, vo.getContent());
+			ps.setString(3, vo.getName());
+			ps.setInt(4, vo.getP_no());
+			ps.setString(5, vo.getPwd());
+			
+			ps.executeUpdate();
+			ps.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}finally{
+			disConnection();
+		}
+	}
+	
+	public replyVO findReply(int no) {
+		replyVO vo = new replyVO();
+		try {
+			getConnection();
+			String sql = "SELECT no,id,pwd FROM recontent WHERE no=?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, no);
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			
+			vo.setNo(rs.getInt(1));
+			vo.setId(rs.getString(2));
+			vo.setPwd(rs.getString(3));
+			
+			rs.close();
+			ps.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}finally{
+			disConnection();
+		}
+		return vo;
+	}
+	
+	public void reDelete(int no) {
+		try {
+			getConnection();
+			String sql = "DELETE FROM recontent WHERE no=?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, no);
 			
 			ps.executeUpdate();
 			ps.close();

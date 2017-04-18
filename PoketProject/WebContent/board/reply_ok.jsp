@@ -1,21 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.sist.board.*"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR" import="com.sist.board.*"%>
 <%
-	request.setCharacterEncoding("UTF-8");
+	request.setCharacterEncoding("EUC-KR");
 	String content = request.getParameter("content");
 	String name = request.getParameter("name");
 	String no = request.getParameter("c_no");
+	String pwd = request.getParameter("c_pwd");
 	
 	replyVO vo = new replyVO();
 	vo.setContent(content);
 	vo.setName(name);
 	vo.setP_no(Integer.parseInt(no));
+	vo.setPwd(pwd);
 	replyDAO dao = replyDAO.newInstance();
 	dao.reInsert(vo);
-	
-	System.out.println(vo.getContent());
-	System.out.println(vo.getName());
-	System.out.println(vo.getP_no());
-	
-	
+
+	response.sendRedirect("../main/main.jsp?mode=9&no="+no);
 %>
