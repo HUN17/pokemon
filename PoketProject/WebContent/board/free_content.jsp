@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*"%>
+    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*,java.util.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 	String no = request.getParameter("no");
 	freeDAO dao = freeDAO.newInstance();
 	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
-	
+	replyDAO dao3 = replyDAO.newInstance();
+	List<replyVO> list = dao3.getList(Integer.parseInt(no));
+	System.out.println(vo.getNo());
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -39,15 +42,6 @@
 	}
 
 </script>
-<!-- 
-<script type="text/javascript">
-	    function open_pop2(detail){
-	        var url = '../book/detailBook1.jsp?detail='+detail;
-	        var set = "width=1050,height=650";
-	        window.open(url,'popupView',set); 
-	    }
-</script> -->
-
 </head>
 <body>
 	<center>
@@ -86,10 +80,6 @@
 				
 				
 				<td align="right">		
-					<a href="main.jsp?mode=12&no=<%=no%>">
-						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
-						 <input type="button" value="답글쓰기"  class="btn btn-default">
-					</a>
 					<a href="main.jsp?mode=11&no=<%=no%>">
 						<input type="button" value="수정" id="WriteBtn" class="btn btn-default">
 					</a>
@@ -98,11 +88,7 @@
 						<input type="button" value="목록" class="btn btn-default">
 					</a>
 				</td>
-				
-				
-					
 			</tr>
-			
 			<tr id="del" style="display: none;">
 				<td colspan="2" align="right">
 					<form action="../board/free_delete_ok.jsp" method="post">
@@ -113,6 +99,36 @@
 				</td>
 			</tr>
 		</table>
+		
+		<form action="../board/reply_ok.jsp" method="post">
+			<table  class="table table-bordered" style="width: 60%" border="1">
+				<tr>
+					<td width="85%">
+						<textarea name="content" rows="5" cols="100"></textarea>
+					</td>
+					<td width="15%">
+						<input type="hidden" name="c_no" value="<%=vo.getNo() %>">
+						<input type="hidden" name="name" value="<%=session.getAttribute("name") %>">
+						<input type="submit" value="등록" width="50" height="40">
+					</td>
+				</tr>
+				</table>
+		</form>
+				<table  class="table table-bordered" style="width: 60%" border="1">
+				<c:forEach var="vo" items="<%=list %>">
+					<tr>
+						<td width="85%">
+							${vo.content }
+						</td>
+						<td width="15%">
+							${vo.name }</br>
+							${vo.date}</br>
+							<input type="button" value="수정">
+							<input type="button" value="삭제">
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
 		</center>
 </body>
 </html>

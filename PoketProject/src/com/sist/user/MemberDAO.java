@@ -254,10 +254,8 @@ public class MemberDAO {
 		
 		try {
 			getConnection();
-			System.out.println("test1");
 			String sql = "UPDATE JOIN_USER SET point=?, exp=?"
 					+ "WHERE id=?";
-			System.out.println("test2");
 			ps=conn.prepareStatement(sql);
 			
 			ps.setInt(1, vo.getPoint()+point);

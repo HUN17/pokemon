@@ -281,9 +281,8 @@ public class freeDAO {
 	public void boardInsert(freeVO vo){
 		try{
 			getConnection();
-			String sql="INSERT INTO pokeBoard(no,name,id,Exp,subject,content,pwd,group_id) "
-					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,"
-					+"(SELECT NVL(MAX(group_id)+1,1) FROM pokeBoard))";
+			String sql="INSERT INTO pokeBoard(no,name,id,Exp,subject,content,pwd) "
+					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
 			ps.setString(2, vo.getId());

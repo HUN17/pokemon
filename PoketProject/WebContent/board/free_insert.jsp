@@ -42,9 +42,11 @@
 				<tr>
 					<td width="20%" align="right">내용</td>
 					<td width="80%" align="left">
-						<!-- <textarea rows="10" cols="60" name="content" class="form-control" style="width: 60%" placeholder="내용을 입력하세요"> -->
-						<textarea name="content" id="ir1" rows="15" cols="40" style="width: 600px;" placeholder="내용을 입력하세요" ></textarea>
-						<script type="text/javascript">
+						 <textarea rows="10" cols="60" name="content" class="form-control" style="width: 60%" placeholder="내용을 입력하세요"> 
+						</textarea>
+						<!-- <textarea name="content" id="ir1" rows="15" cols="40" style="width: 600px;" placeholder="내용을 입력하세요" > -->
+						
+						<!-- <script type="text/javascript">
 								var oEditors = [];
 								nhn.husky.EZCreator.createInIFrame({
 								    oAppRef: oEditors,
@@ -52,8 +54,7 @@
 								    sSkinURI: "../se2/SmartEditor2Skin.html",
 								    fCreator: "createSEditor2"
 								});
-						</script> 
-						<!-- </textarea> -->
+						</script> -->
 					</td>
 				</tr>
 				<tr>
