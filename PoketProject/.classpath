@@ -7,5 +7,7 @@
 	<classpathentry kind="lib" path="C:/Users/sue_z/git/PoketProject/PoketProject/WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/sue_z/git/PoketProject/PoketProject/WebContent/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/sue_z/git/PoketProject/PoketProject/WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sue_z/git/PoketProject/PoketProject/WebContent/WEB-INF/lib/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sue_z/git/PoketProject/PoketProject/WebContent/WEB-INF/lib/javax.mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -25,9 +25,11 @@
 </head>
 <body>
 	<div id="chatHeader" >
-		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
-		자유게시판
-		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
+		<a id="freeboard" href="main.jsp?mode=5">
+			<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
+			자유게시판
+			<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
+		</a>
 	</div>
 	
 	<table id="boardTable_mini" >
