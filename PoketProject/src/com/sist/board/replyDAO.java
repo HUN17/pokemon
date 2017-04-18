@@ -64,7 +64,7 @@ public class replyDAO {
 				vo.setName(rs.getString(2));
 				vo.setP_no(rs.getInt(3));
 				list.add(vo);
-			}
+			}       
 			rs.close();
 			ps.close();
 		}catch(Exception ex){
