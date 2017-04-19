@@ -9,6 +9,8 @@
 		String no = request.getParameter("detail");
 		poketmonDAO dao = poketmonDAO.newInstance();
 		poketmonVO vo = dao.detailData(Integer.parseInt(no));
+
+		/* //poketmonVO vo = dao.detailData(1);  // */
 %>
 <c:set var="vo" value="<%=vo %>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
