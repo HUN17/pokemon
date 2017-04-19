@@ -1,10 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*"%>
+    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*,java.util.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
+	request.setCharacterEncoding("EUC-KR");
 	String no = request.getParameter("no");
 	freeDAO dao = freeDAO.newInstance();
 	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
-	
+	replyDAO dao3 = replyDAO.newInstance();
+	List<replyVO> list = dao3.getList(Integer.parseInt(no));
+	String str = (String)session.getAttribute("id");
+	int g = 0;
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -29,25 +34,39 @@
 			}
 		});	
 	});
-	
+/* 	var p=0;
+	$(function(){
+		$('#up_del_btn').click(function(){
+			var buttonid = $(this).attr('my_value');
+			console.log(buttonid)
+			if(p==0){
+				$('#del'+buttonid).show();
+				p=1;
+			}else{
+				$('#del'+buttonid).hide();
+				p=0;
+			}
+		});	
+	}); */
+	var p = 0;
+	function test01(c) {
+		if(p==0){
+			$('#del'+c).show();
+			p=1;
+		}else{
+			$('#del'+c).hide();
+			p=0;
+		}
+	}
 	function levup(){
 		<% 
 		MemberDAO dao2 = MemberDAO.newInstance();
 		MemberVO vo2 = dao2.getMember(vo.getId());
 		dao2.levUp(vo2, 100,20);
 		%>
-	}
+	};
 
 </script>
-<!-- 
-<script type="text/javascript">
-	    function open_pop2(detail){
-	        var url = '../book/detailBook1.jsp?detail='+detail;
-	        var set = "width=1050,height=650";
-	        window.open(url,'popupView',set); 
-	    }
-</script> -->
-
 </head>
 <body>
 	<center>
@@ -86,10 +105,6 @@
 				
 				
 				<td align="right">		
-					<a href="main.jsp?mode=12&no=<%=no%>">
-						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
-						 <input type="button" value="답글쓰기"  class="btn btn-default">
-					</a>
 					<a href="main.jsp?mode=11&no=<%=no%>">
 						<input type="button" value="수정" id="WriteBtn" class="btn btn-default">
 					</a>
@@ -98,11 +113,7 @@
 						<input type="button" value="목록" class="btn btn-default">
 					</a>
 				</td>
-				
-				
-					
 			</tr>
-			
 			<tr id="del" style="display: none;">
 				<td colspan="2" align="right">
 					<form action="../board/free_delete_ok.jsp" method="post">
@@ -113,6 +124,60 @@
 				</td>
 			</tr>
 		</table>
+		
+		<form action="../board/reply_ok.jsp" method="post">
+			<table  class="table table-bordered" style="width: 60%" border="1">
+				<tr>
+					<td width="85%">
+						<textarea name="content" rows="3" cols="100"></textarea>
+					</td>
+					
+					<td width="15%">
+						<%if(session.getAttribute("name") != null){ %>
+						<input type="hidden" name="c_no" value="<%=vo.getNo() %>">
+						<input type="hidden" name="name" value="<%=session.getAttribute("name") %>">
+						<input type="hidden" name="c_id" value="<%=session.getAttribute("id") %>">
+						Pwd : <input type="password" name="c_pwd" size="8"></br>
+						<input type="submit" value="등록" width="50" height="40">
+						<% } else { %>
+						로그인 해주세요
+						<a href="main.jsp?mode=7"><input type="button" value="Login"></a>
+						<% } %>
+					</td>
+				</tr>
+				</table>
+		</form>
+		
+				<table  class="table table-bordered" style="width: 60%" border="1">
+				<c:forEach var="vo" items="<%=list %>">
+					<tr>
+						<td width="85%">
+							<textarea name="content" rows="3" cols="100" >${vo.content }</textarea>
+						</td>
+						<td width="15%">
+							${vo.name }</br>
+							${vo.date}</br>
+							<%-- <input type="button" id="up_del_btn" value="수정/삭제" my_value="<%=g%>"> --%>
+							<input type="button" id="up_del_btn" value="수정/삭제" onclick="test01(<%=g%>);">
+						</td>
+					</tr>
+					
+					<tr id="del<%=g%>" style="display: none;">
+						<td colspan="2" align="right">
+							<form action="../board/re_delete.jsp" method="post" >
+							Pwd : <input type="password" size="10" name="d_pwd">
+							<input type="hidden" name="d_id" value="<%=str%>">
+							<input type="hidden" name="d_no" value="${vo.no }">
+							<input type="hidden" name="content_no" value="<%=vo.getNo()%>">
+							<input type="submit" value="삭제">
+							</form>
+						</td>
+					</tr>
+					<% System.out.print(g); %>
+					<% g = g+1 ;%>
+					
+				</c:forEach>
+			</table>
 		</center>
 </body>
 </html>
