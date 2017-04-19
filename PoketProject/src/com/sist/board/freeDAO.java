@@ -452,7 +452,7 @@ public class freeDAO {
 		List<freeVO> list = new ArrayList<>();
 		try{
 			getConnection();
-			String sql="SELECT no,subject,name,exp,regdate,hit FROM pokeBoard ORDER BY b_like DESC, no ASC";
+			String sql="SELECT no,subject,name,exp,regdate,hit,exp FROM pokeBoard ORDER BY b_like DESC, no ASC";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 
@@ -465,6 +465,7 @@ public class freeDAO {
 				vo.setExp(rs.getInt(4));
 				vo.setRegdate(rs.getDate(5));
 				vo.setHit(rs.getInt(6));
+				vo.setExp(rs.getInt(7));
 				list.add(vo);
 				rs.next();
 			}
