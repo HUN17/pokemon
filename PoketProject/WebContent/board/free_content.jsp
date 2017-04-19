@@ -9,6 +9,7 @@
 	replyDAO dao3 = replyDAO.newInstance();
 	List<replyVO> list = dao3.getList(Integer.parseInt(no));
 	String str = (String)session.getAttribute("id");
+	int g = 0;
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,11 +37,13 @@
 	var p=0;
 	$(function(){
 		$('#up_del_btn').click(function(){
+			var buttonid = $(this).attr('my_value');
+			console.log(buttonid)
 			if(p==0){
-				$('#up_del').show();
+				$('#del'+buttonid).show();
 				p=1;
 			}else{
-				$('#up_del').hide();
+				$('#del'+buttonid).hide();
 				p=0;
 			}
 		});	
@@ -143,20 +146,23 @@
 						<td width="15%">
 							${vo.name }</br>
 							${vo.date}</br>
-							<input type="button" id="up_del_btn" value="수정/삭제">
+							<input type="button" id="up_del_btn" value="수정/삭제" my_value="<%=g%>">
 						</td>
 					</tr>
-					<tr id="up_del" style="display: none;">
+					
+					<tr id="del<%=g%>" style="display: none;">
 						<td colspan="2" align="right">
-						<form action="../board/re_delete.jsp" method="post">
+							<form action="../board/re_delete.jsp" method="post" >
 							Pwd : <input type="password" size="10" name="d_pwd">
 							<input type="hidden" name="d_id" value="<%=str%>">
 							<input type="hidden" name="d_no" value="${vo.no }">
 							<input type="hidden" name="content_no" value="<%=vo.getNo()%>">
 							<input type="submit" value="삭제">
-						</form>
+							</form>
 						</td>
 					</tr>
+					
+					<% g = g+1 ;%>
 				</c:forEach>
 			</table>
 		</center>
