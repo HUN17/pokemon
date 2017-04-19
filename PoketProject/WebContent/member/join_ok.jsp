@@ -33,8 +33,9 @@
 	MemberDAO dao=MemberDAO.newInstance();
 	dao.MemberInsert(vo);
 	//페이지 이동
-	//response.sendRedirect("../main/main.jsp");
+	response.sendRedirect("../main/main.jsp");
 	
 	//response.sendRedirect("../main/main.jsp?mode=5");
-	response.sendRedirect("result_join.jsp");
+	/* response.sendRedirect("result_join.jsp"); */
+	
 %>

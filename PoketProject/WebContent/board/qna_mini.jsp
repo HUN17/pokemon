@@ -1,17 +1,15 @@
-<%@page import="com.sistautodb.dao.PokemonVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ page import="java.util.*"%>
-<%@ page import="com.sist.board.*" %>
+    pageEncoding="EUC-KR" import="com.sist.board.*,java.util.*"%>
 <%@page import="java.text.SimpleDateFormat"%>
-    <%
-    	freeVO vo = new freeVO();
-    	freeDAO dao = new freeDAO();
-    	List<freeVO> list = dao.freeMiniData(1);
-    %>
+<%
+	qnaVO vo = new qnaVO();
+	qnaDAO dao = new qnaDAO();
+	List<qnaVO> list = dao.qnaMiniData(1);
+%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="list" value="<%=list %>"></c:set>
+<c:set var="list" value="<%=list %>"></c:set>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
@@ -26,7 +24,7 @@
 <body>
 	<div id="chatHeader" >
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
-		자유게시판
+		질문게시판
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 	</div>
 	

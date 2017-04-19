@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*"%>
+    pageEncoding="EUC-KR" import="com.sist.user.*,com.sist.board.*"%>
 <%
 	String no = request.getParameter("no");
-	freeDAO dao = freeDAO.newInstance();
-	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
+	qnaDAO dao = qnaDAO.newInstance();
+	qnaVO vo =dao.qboardContent(Integer.parseInt(no), 1);
 	
-%>    
+	
+%>      
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,7 +16,6 @@
 <!-- BootStrap CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 	var i=0;
@@ -39,15 +40,6 @@
 	}
 
 </script>
-<!-- 
-<script type="text/javascript">
-	    function open_pop2(detail){
-	        var url = '../book/detailBook1.jsp?detail='+detail;
-	        var set = "width=1050,height=650";
-	        window.open(url,'popupView',set); 
-	    }
-</script> -->
-
 </head>
 <body>
 	<center>
@@ -90,11 +82,11 @@
 						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
 						 <input type="button" value="답글쓰기"  class="btn btn-default">
 					</a>
-					<a href="main.jsp?mode=11&no=<%=no%>">
+					<a href="main.jsp?mode=23&no=<%=no%>">
 						<input type="button" value="수정" id="WriteBtn" class="btn btn-default">
 					</a>
 					<input type="button" value="삭제" id="delBtn" class="btn btn-default">
-					<a href="main.jsp?mode=5">
+					<a href="main.jsp?mode=4">
 						<input type="button" value="목록" class="btn btn-default">
 					</a>
 				</td>
@@ -105,7 +97,7 @@
 			
 			<tr id="del" style="display: none;">
 				<td colspan="2" align="right">
-					<form action="../board/free_delete_ok.jsp" method="post">
+					<form action="../board/qna_delete_ok.jsp" method="post">
 						비밀번호 : <input type="password" size="10" name="pwd">
 								<input type="hidden" name="no" value="<%=no%>">
 						<input type="submit" value="삭제">

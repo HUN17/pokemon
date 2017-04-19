@@ -88,7 +88,7 @@
 						
 						<!-- 포켓몬 사진 div -->
  				<c:set var="list" value="<%=list %>"></c:set>
-						<div class="owl-carousel owl-theme" style="width: 1200px; height: 300px;">
+						<div class="owl-carousel owl-theme" style="width: 1200px; height: 200px;">
 						    <c:forEach var="vo" items="${list}" >
 						    	<div class="item" style="width: 150px; border: 3px solid #F6F6F6; border-radius: 10px;" onclick="open_pop2(${vo.no})">
 						    		<div>
@@ -118,7 +118,7 @@
 						
 						<!-- 게시판1  div -->
 						<div style="width: 610px; height: 370px; float: left; margin: 10px 15px 15px 25px;">		
-							<jsp:include page="../board/free_mini.jsp"></jsp:include>
+							<jsp:include page="../board/notice_mini.jsp"></jsp:include>
 						</div>		<!-- 게시판1 div -->
 						
 						<!-- 게시판2  div -->
@@ -128,7 +128,7 @@
 		
 						<!-- 게시판3 아래 div -->
 						<div style="width: 610px; height: 370px;  float: left; margin: 15px 15px 15px 25px;">		
-							<jsp:include page="../board/free_mini.jsp"></jsp:include>
+							<jsp:include page="../board/qna_mini.jsp"></jsp:include>
 						</div>		<!-- 게시판3 아래 div -->
 						
 						<!-- 게시판4 아래 div -->
@@ -161,7 +161,7 @@
 								
 								
 							</table>  --%>
-								<jsp:include page="../board/free_mini.jsp"></jsp:include>
+								<jsp:include page="../board/tip_mini.jsp"></jsp:include>
 
 						</div>		<!-- 게시판4 아래 div -->
 					</div>

@@ -12,7 +12,6 @@
 	String phone=request.getParameter("phone");
 	String phone1=request.getParameter("phone1");
 	String email=request.getParameter("email");
-	String email1=request.getParameter("email1");
 	
 	MemberVO vo=new MemberVO();
 	vo.setId(id);
@@ -22,10 +21,9 @@
 	vo.setPhone(phone);
 	vo.setPhone1(phone1);
 	vo.setEmail(email);
-	vo.setEmail1(email1);
 	
 	MemberDAO dao=MemberDAO.newInstance();
 	dao.updateMember(vo);
 	
-	response.sendRedirect("result_update.jsp");
+	response.sendRedirect("../main/main.jsp");
 %>

@@ -4,7 +4,7 @@
 	String id = (String)session.getAttribute("id");
 	MemberDAO dao=MemberDAO.newInstance();  
 	MemberVO vo = dao.getMember(id);
-%>
+%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,14 +17,13 @@
 
 <!-- SmartEditor를 사용하기 위해서 다음 js파일을 추가 (경로 확인) -->
 <script type="text/javascript" src="../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
-
 </head>
 <body>
 	<center>
 	<div style="margin-top: 15px"></div>
 		<img alt="글쓰기" src="../image/board_image/po.png" width="1000" >
 		<p>
-		<form method="post" action="../board/free_insert_ok.jsp" name="frm">
+		<form method="post" action="../board/qna_insert_ok.jsp" name="frm">
 			<table class="table" style="width: 60%">
 				<tr>
 					<td width="20%" align="right">이름</td>
@@ -43,7 +42,6 @@
 					<td width="20%" align="right">내용</td>
 					<td width="80%" align="left">
 						<textarea rows="10" cols="60" name="content" class="form-control" style="width: 60%" placeholder="내용을 입력하세요">
-					
 						</textarea>
 					</td>
 				</tr>

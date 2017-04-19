@@ -86,19 +86,16 @@ public class MemberDAO {
 		return result;
 	}
 
-	public MemberVO getLogData(String id) {
-		MemberVO result=new MemberVO();
+	public String getLogData(String id) {
+		String result = "";
 		try {
 			getConnection();
-			String sql = "SELECT nickname,email,point FROM join_user WHERE id=?";
+			String sql = "SELECT nickname FROM join_user WHERE id=?";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, id);
 			ResultSet rs = ps.executeQuery();
 			rs.next();
-			result.setNickname(rs.getString(1));
-			result.setEmail(rs.getString(2));
-			result.setPoint(rs.getInt(3));
-			
+			result = rs.getString(1);
 			rs.close();
 
 		} catch (Exception ex) {
@@ -136,7 +133,6 @@ public class MemberDAO {
 		try {
 			getConnection();
 			String sql = "INSERT INTO join_user VALUES(?,?,?,?,?,?,?,?,?)";
-			System.out.println(sql);
 
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());
@@ -238,7 +234,7 @@ public class MemberDAO {
 		ps.setString(4, vo.getPhone());
 		ps.setString(5, vo.getPhone1());
 		ps.setString(6, vo.getEmail());
-		ps.setString(8, vo.getId());
+		ps.setString(7, vo.getId());
 		
 		ps.executeUpdate();
 		ps.close();
@@ -276,40 +272,6 @@ public class MemberDAO {
 			disConnection();
 		}
 
-	}
-	
-	//포인트 차감
-	public MemberVO minusPoint(int point, String id){	
-		MemberVO vo = new MemberVO();
-		try{
-			getConnection();
-			String sql = "UPDATE JOIN_USER SET point=point-? WHERE id=?";
-			
-			ps=conn.prepareStatement(sql);
-			ps.setInt(1, point);
-			ps.setString(2, id);
-			ps.executeUpdate();
-			ps.close();
-			
-			sql = "SELECT id,email,point FROM JOIN_USER WHERE id=?";
-			ps=conn.prepareStatement(sql);
-			ps.setString(1, id);
-			ResultSet rs = ps.executeQuery();
-			rs.next();
-			vo.setId(rs.getString(1));
-			vo.setEmail(rs.getString(2));
-			vo.setPoint(rs.getInt(3));
-			rs.close();
-			ps.close();
-			
-			System.out.println("minusPoint");
-			
-		}catch(Exception ex){
-			System.out.println("minusPoint()"+ex.getMessage());
-		}finally{
-			disConnection();
-		}
-		return vo;
 	}
 
 }

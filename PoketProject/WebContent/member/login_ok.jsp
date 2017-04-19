@@ -1,4 +1,3 @@
-<%@page import="com.sist.user.MemberVO"%>
 <%@page import="java.util.HashMap"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" %>
@@ -28,18 +27,15 @@
 	</script>
 <%
 	}else if(res==2){
-		MemberVO vo = new MemberVO();
-		MemberVO info=dao.getLogData(id);
+		String name=dao.getLogData(id);
 		session.setAttribute("id", id);
-		session.setAttribute("name", info.getNickname());
-		session.setAttribute("email", info.getEmail());
-		session.setAttribute("point", info.getPoint());
+		session.setAttribute("name", name);
 		
 		//접속자 리스트에 추가
 		HashMap userInfo = new HashMap();
 		userInfo.put("sessionId",session.getId());
 		userInfo.put("id",id);
-		userInfo.put("name",info.getNickname());
+		userInfo.put("name",name);
 		userInfo.put("accessTime",System.currentTimeMillis());
 		accessUserCount.add(userInfo);
 		System.out.println(id);

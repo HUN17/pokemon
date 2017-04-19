@@ -84,8 +84,8 @@ function postsend() {
 			<li class="menu" id="book"><a href="main.jsp?mode=2">도감</a></li>
 			<li class="menu" id="board"><a href="#">게시판</a>
 				<div class="dropdown">
-				<a href="main.jsp?mode=5">공략게시판</a>
-				<a href="main.jsp?mode=5">질문게시판</a>
+				<a href="main.jsp?mode=3">공략게시판</a>
+				<a href="main.jsp?mode=4">질문게시판</a>
 				<a href="main.jsp?mode=5">자유게시판</a>
 				</div>	
 			</li>

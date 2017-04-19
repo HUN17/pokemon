@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" import="com.sist.user.*"%>
-<%	
+<%
 	String id = (String)session.getAttribute("id");
 	MemberDAO dao=MemberDAO.newInstance();  
 	MemberVO vo = dao.getMember(id);
-%>
+%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,14 +17,13 @@
 
 <!-- SmartEditor를 사용하기 위해서 다음 js파일을 추가 (경로 확인) -->
 <script type="text/javascript" src="../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
-
 </head>
 <body>
-	<center>
+<center>
 	<div style="margin-top: 15px"></div>
 		<img alt="글쓰기" src="../image/board_image/po.png" width="1000" >
 		<p>
-		<form method="post" action="../board/free_insert_ok.jsp" name="frm">
+		<form method="post" action="../board/tip_insert_ok.jsp" name="frm">
 			<table class="table" style="width: 60%">
 				<tr>
 					<td width="20%" align="right">이름</td>
