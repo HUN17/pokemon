@@ -85,11 +85,7 @@
 				</td>
 				
 				
-				<td align="right">		
-					<a href="main.jsp?mode=12&no=<%=no%>">
-						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
-						 <input type="button" value="답글쓰기"  class="btn btn-default">
-					</a>
+				<td align="right">
 					<a href="main.jsp?mode=11&no=<%=no%>">
 						<input type="button" value="수정" id="WriteBtn" class="btn btn-default">
 					</a>

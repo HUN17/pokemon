@@ -88,7 +88,7 @@
 						
 						<!-- 포켓몬 사진 div -->
  				<c:set var="list" value="<%=list %>"></c:set>
-						<div class="owl-carousel owl-theme" style="width: 1200px; height: 200px;">
+						<div class="owl-carousel owl-theme" style="width: 1200px; height: 300px;">
 						    <c:forEach var="vo" items="${list}" >
 						    	<div class="item" style="width: 150px; border: 3px solid #F6F6F6; border-radius: 10px;" onclick="open_pop2(${vo.no})">
 						    		<div>
