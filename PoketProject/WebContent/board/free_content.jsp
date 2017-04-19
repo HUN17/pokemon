@@ -124,10 +124,10 @@
 						<input type="hidden" name="name" value="<%=session.getAttribute("name") %>">
 						<input type="hidden" name="c_id" value="<%=session.getAttribute("id") %>">
 						Pwd : <input type="password" name="c_pwd" size="8"></br>
-						<input type="submit" value="등록" width="50" height="40">
+						<input type="submit" value="등록" width="50" height="40" class="btn btn-default">
 						<% } else { %>
 						로그인 해주세요
-						<a href="main.jsp?mode=7"><input type="button" value="Login"></a>
+						<a href="main.jsp?mode=7"><input type="button" value="Login" class="btn btn-default"></a>
 						<% } %>
 					</td>
 				</tr>
@@ -138,12 +138,12 @@
 				<c:forEach var="vo" items="<%=list %>">
 					<tr>
 						<td width="85%">
-							<textarea name="content" rows="3" cols="130" >${vo.content }</textarea>
+							<textarea name="content" rows="3" cols="130" readonly >${vo.content }</textarea>
 						</td>
 						<td width="15%">
 							${vo.name }</br>
 							${vo.date}</br>
-							<input type="button" id="up_del_btn" value="수정/삭제" onclick="test01(<%=g%>);">
+							<input type="button" id="up_del_btn" value="수정/삭제" onclick="test01(<%=g%>);"  class="btn btn-default">
 						</td>
 					</tr>
 					
