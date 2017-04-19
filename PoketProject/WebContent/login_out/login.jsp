@@ -18,7 +18,26 @@
 	input{
 		font-size: 20px;
 	}
-
+	
+	.loginBtn{
+		background-color: #FF3636;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
+	
+	.loginBtn:HOVER {
+		background-color: white;
+		color: black;
+		border: 2px solid #FF3636;
+}
 </style>
 </head>
 <body>
@@ -38,7 +57,7 @@
 				</tr>
 				<tr>
 					<td align="center" height="100">
-						<input type="image"  src="../image/login_out_image/login_btn.png">
+						<input id="loginBtn" type="submit" value="·Î±×ÀÎ">
 					</td>
 				</tr>
 				<tr>

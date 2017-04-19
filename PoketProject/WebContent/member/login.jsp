@@ -69,6 +69,29 @@ $(function(){
 			f.submit();
 		}
 </script>
+<style type="text/css">
+	input[type="submit"]{
+		background-color: #FF3636;
+		width:455px;
+		height:50px;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: bold;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
+	
+	input[type="submit"]:HOVER {
+		background-color: white;
+		color: black;
+		border: 2px solid #FF3636;
+}
+</style>
 </head>
 <body>
 	<center>
@@ -87,7 +110,7 @@ $(function(){
 				</tr>
 				<tr>
 					<td align="center" height="100">
-						<input class="box" type="image"  src="../image/login_out_image/login_btn.png">
+						<input type="submit" value="·Î±×ÀÎ">
 					</td>
 				</tr>
 				<tr>

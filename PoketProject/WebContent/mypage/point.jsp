@@ -116,7 +116,6 @@ $(function(){
 	<div id="aliHeader">
                <h1>포인트 교환</h1>
                <h5><%=name %>님의 포인트를 쿠폰으로 교환하실 수 있습니다.</h5>
-               <h5><%=email %>님의 포인트를 쿠폰으로 교환하실 수 있습니다.</h5>
                 <h5><%=name %>님의 보유 포인트는 <%=vo.getPoint() %> 점 입니다.</h5>
      </div>
      <form action="../mypage/point_ok.jsp" method="post">

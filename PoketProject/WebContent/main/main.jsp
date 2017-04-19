@@ -20,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="../chat/chat.css">
 <link rel="stylesheet" type="text/css" href="../slide/slide.css">
 <link rel="stylesheet" type="text/css" href="../book/book.css">
+<link rel="stylesheet" type="text/css" href="../mypage/point.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/owl.carousel.min.css">

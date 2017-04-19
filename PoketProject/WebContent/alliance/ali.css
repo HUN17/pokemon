@@ -17,6 +17,10 @@
 		color: black;
 		font-weight: bold;
 	}
+	.icon:HOVER{
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+	}
 	.aliSection a{
 		text-decoration: none;
 		color: black;
