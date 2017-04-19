@@ -393,4 +393,45 @@ public class noticeDAO {
 		}
 		return bCheck;
 	}
+	
+	   public List<freeVO> noticeMiniData(int page){
+		      ArrayList<freeVO> list  = new ArrayList<>();
+		      
+		      try{
+		         getConnection();
+		         /*String sql="SELECT no,subject,name,hit "
+		               +"FROM (SELECT * FROM (SELECT * FROM POKEBOARD ORDER BY hit DESC )) "
+		               +"ORDER BY group_id DESC,group_step ASC";*/
+		         String sql="SELECT no,subject,name,id,Exp,hit "
+		         +" FROM nBoard WHERE group_step=0 ORDER BY hit DESC ";
+		         ps=conn.prepareStatement(sql);
+		         ResultSet rs = ps.executeQuery();
+		         
+		         int i=0;
+		         int j=0;
+		         int pagecnt=(page*10)-10;
+		         
+		         while(rs.next()){
+		            if(i<10 && j>=pagecnt){
+		            	freeVO vo=new freeVO();
+		               vo.setNo(rs.getInt(1));
+		               vo.setSubject(rs.getString(2));
+		               vo.setName(rs.getString(3));
+		               vo.setId(rs.getString(4));
+		               vo.setExp(rs.getInt(5));
+		               vo.setHit(rs.getInt(6));
+		               list.add(vo);
+		               i++;
+		            }
+		            j++;
+		         }
+		         
+		      }catch(Exception ex){
+		         System.out.println("noticeMiniData()"+ex.getMessage());
+		      }finally{
+		         disConnection();
+		      }
+		      
+		      return list;
+		   }
 }

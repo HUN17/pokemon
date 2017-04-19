@@ -1,15 +1,3 @@
-.aaa{
-	width: 500px;
-	height: 730px;
-	float: left;
-}
-#bbb{
-	width: 500px;
-	height: 140px;
-}
-
-
-
 .left_button{
 	
 	display: table-cell;
@@ -54,7 +42,7 @@
 	#rootDiv{
 
 		width: 1000px;
-		height: 730px;
+		height: 731px;
 		font-weight: bold;
 		background-image: url("../image/book_image/1000.png");
 		cursor: pointer;
@@ -62,103 +50,118 @@
 	
 	}
 	#div0_0{
-		width: 436px;
-		height: 370px;
+		width: 950px;
+		height: 340px;
 		display: block;
-		margin-left: 18px;
-		margin-right: 51px;
-		background-color: black;
-	/* 	background-image: url("image/back.jpg");	 */
+		border-radius: 20px;
+	
 		
 	}
-	.bounce{
+	#div0_1{
+		width: 900px;
+		height: 180px;
+		
+	}
+	#div1{
+		width: 400px;
+		height: 325px;
+		float: left;
+		margin: 150px 5px 5px 5px;
+	}
+	#div1_1{
+		width: 400px;
+		height: 300px;
+		margin: 5px 5px 5px 5px;
+		border-radius: 20px;
+		background-image: url("image/back.jpg");
+		
+	}
+	#div1_2{
+		width: 340px;
+		height: 44px;
+		margin: 5px 5px 5px 5px;
+		vertical-align: middle;
+	}
+	#div2{
+		width: 400px;
+		height: 375px;
+		float: right;
+		margin: 10px 5px 5px 5px;
+		
+	}
+
+	#typediv{
+		width: 350px;
+		height: 135px;
+		margin: 105px 0px 0px -50px;
+		text-align: left;
+		font-weight: bold;
+	}
+	#div2_1a{
+		width: 445px;
+		height: 40px;
+		margin: 10px 5px 0px 5px;
+		float: left;
+	
+	}
+	#div2_1{
+		width: 445px;
+		height: 40px;
+		margin: 0px 5px 0px 5px;
+		float: left;
+		
+	}
+	#div2_1b{
+		width: 445px;
+		height: 40px;
+		margin: 0px 5px 5px 5px;
+		float: left;
+	}
+ 	#div2_2a{
+		width: 445px;
+		height: 55px;
+		margin: 10px 5px 0px 5px;
+	}
+	#div2_2b{
+		width: 445px;
+		height: 55px;
+		margin: 0px 5px 0px 5px;
+	}
+	.div2_2_2 {
+	 	width: 215px;
+	 	height: 55px;
+	 	margin: 0px 0px 0px 5px;
+	 	float: left;
+	 }
+	#div2_3{
+		width: 445px;
+		height: 90px;
+		margin: 10px 5px 10px 5px;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	#div3{
+		width: 450px;
+		height: 350px;
+		margin: 0px 5px 5px 5px;
+		border-radius: 20px;
+		
+		
+	}
+	.div3_1 {
+		width: 130px;
+		height: 130px;
+		margin: 10px 0px 0px 18px;
+		float: left;
+	}
+	#p_img {
 		width: 90%;
 		height: 90%;
 		vertical-align: middle;
 		
-	}
-
-	#div0_1{
-		width: 500px;
-		height: 150px;
-	}
-	
-	#bbb_2{
-	 	width: 500px;
-	 	height: 115px;
-	}
-	#div1_0{
-		width: 500px;
-		height: 140px;
-		
-	}
-	#typediv_1{
-		width: 360px;
-		height: 130px;
-		background-color: skyblue;
-		text-align: left;
-		font-weight: bold;
-		border-radius: 20px;
-		padding: 1px;
-		margin-top: 10px;
-	}
-	
-	#div1_1{
-		width: 200px;
-		height: 110px;
-		margin: 7px;
-		float: left;	
-	}
-	
-	#div1_2{
-		width: 130px;
-		height: 110px;
-		margin: 7px;
-		float: right;
-	}
-	#div1_3{
-	
-		
-		text-align: left;
-		font-weight: bold;
-	}
-	
-	#div1_1a font{
-		margin-top: 30px;
-	}
-	
-	#div1_2a{
 	
 	}
-	#div1_3a{
-	
-	}
-	#div2_0{
-		width: 500px;
-		height: 160px;
-	}
-	#typediv_2{
-		width: 360px;
-		height: 135px;
-		background-color: red;
-		text-align: left;
-		font-weight: bold;
-		border-radius: 20px;
-		padding: 1px;
-	}
-	
-	#div3_0{
-		width: 500px;
-		height: 338px;
-		
-	}
-	
-	#typediv_2>{
-		
-	}
-	
-	
-	
 	#title {
 		font-size: 30px;
 		height: 50px;
@@ -339,17 +342,4 @@ body {
   animation-delay: 0.75s;
   -webkit-animation-delay: 0.75s;
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	

@@ -118,7 +118,7 @@
 						
 						<!-- 게시판1  div -->
 						<div style="width: 610px; height: 370px; float: left; margin: 10px 15px 15px 25px;">		
-							<jsp:include page="../board/free_mini.jsp"></jsp:include>
+							<jsp:include page="../board/notice_mini.jsp"></jsp:include>
 						</div>		<!-- 게시판1 div -->
 						
 						<!-- 게시판2  div -->
