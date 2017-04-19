@@ -7,9 +7,6 @@
 	width: 500px;
 	height: 140px;
 }
-
-
-
 .left_button{
 	
 	display: table-cell;
@@ -28,11 +25,8 @@
     padding: 10px 10px;
     text-decoration: none;
     text-shadow: rgb(82, 142, 204) 0px 1px 0px;
-	
 	}
-	
 	.right_button{
-	
 	rgb(187, 218, 247) 0px 1px 0px 0px inset;
     background: linear-gradient(rgb(249, 249, 249) 5%, 
     rgb(233, 233, 233) 100%) rgb(249, 249, 249);
@@ -80,7 +74,24 @@
 
 	#div0_1{
 		width: 500px;
-		height: 150px;
+		height: 80px;
+	}
+	
+	#div0_2 {
+		width: 500px;
+		height: 27px;
+		padding-left: 35px;
+	}
+	.pre_btn {
+		width:30px;
+		height: 25px;
+		float: left;
+	}
+	.next_btn{
+		width:30px;
+		height: 25px;
+		float: left;
+		margin-left: 10px;
 	}
 	
 	#bbb_2{
@@ -148,22 +159,19 @@
 	}
 	
 	#div3_0{
-		width: 500px;
-		height: 338px;
-		
+		width: 400px;
+		height: 265px;	
 	}
-	
-	#typediv_2>{
-		
+	.div3_1 {
+		width:150px;
+		height: 150px;
+		display: inline;
 	}
-	
-	
-	
 	#title {
 		font-size: 30px;
 		height: 50px;
 		padding: 0px 0px 0px 0px;
-		margin:  0px 0px 0px 0px;
+		margin:  20px 0px 0px 0px;
 	}
 	.rev_img {
 		width: 110px;

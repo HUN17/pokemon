@@ -9,6 +9,7 @@
 		String no = request.getParameter("detail");
 		poketmonDAO dao = poketmonDAO.newInstance();
 		poketmonVO vo = dao.detailData(Integer.parseInt(no));
+		/* poketmonVO vo = dao.detailData(Integer.parseInt("50"));  */
 
 %>
 <c:set var="vo" value="<%=vo %>"></c:set>
@@ -34,11 +35,17 @@
 <script type="text/javascript">
 	function send(number) {
 		number = number+1; 
+/*  		if(numer > 248) {
+			number = 1;
+		} */
 		location.href="../book/detailBook1.jsp?detail="+number;
 	};
 	
 	function send2(number) {
 		number = number-1; 
+/* 		if(numer < 1) {
+			number = 248;
+		} */
 		location.href="../book/detailBook1.jsp?detail="+number;
 	};
 </script>
@@ -59,6 +66,13 @@
 				</div>
 				<div id="div0_1">
 					<h1 id="title">No. ${vo.no }&nbsp;&nbsp;${vo.name }</h1>
+				</div>
+				
+				<div id="div0_2">
+				</div>
+				<div id="div0_2">
+					<div class="pre_btn"><span class="pre_btn" onclick="send2(${vo.no });"></span></div>
+					<div class="next_btn"><span class="next_btn" onclick="send(${vo.no });"></span></div>
 				</div>
 			</div>
 				
@@ -98,19 +112,10 @@
 							</div>
 						</div>
 						<div id="div1_2">
-							<div id="div1_3">포획정보<br/> 
-								<br/>
-								${vo.gps1 }
-								<c:if test="${vo.gps2 !='0' }">
-								&nbsp;
-								&nbsp;
-								${vo.gps2 }
-						
-
-								</c:if>
-								<c:if test="${vo.gps2 =='0' }">
-								</c:if>
-				
+							<div id="div1_3"><font size="4px;">포획정보</font>
+								<br/>${vo.gps1 }<br/>
+								<c:if test="${vo.gps2 !='0' }">${vo.gps2 }</c:if>
+								<c:if test="${vo.gps2 =='0' }"></c:if>
 						</div>
 					</div>
 					</div>
@@ -254,53 +259,46 @@
 							  	</c:if>
 							  </div>
 					</div>
-						
 				</div>
 		 	</div>
+		 	
 		 <div id="div3_0">
-			<div id="typediv_3">
+		 
 				<div id="div3">
 					<div class="div3_1">
 						<c:if test="${vo.rev1 !='0' }">
-							<img class="rev_img" src="../image/poket_image/${vo.rev1 }.png" >
+							<a href="../book/detailBook1.jsp?detail=${vo.rev1 }"><img class="rev_img" src="../image/poket_image/${vo.rev1 }.png" ></a>
 						</c:if>
 						<c:if test="${vo.rev1 =='0' }"></c:if>
-					</div>
-					<div class="div3_1">
 						<c:if test="${vo.rev2 !='0' }">
-							<img class="rev_img" src="../image/poket_image/${vo.rev2 }.png" >
+							<a href="../book/detailBook1.jsp?detail=${vo.rev2 }"><img class="rev_img" src="../image/poket_image/${vo.rev2 }.png" ></a>
 						</c:if>
 						<c:if test="${vo.rev2 =='0' }"></c:if>
-					</div>
-					<div class="div3_1">
 						<c:if test="${vo.rev3 !='0' }">
-							<img class="rev_img" src="../image/poket_image/${vo.rev3 }.png" >
+							<a href="../book/detailBook1.jsp?detail=${vo.rev3 }"><img class="rev_img" src="../image/poket_image/${vo.rev3 }.png" ></a>
 						</c:if>
 						<c:if test="${vo.rev3 =='0' }"></c:if>
 					</div>
-					</div>
-					<div id="div3">
+				</div>
+				
+				<div id="div3">
 					<div class="div3_1">
 						<c:if test="${vo.rev4 !='0' }">
-							<img class="rev_img" src="../image/poket_image/${vo.rev4 }.png" >
+							<a href="../book/detailBook1.jsp?detail=${vo.rev4 }"><img class="rev_img" src="../image/poket_image/${vo.rev4 }.png" ></a>
 						</c:if>
 						<c:if test="${vo.rev4 =='0' }"></c:if>
-					</div>
-					<div class="div3_1">
 						<c:if test="${vo.rev5 !='0' }">
-							<img class="rev_img" src="../image/poket_image/${vo.rev5 }.png" >
+							<a href="../book/detailBook1.jsp?detail=${vo.rev5 }"><img class="rev_img" src="../image/poket_image/${vo.rev5 }.png" ></a>
 						</c:if>
 						<c:if test="${vo.rev5 =='0' }"></c:if>
-					</div>
-					<div class="div3_1">
 						<c:if test="${vo.rev6 !='0' }">
-							<img class="rev_img" src="../image/poket_image/${vo.rev6 }.png" >
+							<a href="../book/detailBook1.jsp?detail=${vo.rev6 }"><img class="rev_img" src="../image/poket_image/${vo.rev6 }.png" ></a>
 						</c:if>
 						<c:if test="${vo.rev6 =='0' }"></c:if>
 					</div>
 				</div>
-			</div>		
 		</div>		
+		
 		</div>
 				
 	</center>

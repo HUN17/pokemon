@@ -26,7 +26,6 @@
       <img class="chat_ball" alt="Æ÷ÄÏº¼" src="../chat/image/chat_subject.png">
    </div>
    <table id="boardTable_mini" >
-      
       <c:forEach var="vo" items="${list }">
       
       <tr height="34" onclick="miniTr(${vo.no});">
