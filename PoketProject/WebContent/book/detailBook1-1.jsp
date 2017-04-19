@@ -9,7 +9,6 @@
 		String no = request.getParameter("detail");
 		poketmonDAO dao = poketmonDAO.newInstance();
 		poketmonVO vo = dao.detailData(Integer.parseInt(no));
-
 %>
 <c:set var="vo" value="<%=vo %>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -46,29 +45,30 @@
 <body>
 	<center>
 		<div id="rootDiv">
-			<div class="aaa">
-				<div id="bbb">
-				</div>
+
 				<div id="div0_0">
-					<img img class="bounce" 
+					<div id="div1">
+						<div>
+							<div id="div1_1">
+								<img img class="bounce" 
 							     data-distance="15" 
 							     data-speed-down="300" 
 							     data-speed-up="800" 
 							     id="p_img" 
 							     src="../image/poket_image/${vo.no }.png"> 
-				</div>
-				<div id="div0_1">
-					<h1 id="title">No. ${vo.no }&nbsp;&nbsp;${vo.name }</h1>
-				</div>
-			</div>
-				
-			<div class="aaa">
-				<div id="bbb_2">
-				</div>
-				<div id="div1_0">
-					<div id="typediv_1">
-						<div id="div1_1">
-							<div id="div1_1a">
+												
+								</div>
+							<div id="div1_2">
+								<h2 id="title">No. ${vo.no }&nbsp;&nbsp;${vo.name }</h2>
+							</div>
+						</div>
+					</div>
+					
+					<div id="div2">
+
+						<div id="typediv">
+
+							<div id="div2_1a">
 								타입 : <img class="t_img" src="../image/book_image/${vo.type1 }.jpg">
 								<c:if test="${vo.type2 != '0' }">
 								<img class="t_img" src="../image/book_image/${vo.type2 }.jpg"><br/>
@@ -76,7 +76,7 @@
 								<c:if test="${vo.type2 == '0' }">
 								</c:if>
 							</div>
-							<div id="div1_2a">강함 : 
+							<div id="div2_1">강함 : 
 								<c:if test="${vo.s_type1 != '0' }">
 									<img class="t_img" src="../image/book_image/${vo.s_type1}.jpg">&nbsp;
 								</c:if>
@@ -88,8 +88,8 @@
 								<c:if test="${vo.s_type2 == '0' }">
 								</c:if>
 							</div>
-							<div id="div1_3a">
-								약함 : <img class="t_img" src="../image/book_image/${vo.l_type1 }.jpg">&nbsp;
+							<div id="div2_1b">
+								약함 :&nbsp; <img class="t_img" src="../image/book_image/${vo.l_type1 }.jpg">&nbsp;
 								<c:if test="${vo.l_type2 != '0' }">
 									<img class="t_img" src="../image/book_image/${vo.l_type2 }.jpg"><br/>
 								</c:if>
@@ -97,34 +97,16 @@
 								</c:if>
 							</div>
 						</div>
-						<div id="div1_2">
-							<div id="div1_3">포획정보<br/> 
-								<br/>
-								${vo.gps1 }
-								<c:if test="${vo.gps2 !='0' }">
-								&nbsp;
-								&nbsp;
-								${vo.gps2 }
 						
-
-								</c:if>
-								<c:if test="${vo.gps2 =='0' }">
-								</c:if>
-				
-						</div>
-					</div>
-					</div>
-				</div>
-				<div id="div2_0">
-					<div id="typediv_2">
+						<div id="div2_">
 							<!-- <div class="stat-levels"> -->
 							<div style="float: left; width: 90px; text-align: center;">
-								<div class="test">&nbsp;CP	: ${vo.cp }</div>
+								<div class="test">&nbsp;CP : ${vo.cp }</div>
 								<div class="test">&nbsp;ATT : ${vo.att }</div>
 								<div class="test">&nbsp;DEF : ${vo.def }</div>
-								<div class="test">&nbsp;HP	: ${vo.hp }</div>
+								<div class="test">&nbsp;HP : ${vo.hp }</div>
 							</div>
-							<div style="float: left; width: 250px">
+							<div style="float: left; width: 300px">
 							  <div class="stat-1 stat-bar">
 							  	<c:if test="${vo.cp <=400 && vo.cp > 0}">
 							    	<span class="stat-bar-rating" role="stat-bar" style="width:10% ;"></span>
@@ -253,12 +235,57 @@
 							    	<span class="stat-bar-rating" role="stat-bar" style="width: 100%;"></span>
 							  	</c:if>
 							  </div>
-					</div>
+							  <!-- </div> -->
+							</div>
+						</div>
+						<%-- <div id="div2_2a">
+							<div class="div2_2_2">CP : ${vo.cp }</div>
+							<div class="div2_2_2">ATT : ${vo.att }</div>
+						</div>
+						<div id="div2_2b">
+							<div class="div2_2_2">DEF : ${vo.def }</div>
+							<div class="div2_2_2">HP : ${vo.hp }</div>
+						</div> --%>
+					<%-- 	
+					<div id="div2_1b">
+								약함 :&nbsp; <img class="t_img" src="../image/book_image/${vo.l_type1 }.jpg">&nbsp;
+								<c:if test="${vo.l_type2 != '0' }">
+									<img class="t_img" src="../image/book_image/${vo.l_type2 }.jpg"><br/>
+								</c:if>
+								<c:if test="${vo.l_type2 == '0' }">
+								</c:if>
+							</div>	
+						 --%>
+					<%-- 	<table align="left" style="padding-left: 20px;">
+							<tr>
+								<td>포획정보:</td>
+								<td>${vo.gps1 }</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>${vo.gps2 }</td>
+							</tr>
+						</table> --%>
+						 
+						<div id="div2_3">포획정보 : ${vo.gps1 }<br/>
+							<c:if test="${vo.gps2 !='0' }">
+							
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vo.gps2 }
 						
-				</div>
-		 	</div>
-		 <div id="div3_0">
-			<div id="typediv_3">
+
+							</c:if>
+							<c:if test="${vo.gps2 =='0' }">
+							</c:if>
+				
+					</div>
+				</div>	
+			</div>
+			
+
+
+	
+			<div id="div0_1">
 				<div id="div3">
 					<div class="div3_1">
 						<c:if test="${vo.rev1 !='0' }">
@@ -299,41 +326,16 @@
 						<c:if test="${vo.rev6 =='0' }"></c:if>
 					</div>
 				</div>
-			</div>		
-		</div>		
+			</div>
 		</div>
+			<div class="left_button" >
+			<span onclick="send2(${vo.no});"><<<</span>
+			</div>
+			<div class="right_button" >
+			<span onclick="send(${vo.no});">>>></span>
+			</div>	
 				
 	</center>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
