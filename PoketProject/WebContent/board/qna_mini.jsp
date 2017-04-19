@@ -23,9 +23,11 @@
 </head>
 <body>
 	<div id="chatHeader" >
+		<a href="main.jsp?mode=4">
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 		질문게시판
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
+		</a>
 	</div>
 	
 	<table id="boardTable_mini" >
@@ -44,7 +46,7 @@
 				<img alt="인기글" src="../image/board_image/mini_star.png" width="20">
 			</td>
 			
-			<td width="50%" align="left">
+			<td width="50%" align="left"  >
 			${vo.subject }
 			</td>
 			<td width="30%" align="center">${vo.name }</td>

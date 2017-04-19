@@ -172,7 +172,6 @@ $(function(){
          <hr width="1000">
          <div class="aliSection">
             <div class="aliImg">
-               <div style="width: 270px; height: 30.22px;"></div>
                   <img alt="10% ÄíÆù" src="../image/point_image/voucher.png" width="270">
             </div>
             <div class="aliText">
