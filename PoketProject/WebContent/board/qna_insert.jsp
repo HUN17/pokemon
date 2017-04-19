@@ -21,7 +21,7 @@
 <body>
 	<center>
 	<div style="margin-top: 15px"></div>
-		<img alt="글쓰기" src="../image/board_image/po.png" width="1000" >
+		<img alt="글쓰기" src="../image/board_image/qpo.png" width="1000" >
 		<p>
 		<form method="post" action="../board/qna_insert_ok.jsp" name="frm">
 			<table class="table" style="width: 60%">

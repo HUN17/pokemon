@@ -7,11 +7,11 @@
 	String ss=request.getParameter("ss");
 	
 	noticeDAO dao=noticeDAO.newInstance();
-	List<freeVO> list=null;
+	List<noticeVO> list=null;
 	int count=dao.boardFindCount(fs, ss);
 			
 	if(count!=0){
-		 list=dao.boardFindData(fs, ss);
+		 list=dao.nboardFindData(fs, ss);
 	}	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -26,7 +26,7 @@
 <body>
 	<center>
 	 <div style="margin-top: 15px"></div>
-		<img alt="게시판 검색" src="../image/board_image/po.png" width="1000" height="40">
+		<img alt="게시판 검색" src="../image/board_image/notice.png" width="1000" height="40">
 		<p>
 		<table class="table" style="width: 70%" >
 			<tr>
@@ -46,7 +46,7 @@
 				<%
 					int i=0;
 					String color = "white";
-					for(freeVO vo:list){
+					for(noticeVO vo:list){
 						if(i%2==0) color="white";
 						else color = "ivory";
 				%>
@@ -61,7 +61,7 @@
 									//2017-03-10
 									if(today.equals(dbday)){
 								%>
-										<sup><img alt="뉴" src="image/new.gif"></sup>
+										<sup><img alt="뉴" src="../image/board_image/ico_new.png"></sup>
 								<%										
 									}
 								%>

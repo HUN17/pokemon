@@ -26,7 +26,7 @@
 <body>
 	<center>
 	 <div style="margin-top: 15px"></div>
-		<img alt="게시판 검색" src="../image/board_image/po.png" width="1000" height="40">
+		<img alt="게시판 검색" src="../image/board_image/tpo.png" width="1000" height="40">
 		<p>
 		<table class="table" style="width: 70%" >
 			<tr>

@@ -433,6 +433,7 @@ public class freeDAO {
 				if(i<10 && j>=pagecnt){
 					freeVO vo=new freeVO();
 					vo.setNo(rs.getInt(1));
+					System.out.println(vo.getNo());
 					vo.setSubject(rs.getString(2));
 					vo.setName(rs.getString(3));
 					vo.setId(rs.getString(4));

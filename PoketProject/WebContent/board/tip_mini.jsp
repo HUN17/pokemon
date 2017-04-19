@@ -14,10 +14,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <script type="text/javascript">
-<%-- "main.jsp?mode=9&no=<%=vo.getNo()%>" --%>
-	function miniTr (test){
+<%-- "main.jsp?mode=25&no=<%=vo.getNo()%>" --%>
+	/* function miniTr (test){
 		location.href="main.jsp?mode=25&no="+test;
-	};
+	}; */
 </script>
 </head>
 <body>
@@ -44,7 +44,7 @@
 			</td>
 			
 			<td width="50%" align="left">
-			${vo.subject }
+			<a href="main.jsp?mode=25&no=${vo.no }">${vo.subject }</a>
 			</td>
 			<td width="30%" align="center">${vo.name }</td>
 			<%-- <td width="20%" align="center">${vo.hit }</td> --%>

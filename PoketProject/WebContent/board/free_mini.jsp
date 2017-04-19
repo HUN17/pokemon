@@ -18,9 +18,9 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 <%-- "main.jsp?mode=9&no=<%=vo.getNo()%>" --%>
-	function miniTr (test){
+/* 	function miniTr (test){
 		location.href="main.jsp?mode=9&no="+test;
-	};
+	}; */
 </script>
 </head>
 <body>
@@ -40,14 +40,14 @@
 		
 		<c:forEach var="vo" items="${list }">
 		
-		<tr height="34" onclick="miniTr(${vo.no});">
+		<tr height="34" <%-- onclick="miniTr(${vo.no});" --%>>
 			
 			<td width="20%" align="center">
 				<img alt="ÀÎ±â±Û" src="../image/board_image/mini_star.png" width="20">
 			</td>
 			
 			<td width="50%" align="left">
-			${vo.subject }
+			<a href="main.jsp?mode=9&no=${vo.no }">${vo.subject }</a>
 			</td>
 			<td width="30%" align="center">${vo.name }</td>
 			<%-- <td width="20%" align="center">${vo.hit }</td> --%>

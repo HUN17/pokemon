@@ -40,7 +40,7 @@
 <body>
 	<center>
 		<div style="margin-top: 15px"></div>
-	 	<img alt="Ä¿¹Â´ÏÆ¼" src="../image/board_image/po.png" width="1000" >
+	 	<img alt="Ä¿¹Â´ÏÆ¼" src="../image/board_image/tpo.png" width="1000" >
 		<p>
 		<table class="table table-hover" style="width: 70%" >
 			

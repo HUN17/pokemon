@@ -85,8 +85,8 @@ public class replyDAO {
 			ps.setString(1, vo.getId());
 			ps.setString(2, vo.getContent());
 			ps.setString(3, vo.getName());
-			ps.setInt(4, vo.getP_no());
-			ps.setString(5, vo.getPwd());
+			ps.setString(4, vo.getPwd());
+			ps.setInt(5, vo.getP_no());
 			
 			ps.executeUpdate();
 			ps.close();
