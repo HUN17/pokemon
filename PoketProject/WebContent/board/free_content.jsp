@@ -34,20 +34,6 @@
 			}
 		});	
 	});
-/* 	var p=0;
-	$(function(){
-		$('#up_del_btn').click(function(){
-			var buttonid = $(this).attr('my_value');
-			console.log(buttonid)
-			if(p==0){
-				$('#del'+buttonid).show();
-				p=1;
-			}else{
-				$('#del'+buttonid).hide();
-				p=0;
-			}
-		});	
-	}); */
 	var p = 0;
 	function test01(c) {
 		if(p==0){
@@ -129,7 +115,7 @@
 			<table  class="table table-bordered" style="width: 60%" border="1">
 				<tr>
 					<td width="85%">
-						<textarea name="content" rows="3" cols="100"></textarea>
+						<textarea name="content" rows="3" cols="130"></textarea>
 					</td>
 					
 					<td width="15%">
@@ -152,12 +138,11 @@
 				<c:forEach var="vo" items="<%=list %>">
 					<tr>
 						<td width="85%">
-							<textarea name="content" rows="3" cols="100" >${vo.content }</textarea>
+							<textarea name="content" rows="3" cols="130" >${vo.content }</textarea>
 						</td>
 						<td width="15%">
 							${vo.name }</br>
 							${vo.date}</br>
-							<%-- <input type="button" id="up_del_btn" value="수정/삭제" my_value="<%=g%>"> --%>
 							<input type="button" id="up_del_btn" value="수정/삭제" onclick="test01(<%=g%>);">
 						</td>
 					</tr>
@@ -173,7 +158,6 @@
 							</form>
 						</td>
 					</tr>
-					<% System.out.print(g); %>
 					<% g = g+1 ;%>
 					
 				</c:forEach>
