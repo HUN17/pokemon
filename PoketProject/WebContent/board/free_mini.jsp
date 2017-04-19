@@ -4,10 +4,11 @@
 <%@ page import="java.util.*"%>
 <%@ page import="com.sist.board.*" %>
 <%@page import="java.text.SimpleDateFormat"%>
+<%@	page import="com.sist.change.JspChange" %>
     <%
     	freeVO vo = new freeVO();
     	freeDAO dao = new freeDAO();
-    	List<freeVO> list = dao.freeMiniData(1);
+    	List<freeVO> list = dao.freeMiniData();
     %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="list" value="<%=list %>"></c:set>
@@ -19,7 +20,13 @@
 <script type="text/javascript">
 <%-- "main.jsp?mode=9&no=<%=vo.getNo()%>" --%>
 	function miniTr (test){
-		location.href="main.jsp?mode=9&no="+test;
+		<%String mode =request.getParameter("mode");
+				if(mode != "9" ) {
+					mode = "9";
+				}
+		%>
+		 location.href="main.jsp?mode=9&no="+test;
+		 console.log(jsp);
 	};
 </script>
 </head>

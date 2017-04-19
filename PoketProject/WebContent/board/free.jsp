@@ -1,6 +1,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" import="java.util.*,com.sist.board.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 	String strPage=request.getParameter("page");
 	if(strPage==null)
@@ -11,9 +12,7 @@
 	List<freeVO> list=dao.boardListData(curpage);
 	int totalpage=dao.boardTotalPage();
 	int count=dao.boardRowCount();
-	//전체 18개 개시글 ==>18개
-	//첫번째 계시글 번호 
-	//count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
+	List<freeVO> list2=dao.likeBoard();
 	
 	int total=dao.boardTotalPage();
 %>     	
@@ -51,7 +50,23 @@
 				<th width="20%" style="text-align: center; font-size: 13px;">작성일</th>
 				<th width="10%" style="text-align: center; font-size: 13px;">조회수</th>
 			</tr>
-
+			</table>
+			
+			<table class="table table-hover" style="width: 70%" >
+				<c:forEach var="vo2" items="<%=list2 %>">
+					<tr>
+						<td width="10%" align="center">${vo2.no }</td>
+						
+						<td width="45%" align="left"><a href="main.jsp?mode=9&no=${vo2.no }">${vo2.subject }</a></td>
+						
+						<td width="15%" align="center">${vo2.name }</td>
+						<td width="20%" align="center">${vo2.regdate }</td>
+						<td width="10%" align="center">${vo2.hit }</td>
+					</tr>
+				</c:forEach>
+			</table>
+			
+			<table class="table table-hover" style="width: 70%" >
 			<%
 				int i=0;
 				
