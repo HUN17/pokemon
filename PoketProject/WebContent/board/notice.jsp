@@ -8,12 +8,12 @@
 	int curpage=Integer.parseInt(strPage);
 	
 	noticeDAO dao=new noticeDAO();
-	List<freeVO> list=dao.boardListData(curpage);
+	List<noticeVO> list=dao.nboardListData(curpage);
 	int totalpage=dao.boardTotalPage();
 	int count=dao.boardRowCount();
 	//전체 18개 개시글 ==>18개
 	//첫번째 계시글 번호 
-	count=count-((curpage*15)-15);		//18-((1*10)-10)=18번
+	count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
 	
 	int total=dao.boardTotalPage();
 %>     	
@@ -53,7 +53,7 @@
 			<%
 				int i=0;
 				
-				for(freeVO vo:list){
+				for(noticeVO vo:list){
 			%>
 				<tr bgcolor="" height="27" id="dataTr">
 					<td width="10%" align="center"><%=count-- %></td>
@@ -74,7 +74,7 @@
 						<%		
 							}else{
 						%>
-								<a href="main.jsp?mode=9&no=<%=vo.getNo()%>"><%=vo.getSubject() %></a>
+								<a href="main.jsp?mode=14&no=<%=vo.getNo()%>"><%=vo.getSubject() %></a>
 						<%		
 							}
 							SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
@@ -101,8 +101,8 @@
      <table  class="table" style="width: 70%" > 
          <tr align="center">
             <td>
-               <form method="post" action="main.jsp?mode=8" id="ff" class="form-inline">      
-               	<a href="main.jsp?mode=10">
+               <form method="post" action="main.jsp?mode=13" id="ff" class="form-inline">      
+               	<a href="main.jsp?mode=15">
                   <input type="button" value="글쓰기" id="WriteBtn" class="btn btn-primary">
                </a>
                <select name="fs" class="form-control" style="width:8%" >

@@ -9,7 +9,7 @@
 	String no = request.getParameter("no");
 	String pwd = request.getParameter("pwd");
 	
-	freeVO vo = new freeVO();
+	noticeVO vo = new noticeVO();
 	vo.setNo(Integer.parseInt(no));
 	vo.setName(name);
 	vo.setSubject(subject);

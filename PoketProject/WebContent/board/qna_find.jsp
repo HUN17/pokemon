@@ -26,7 +26,7 @@
 <body>
 	<center>
 	 <div style="margin-top: 15px"></div>
-		<img alt="게시판 검색" src="../image/board_image/po.png" width="1000" height="40">
+		<img alt="게시판 검색" src="../image/board_image/qpo.png" width="1000" height="40">
 		<p>
 		<table class="table" style="width: 70%" >
 			<tr>
@@ -53,7 +53,7 @@
 						<tr height="27" id="dataTr">
 							<td width="10%" align="center"><%=vo.getNo() %></td>
 							<td width="45%" align="left">
-								<a href="content.jsp?no=<%=vo.getNo()%>"><%=vo.getSubject() %></a>
+								<a href="main.jsp?mode=21&no=<%=vo.getNo()%>"><%=vo.getSubject() %></a>
 								<%
 									SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 									String today = sdf.format(new Date());

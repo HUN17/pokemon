@@ -3,10 +3,11 @@
     pageEncoding="EUC-KR" import="java.util.*,com.sist.board.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
+	int curpage=1;
 	String strPage=request.getParameter("page");
 	if(strPage==null)
 		strPage="1";
-	int curpage=Integer.parseInt(strPage);
+	curpage=Integer.parseInt(strPage);
 	
 	tipDAO dao=new tipDAO();
 	List<tipVO> list=dao.tboardListData(curpage);
@@ -15,7 +16,7 @@
 	List<tipVO> list2=dao.likeBoard();
 	//전체 18개 개시글 ==>18개
 	//첫번째 계시글 번호 
-	//count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
+	count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
 	
 	int total=dao.tboardTotalPage();
 %>    
@@ -42,7 +43,7 @@
 <body>
 	<center>
 		<div style="margin-top: 15px"></div>
-	 	<img alt="커뮤니티" src="../image/board_image/po.png" width="1000" >
+	 	<img alt="커뮤니티" src="../image/board_image/tpo.png" width="1000" >
 		<p>
 		<table class="table table-hover" style="width: 70%" >
 			

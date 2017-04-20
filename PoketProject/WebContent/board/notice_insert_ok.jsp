@@ -2,12 +2,14 @@
     pageEncoding="EUC-KR" import="com.sist.board.*"%>
 <%
 	request.setCharacterEncoding("EUC-KR");
+	String exp = request.getParameter("exp");
 	String name = request.getParameter("name");
 	String subject = request.getParameter("subject");
 	String content = request.getParameter("content");
 	String pwd = request.getParameter("pwd");
 	
-	freeVO vo = new freeVO();
+	noticeVO vo = new noticeVO();
+	vo.setExp(Integer.parseInt(exp));
 	vo.setName(name);
 	vo.setSubject(subject);
 	vo.setContent(content);

@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR" import="com.sist.user.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%	
+	String id = (String)session.getAttribute("id");
+	MemberDAO dao=MemberDAO.newInstance();  
+	MemberVO vo = dao.getMember(id);
+%> 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
@@ -9,18 +14,22 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <!-- <link rel="stylesheet" href="table.css" type="text/css"> -->
+
+<!-- SmartEditor를 사용하기 위해서 다음 js파일을 추가 (경로 확인) -->
+<script type="text/javascript" src="../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
 </head>
 <body>
 	<center>
 	<div style="margin-top: 15px"></div>
-		<img alt="글쓰기" src="../image/board_image/po.png" width="1000" >
+		<img alt="글쓰기" src="../image/board_image/notice.png" width="1000" >
 		<p>
 		<form method="post" action="../board/notice_insert_ok.jsp" name="frm">
 			<table class="table" style="width: 60%">
 				<tr>
 					<td width="20%" align="right">이름</td>
 					<td width="80%" align="left">
-						<input type="text" name="name" class="form-control" style="width: 30%" placeholder="이름을 입력하세요">
+						<input type="hidden" name="exp" value="<%=vo.getExp() %>">
+						<input type="text" name="name" class="form-control" style="width: 30%" readonly value="<%=vo.getNickname() %>">
 					</td>
 				</tr>
 				<tr>

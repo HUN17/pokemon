@@ -3,7 +3,7 @@
 <%
 	String no = request.getParameter("no");			
 	noticeDAO dao = noticeDAO.newInstance();
-	freeVO vo = dao.boardUpdateData(Integer.parseInt(no));
+	noticeVO vo = dao.boardUpdateData(Integer.parseInt(no));
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -15,11 +15,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 </head>
 <body>
-	<center>
+<center>
 	<div style="margin-top: 15px"></div>
-		<img alt="수정하기" src="../image/board_image/po.png" width="1000" >
+		<img alt="수정하기" src="../image/board_image/notice.png" width="1000" >
 		<p>
-		<form method="post" action="../board/notice_update_ok.jsp" name="frm">
+		<form method="post" action="../board/qna_update_ok.jsp" name="frm">
 			<table class="table" style="width: 60%">
 				<tr>
 					<td width="20%" align="right">이름</td>

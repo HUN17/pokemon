@@ -41,20 +41,20 @@ public class noticeDAO {
 		}
 	}
 	
-	public List<freeVO> boardListData(int page){
-		ArrayList<freeVO> list=new ArrayList<>();
+	public List<noticeVO> nboardListData(int page){
+		ArrayList<noticeVO> list=new ArrayList<>();
 		
 		try{
 			getConnection();
-			String sql="SELECT no,subject,name,regdate,hit,group_tab "
-					+"FROM noticeBoard "
+			String sql="SELECT no,subject,name,Exp,regdate,hit,group_tab "
+					+"FROM nBoard "
 					+"ORDER BY group_id DESC,group_step ASC";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			
 			int i=0;
 			int j=0;
-			int pagecnt=(page*15)-15;
+			int pagecnt=(page*10)-10;
 			/*
 			 * 		13 	=> 0~9,		10~12
 			 * 		1page		2page 		3page
@@ -62,14 +62,15 @@ public class noticeDAO {
 			 * 		  9			  19		  29
 			 */
 			while(rs.next()){
-				if(i<15 && j>=pagecnt){
-					freeVO vo=new freeVO();
+				if(i<10 && j>=pagecnt){
+					noticeVO vo=new noticeVO();
 					vo.setNo(rs.getInt(1));
 					vo.setSubject(rs.getString(2));
 					vo.setName(rs.getString(3));
-					vo.setRegdate(rs.getDate(4));
-					vo.setHit(rs.getInt(5));
-					vo.setGroup_tab(rs.getInt(6));
+					vo.setExp(rs.getInt(4));
+					vo.setRegdate(rs.getDate(5));
+					vo.setHit(rs.getInt(6));
+					vo.setGroup_tab(rs.getInt(7));
 					list.add(vo);
 					i++;
 				}
@@ -89,7 +90,7 @@ public class noticeDAO {
 		int total=0;
 		try{
 			getConnection();
-			String sql="SELECT CEIL(COUNT(*)/15) FROM noticeBoard";
+			String sql="SELECT CEIL(COUNT(*)/10) FROM nBoard";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			rs.next();
@@ -109,7 +110,7 @@ public class noticeDAO {
 		int total=0;
 		try{
 			getConnection();
-			String sql="SELECT COUNT(*) FROM noticeBoard";
+			String sql="SELECT COUNT(*) FROM nBoard";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			rs.next();
@@ -130,7 +131,7 @@ public class noticeDAO {
 		try{
 			getConnection();
 			String sql="SELECT COUNT(*) "
-					+"FROM noticeBoard "
+					+"FROM nBoard "
 					+"WHERE "+fs+" LIKE '%'||?||'%'";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, ss);
@@ -146,26 +147,27 @@ public class noticeDAO {
 		return count;
 	}
 	
-	public List<freeVO> boardFindData(String fs, String ss){
-		List<freeVO> list=new ArrayList<>();
+	public List<noticeVO> nboardFindData(String fs, String ss){
+		List<noticeVO> list=new ArrayList<>();
 		
 		try{
 			getConnection();
-			String sql="SELECT no,subject,name,regdate,hit,group_tab "
-					+"FROM noticeBoard "
+			String sql="SELECT no,subject,name,Exp,regdate,hit,group_tab "
+					+"FROM nBoard "
 					+"WHERE "+fs+" LIKE '%'||?||'%'";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, ss);
 			ResultSet rs=ps.executeQuery();
 			
 			while(rs.next()){
-				freeVO vo=new freeVO();
+				noticeVO vo=new noticeVO();
 				vo.setNo(rs.getInt(1));
 				vo.setSubject(rs.getString(2));
 				vo.setName(rs.getString(3));
-				vo.setRegdate(rs.getDate(4));
-				vo.setHit(rs.getInt(5));
-				vo.setGroup_tab(rs.getInt(6));
+				vo.setExp(rs.getInt(4));
+				vo.setRegdate(rs.getDate(5));
+				vo.setHit(rs.getInt(6));
+				vo.setGroup_tab(rs.getInt(7));
 				list.add(vo);
 			}
 			rs.close();
@@ -178,14 +180,14 @@ public class noticeDAO {
 		return list;
 	}
 	
-	public freeVO boardContent(int no,int type){
-		freeVO vo=new freeVO();
+	public noticeVO boardContent(int no,int type){
+		noticeVO vo=new noticeVO();
 		
 		try{
 			getConnection();
 			String sql="";
 			if(type==1){
-				sql="UPDATE noticeBoard SET "
+				sql="UPDATE nBoard SET "
 						+"hit=hit+1 "
 						+"WHERE no=?";
 				ps=conn.prepareStatement(sql);
@@ -194,8 +196,8 @@ public class noticeDAO {
 				ps.close();
 			}
 			
-			sql="SELECT no,name,subject,content,regdate,hit "
-					+"FROM noticeBoard "
+			sql="SELECT no,name,id,Exp,subject,content,regdate,hit "
+					+"FROM nBoard "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -203,10 +205,12 @@ public class noticeDAO {
 			rs.next();
 			vo.setNo(rs.getInt(1));
 			vo.setName(rs.getString(2));
-			vo.setSubject(rs.getString(3));
-			vo.setContent(rs.getString(4));
-			vo.setRegdate(rs.getDate(5));
-			vo.setHit(rs.getInt(6));
+			vo.setId(rs.getString(3));
+			vo.setExp(rs.getInt(4));
+			vo.setSubject(rs.getString(5));
+			vo.setContent(rs.getString(6));
+			vo.setRegdate(rs.getDate(7));
+			vo.setHit(rs.getInt(8));
 			rs.close();		
 			
 		}catch(Exception ex){
@@ -218,11 +222,11 @@ public class noticeDAO {
 		return vo;
 	}
 	//SEQUENCE INSERT,UPDATE,SELECT
-	public void boardReply(int pno,freeVO vo){
+	public void boardReply(int pno,noticeVO vo){
 		try{
 			getConnection();
 			String sql="SELECT group_id,group_step,group_tab "
-					+"FROM noticeBoard "
+					+"FROM nBoard "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, pno);
@@ -233,7 +237,8 @@ public class noticeDAO {
 			int gt=rs.getInt(3);
 			rs.close();
 			ps.close();
-			sql="UPDATE noticeBoard SET "
+
+			sql="UPDATE nBoard SET "
 					+"group_step=group_step+1 "
 					+"WHERE group_id=? AND group_step>?";
 			ps=conn.prepareStatement(sql);
@@ -242,21 +247,24 @@ public class noticeDAO {
 			ps.executeUpdate();
 			ps.close();
 			
-			sql="INSERT INTO noticeBoard(no,name,subject,content,pwd,group_id,group_step,group_tab,root) "
-					+"VALUES(seq_pb_no.nextval,?,?,?,?,?,?,?,?)";
+
+			sql="INSERT INTO nBoard(no,name,id,Exp,subject,content,pwd,group_id,group_step,group_tab,root) "
+					+"VALUES(nt_board_no.nextval,?,?,?,?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
-			ps.setString(2, vo.getSubject());
-			ps.setString(3, vo.getContent());
-			ps.setString(4, vo.getPwd());
-			ps.setInt(5, gi);
-			ps.setInt(6, gs+1);
-			ps.setInt(7, gt+1);
-			ps.setInt(8, pno);
+			ps.setString(2, vo.getId());
+			ps.setInt(3, vo.getExp());
+			ps.setString(4, vo.getSubject());
+			ps.setString(5, vo.getContent());
+			ps.setString(6, vo.getPwd());
+			ps.setInt(7, gi);
+			ps.setInt(8, gs+1);
+			ps.setInt(9, gt+1);
+			ps.setInt(10, pno);
 			ps.executeUpdate();
 			ps.close();
 			//depth=depth+1
-			sql="UPDATE noticeBoard SET "
+			sql="UPDATE nBoard SET "
 					+"depth=depth+1 "
 					+"WHERE no=?";
 			ps=conn.prepareStatement(sql);
@@ -270,17 +278,19 @@ public class noticeDAO {
 		}
 	}
 	
-	public void boardInsert(freeVO vo){
+	public void boardInsert(noticeVO vo){
 		try{
 			getConnection();
-			String sql="INSERT INTO noticeBoard(no,name,subject,content,pwd,group_id) "
-					+"VALUES(seq_pb_no.nextval,?,?,?,?,"
-					+"(SELECT NVL(MAX(group_id)+1,1) FROM noticeBoard))";
+			String sql="INSERT INTO nBoard(no,name,id,Exp,subject,content,pwd,group_id) "
+					+"VALUES(nt_board_no.nextval,?,?,?,?,?,?,"
+					+"(SELECT NVL(MAX(group_id)+1,1) FROM nBoard))";
 			ps=conn.prepareStatement(sql);
-			ps.setString(1, vo.getName());	
-			ps.setString(2, vo.getSubject());
-			ps.setString(3, vo.getContent());
-			ps.setString(4, vo.getPwd());
+			ps.setString(1, vo.getName());
+			ps.setString(2, vo.getId());
+			ps.setInt(3, vo.getExp());
+			ps.setString(4, vo.getSubject());
+			ps.setString(5, vo.getContent());
+			ps.setString(6, vo.getPwd());
 			
 			ps.executeUpdate();
 			
@@ -290,12 +300,15 @@ public class noticeDAO {
 			disConnection();
 		}
 	}
-	public boolean boardUpdate(freeVO vo){
+	
+
+	public boolean boardUpdate(noticeVO vo){
 		boolean bCheck = false;
 		
 		try {
 			getConnection();
-			String sql= "SELECT pwd FROM noticeBoard "
+
+			String sql= "SELECT pwd FROM nBoard "
 					+"WHERE no=?";
 			ps =conn.prepareStatement(sql);
 			ps.setInt(1,vo.getNo());
@@ -305,18 +318,21 @@ public class noticeDAO {
 			String db_pwd = rs.getString(1);
 			rs.close();
 			ps.close();
-			
+
 			if(db_pwd.equals(vo.getPwd())){
 				bCheck = true;
-				sql ="UPDATE noticeBoard SET "
+				sql ="UPDATE nBoard SET "
 						+"name=?, "
+						
 						+"subject=?,content=? "
 						+"WHERE no=?";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, vo.getName());
-				ps.setString(2, vo.getSubject());
-				ps.setString(3, vo.getContent());
-				ps.setInt(4, vo.getNo());
+				ps.setString(2, vo.getId());
+				ps.setInt(3, vo.getExp());
+				ps.setString(4, vo.getSubject());
+				ps.setString(5, vo.getContent());
+				ps.setInt(6, vo.getNo());
 				ps.executeUpdate();
 			} else {
 				bCheck = false;
@@ -331,12 +347,12 @@ public class noticeDAO {
 		return bCheck;
 	}
 			
-	public freeVO boardUpdateData(int no){
-		freeVO vo = new freeVO();
+	public noticeVO boardUpdateData(int no){
+		noticeVO vo = new noticeVO();
 		try {
 			getConnection();
 			String sql ="SELECT * "
-					+"FROM noticeBoard "
+					+"FROM nBoard "
 					+"WHERE no=?";
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -346,11 +362,13 @@ public class noticeDAO {
 			
 			vo.setNo(rs.getInt(1));
 			vo.setName(rs.getString(2));
-			vo.setSubject(rs.getString(3));
-			vo.setContent(rs.getString(4));
-			vo.setPwd(rs.getString(5));
-			vo.setRegdate(rs.getDate(6));
-			vo.setHit(rs.getInt(7));			
+			vo.setId(rs.getString(3));
+			vo.setExp(rs.getInt(4));
+			vo.setSubject(rs.getString(5));
+			vo.setContent(rs.getString(6));
+			vo.setPwd(rs.getString(7));
+			vo.setRegdate(rs.getDate(8));
+			vo.setHit(rs.getInt(9));			
 			rs.close();
 		} catch (Exception e) {
 			System.out.println("boardUpdateData()"+e.getMessage());
@@ -365,7 +383,7 @@ public class noticeDAO {
 		
 		try {
 			getConnection();
-			String sql ="SELECT pwd FROM noticeBoard "
+			String sql ="SELECT pwd FROM nBoard "
 					+"WHERE no=?";
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -377,7 +395,7 @@ public class noticeDAO {
 			
 			if(db_pwd.equals(pwd)){
 				bCheck = true;
-				sql = "DELETE FROM noticeBoard "
+				sql = "DELETE FROM nBoard "
 						+"WHERE no=?";
 				ps = conn.prepareStatement(sql);
 				ps.setInt(1, no);
@@ -392,5 +410,46 @@ public class noticeDAO {
 			disConnection();
 		}
 		return bCheck;
+	}
+	
+	public List<noticeVO> noticeMiniData(int page){
+		ArrayList<noticeVO> list  = new ArrayList<>();
+		
+		try{
+			getConnection();
+			/*String sql="SELECT no,subject,name,hit "
+					+"FROM (SELECT * FROM (SELECT * FROM POKEBOARD ORDER BY hit DESC )) "
+					+"ORDER BY group_id DESC,group_step ASC";*/
+			String sql="SELECT no,subject,name,id,Exp,hit "
+			+" FROM nBoard WHERE group_step=0 ORDER BY hit DESC ";
+			ps=conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			int i=0;
+			int j=0;
+			int pagecnt=(page*10)-10;
+			
+			while(rs.next()){
+				if(i<10 && j>=pagecnt){
+					noticeVO vo=new noticeVO();
+					vo.setNo(rs.getInt(1));
+					vo.setSubject(rs.getString(2));
+					vo.setName(rs.getString(3));
+					vo.setId(rs.getString(4));
+					vo.setExp(rs.getInt(5));
+					vo.setHit(rs.getInt(6));
+					list.add(vo);
+					i++;
+				}
+				j++;
+			}
+			
+		}catch(Exception ex){
+			System.out.println("noticeMiniData()"+ex.getMessage());
+		}finally{
+			disConnection();
+		}
+		
+		return list;
 	}
 }

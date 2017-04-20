@@ -423,7 +423,7 @@ public class freeDAO {
 			String sql="SELECT no,subject,name,exp,regdate,hit FROM pokeBoard ORDER BY b_like DESC, no ASC";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
-			
+
 			rs.next();
 			for(int i = 0; i < 10; i++) {
 				freeVO vo=new freeVO();

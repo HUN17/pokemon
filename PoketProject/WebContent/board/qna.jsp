@@ -16,7 +16,7 @@
 	List<qnaVO> list2=dao.likeBoard();
 	//전체 18개 개시글 ==>18개
 	//첫번째 계시글 번호 
-	//count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
+	count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
 	
 	int total=dao.qboardTotalpage();
 %>
@@ -42,7 +42,7 @@
 <body>
 		<center>
 		<div style="margin-top: 15px"></div>
-	 	<img alt="커뮤니티" src="../image/board_image/po.png" width="1000" >
+	 	<img alt="커뮤니티" src="../image/board_image/qpo.png" width="1000" >
 		<p>
 		<table class="table table-hover" style="width: 70%" >
 			

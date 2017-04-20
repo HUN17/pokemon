@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="com.sist.board.*"%>
+    pageEncoding="EUC-KR" import="com.sist.board.*" import="com.sist.user.*,java.util.*"%>
 <%
 	String no = request.getParameter("no");
 	noticeDAO dao = noticeDAO.newInstance();
-	freeVO vo=dao.boardContent(Integer.parseInt(no), 1);
-%>    
+	noticeVO vo =dao.boardContent(Integer.parseInt(no), 1);
+	
+	
+%>     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,7 +36,7 @@
 <body>
 	<center>
 	<div style="margin-top: 15px"></div>
-		<img alt="커뮤니티" src="../image/board_image/po.png" width="1000">
+		<img alt="커뮤니티" src="../image/board_image/notice.png" width="1000">
 		<p>
 		<table class="table table-bordered" style="width: 60%">
 			<tr>
@@ -63,11 +65,11 @@
 		<table class="table table-bordered" style="width: 60%">
 			<tr>
 				<td align="right">
-					<a href="reply.jsp?no=<%=no%>">
+					<%-- <a href="reply.jsp?no=<%=no%>">
 						<!-- <img alt="답글쓰기" src="image/reply.gif" > -->
 						<!--  <input type="button" value="답글쓰기"  class="btn btn-default"> -->
-					</a>
-					<a href="main.jsp?mode=15&no=<%=no%>">
+					</a> --%>
+					<a href="main.jsp?mode=16&no=<%=no%>">
 						<input type="button" value="수정" id="WriteBtn" class="btn btn-default">
 					</a>
 					<input type="button" value="삭제" id="delBtn" class="btn btn-default">

@@ -8,17 +8,17 @@
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="list" value="<%=list %>"></c:set>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <script type="text/javascript">
-<%-- "main.jsp?mode=9&no=<%=vo.getNo()%>" --%>
-	function miniTr (test){
+<%-- "main.jsp?mode=21&no=<%=vo.getNo()%>" --%>
+/* 	function miniTr (test){
 		location.href="main.jsp?mode=9&no="+test;
-	};
+	}; */
 </script>
 </head>
 <body>
@@ -46,6 +46,10 @@
 				<img alt="인기글" src="../image/board_image/mini_star.png" width="20">
 			</td>
 			
+
+			<td width="50%" align="left">
+			<a href="main.jsp?mode=21&no=${vo.no }">${vo.subject }</a>
+			</td>
 			<td width="50%" align="left"  >
 			${vo.subject }
 			</td>

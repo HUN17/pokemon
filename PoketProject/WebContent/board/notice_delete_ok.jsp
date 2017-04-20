@@ -5,7 +5,7 @@
 	String no = request.getParameter("no");
 	String pwd = request.getParameter("pwd");
 	
-	freeDAO dao = freeDAO.newInstance();
+	noticeDAO dao = noticeDAO.newInstance();
 	boolean bCheck = dao.boardDelete(Integer.parseInt(no), pwd);
 	
 	if(bCheck==false){
