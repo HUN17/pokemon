@@ -191,9 +191,6 @@ $(function(){
 				<!--Footer-->
 				<div class="modal-footer">
 					<div class="options text-left" style="font-size: 15px;">
-						<p>
-							Not a member? <a href="">Sign Up</a>
-						</p>
 					</div>
 					<button type="button" class="btn btn-danger ml-auto" data-dismiss="modal">Close</button>
 				</div>

@@ -7,7 +7,7 @@ public class freeVO {
 	private String name;
 	private int exp;
 	private String subject;
-
+	private int b_like;
 	private String content;
 	private String pwd;
 	private Date regdate;
@@ -100,6 +100,12 @@ public class freeVO {
 	}
 	public void setDepth(int depth) {
 		this.depth = depth;
+	}
+	public int getB_like() {
+		return b_like;
+	}
+	public void setB_like(int b_like) {
+		this.b_like = b_like;
 	}
 	
 	

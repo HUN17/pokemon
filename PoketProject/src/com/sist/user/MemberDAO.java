@@ -238,7 +238,7 @@ public class MemberDAO {
       ps.setString(4, vo.getPhone());
       ps.setString(5, vo.getPhone1());
       ps.setString(6, vo.getEmail());
-      ps.setString(8, vo.getId());
+      ps.setString(7, vo.getId());
       
       ps.executeUpdate();
       ps.close();

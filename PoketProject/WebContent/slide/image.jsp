@@ -25,7 +25,7 @@
 	        <img class="slideImg" src="../slide/img/1.png" />
 	        <img class="slideImg" src="../slide/img/2.png" />
 	        <img class="slideImg" src="../slide/img/3.jpg" />
-	        <img class="slideImg" src="../slide/img/4.jpg" />
+	        <img class="slideImg" src="../slide/img/4.png" />
 		</div>
 
 </body>

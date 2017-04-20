@@ -482,4 +482,22 @@ public class freeDAO {
 		
 	}
 	
+	public void likeup(int no) {
+		
+		try{
+			getConnection();
+			String sql = "UPDATE pokeBoard SET b_like = b_like+1 WHERE no = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, no);
+			ps.executeUpdate();
+			ps.close();
+			System.out.println("likeup");
+			
+		}catch(Exception ex){
+			System.out.println("freeMiniData()"+ex.getMessage());
+		}finally{
+			disConnection();
+		}
+	}
+	
 }

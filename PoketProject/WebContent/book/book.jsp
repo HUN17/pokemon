@@ -88,7 +88,7 @@
 <script type="text/javascript">
 	    function open_pop2(detail){
 	        var url = '../book/detailBook1.jsp?detail='+detail;
-	        var set = "width=1050,height=600";
+	        var set = "width=1050,height=770";
 	        
 	        window.open(url,'popupView',set); 
 	    }

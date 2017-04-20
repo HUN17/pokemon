@@ -50,9 +50,6 @@
 			<td width="50%" align="left">
 			<a href="main.jsp?mode=21&no=${vo.no }">${vo.subject }</a>
 			</td>
-			<td width="50%" align="left"  >
-			${vo.subject }
-			</td>
 			<td width="30%" align="center">${vo.name }</td>
 			<%-- <td width="20%" align="center">${vo.hit }</td> --%>
 			

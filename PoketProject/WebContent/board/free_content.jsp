@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/j query.min.js"></script>
 <script type="text/javascript">
 	var i=0;
 	$(function(){
@@ -34,7 +34,35 @@
 			}
 		});	
 	});
-	var p = 0;
+	<%-- function levup(){
+		<% 
+		MemberDAO dao2 = MemberDAO.newInstance();
+		MemberVO vo2 = dao2.getMember(vo.getId());
+		dao2.levUp(vo2, 100,20);
+		//vo.setB_like(vo.getB_like()+1);
+		%> 
+	};--%>  
+ 		$(function(){
+		$('#like').click(function(){
+			
+			if(confirm('추천 하시겠습니까?')){
+				$.ajax({
+					type: "POST",
+					url: "../board/like_ok.jsp",
+					data:{id:$("#a_id").val(),
+						no:$("#a_no").val(),
+						like:$("#a_like").val()
+						}
+				});
+				alert("추천 되었습니다.");
+				location.reload(true);
+			}else{
+				alert("교환을 취소합니다.");
+			}
+		})
+	}); 
+		
+ 	var p = 0;
 	function test01(c) {
 		if(p==0){
 			$('#del'+c).show();
@@ -43,14 +71,8 @@
 			$('#del'+c).hide();
 			p=0;
 		}
-	}
-	function levup(){
-		<% 
-		MemberDAO dao2 = MemberDAO.newInstance();
-		MemberVO vo2 = dao2.getMember(vo.getId());
-		dao2.levUp(vo2, 100,20);
-		%>
-	};
+	}; 
+	
 
 </script>
 </head>
@@ -83,10 +105,14 @@
 			</tr>					
 		</table>
 		
+		<form action="../board/like_ok.jsp">
 		<table class="table table-bordered" style="width: 60%">
 			<tr>
 				<td align="left">
-				 <input type="button" value="추천"  class="btn btn-default" onclick="levup();">
+				<input type="hidden" id="a_id" name="a_id" value="<%=vo.getId()%>">
+				<input type="hidden" id="a_like" name="a_like" value="<%=vo.getB_like()%>">
+				<input type="hidden" id="a_no" name="a_no" value="<%=vo.getNo()%>">
+				 <input type="button" avalue="" value="추천"  id="like" class="btn btn-default" ><!-- onclick="levup();" -->
 				</td>
 				
 				
@@ -100,6 +126,9 @@
 					</a>
 				</td>
 			</tr>
+			</table>
+		</form>
+		<table class="table table-bordered" style="width: 60%">
 			<tr id="del" style="display: none;">
 				<td colspan="2" align="right">
 					<form action="../board/free_delete_ok.jsp" method="post">
@@ -110,6 +139,7 @@
 				</td>
 			</tr>
 		</table>
+
 		
 		<form action="../board/reply_ok.jsp" method="post">
 			<table  class="table table-bordered" style="width: 60%" border="1">
@@ -134,7 +164,7 @@
 				</table>
 		</form>
 		
-				<table  class="table table-bordered" style="width: 60%" border="1">
+				<table  class="table table-bordered" style="width: 60%;" border="1">
 				<c:forEach var="vo" items="<%=list %>">
 					<tr>
 						<td width="85%">

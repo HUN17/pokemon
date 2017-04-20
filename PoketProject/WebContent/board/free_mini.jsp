@@ -17,8 +17,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript">
-<%-- "main.jsp?mode=9&no=<%=vo.getNo()%>" --%>
+<%-- <script type="text/javascript">
+"main.jsp?mode=9&no=<%=vo.getNo()%>"
 
 	function miniTr (test){
 		<%String mode =request.getParameter("mode");
@@ -30,7 +30,8 @@
 		 console.log(jsp);
 	};
 
-</script>
+</script> --%>
+
 </head>
 <body>
 	<div id="chatHeader" >
