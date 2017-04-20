@@ -53,7 +53,7 @@
 						<tr height="27" id="dataTr">
 							<td width="10%" align="center"><%=vo.getNo() %></td>
 							<td width="45%" align="left">
-								<a href="content.jsp?no=<%=vo.getNo()%>"><%=vo.getSubject() %></a>
+								<a href="main.jsp?mode=21&no=<%=vo.getNo()%>"><%=vo.getSubject() %></a>
 								<%
 									SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 									String today = sdf.format(new Date());

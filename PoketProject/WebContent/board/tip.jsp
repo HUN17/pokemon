@@ -2,10 +2,11 @@
     pageEncoding="EUC-KR" import="com.sist.board.*,java.util.*"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%
+	int curpage=1;
 	String strPage=request.getParameter("page");
 	if(strPage==null)
 		strPage="1";
-	int curpage=Integer.parseInt(strPage);
+	curpage=Integer.parseInt(strPage);
 	
 	tipDAO dao=new tipDAO();
 	List<tipVO> list=dao.tboardListData(curpage);
@@ -13,7 +14,7 @@
 	int count=dao.tboardRowCount();
 	//전체 18개 개시글 ==>18개
 	//첫번째 계시글 번호 
-	//count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
+	count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
 	
 	int total=dao.tboardTotalPage();
 %>    
