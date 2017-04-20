@@ -4,6 +4,7 @@
 <%	
 	request.setCharacterEncoding("EUC-KR");
 	String mode=request.getParameter("mode");
+	System.out.println(mode);
 	
 	if(mode==null)
 		mode="0";

@@ -455,4 +455,38 @@ public class tipDAO {
 		return list;
 	}
 	
+	public List<tipVO> likeBoard () {
+		List<tipVO> list = new ArrayList<>();
+		try{
+			getConnection();
+			String sql="SELECT no,subject,name,exp,regdate,hit,exp FROM tipBoard ORDER BY b_like DESC, no ASC";
+			ps=conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			rs.next();
+			for(int i = 0; i < 5; i++) {
+				tipVO vo=new tipVO();
+				vo.setNo(rs.getInt(1));
+				vo.setSubject(rs.getString(2));
+				vo.setName(rs.getString(3));
+				vo.setExp(rs.getInt(4));
+				vo.setRegdate(rs.getDate(5));
+				vo.setHit(rs.getInt(6));
+				vo.setExp(rs.getInt(7));
+				list.add(vo);
+				rs.next();
+			}
+			rs.close();
+
+			
+		}catch(Exception ex){
+			System.out.println("freeMiniData()"+ex.getMessage());
+		}finally{
+			disConnection();
+		}
+		
+		return list;
+		
+	}
+	
 }

@@ -48,7 +48,7 @@ public class freeDAO {
 			getConnection();
 			String sql="SELECT no,subject,name,Exp,regdate,hit,group_tab "
 					+"FROM pokeBoard "
-					+"ORDER BY group_id DESC,group_step ASC";
+					+"ORDER BY no DESC";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			
@@ -412,7 +412,7 @@ public class freeDAO {
 		return bCheck;
 	}
 	
-	public List<freeVO> freeMiniData(int page){
+	public List<freeVO> freeMiniData(){
 		ArrayList<freeVO> list  = new ArrayList<>();
 		
 		try{
@@ -420,30 +420,57 @@ public class freeDAO {
 			/*String sql="SELECT no,subject,name,hit "
 					+"FROM (SELECT * FROM (SELECT * FROM POKEBOARD ORDER BY hit DESC )) "
 					+"ORDER BY group_id DESC,group_step ASC";*/
-			String sql="SELECT no,subject,name,id,Exp,hit "
-			+" FROM POKEBOARD WHERE group_step=0 ORDER BY hit DESC ";
+			String sql="SELECT no,subject,name,exp,regdate,hit FROM pokeBoard ORDER BY b_like DESC, no ASC";
 			ps=conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
-			
-			int i=0;
-			int j=0;
-			int pagecnt=(page*10)-10;
-			
-			while(rs.next()){
-				if(i<10 && j>=pagecnt){
-					freeVO vo=new freeVO();
-					vo.setNo(rs.getInt(1));
-					System.out.println(vo.getNo());
-					vo.setSubject(rs.getString(2));
-					vo.setName(rs.getString(3));
-					vo.setId(rs.getString(4));
-					vo.setExp(rs.getInt(5));
-					vo.setHit(rs.getInt(6));
-					list.add(vo);
-					i++;
-				}
-				j++;
+
+			rs.next();
+			for(int i = 0; i < 10; i++) {
+				freeVO vo=new freeVO();
+				vo.setNo(rs.getInt(1));
+				vo.setSubject(rs.getString(2));
+				vo.setName(rs.getString(3));
+				vo.setExp(rs.getInt(4));
+				vo.setRegdate(rs.getDate(5));
+				vo.setHit(rs.getInt(6));
+				list.add(vo);
+				rs.next();
 			}
+			rs.close();
+			
+		}catch(Exception ex){
+//			System.out.println("freeMiniData()"+ex.getMessage());
+			ex.printStackTrace();
+		}finally{
+			disConnection();
+		}
+		
+		return list;
+	}
+	
+	public List<freeVO> likeBoard () {
+		List<freeVO> list = new ArrayList<>();
+		try{
+			getConnection();
+			String sql="SELECT no,subject,name,exp,regdate,hit,exp FROM pokeBoard ORDER BY b_like DESC, no ASC";
+			ps=conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			rs.next();
+			for(int i = 0; i < 5; i++) {
+				freeVO vo=new freeVO();
+				vo.setNo(rs.getInt(1));
+				vo.setSubject(rs.getString(2));
+				vo.setName(rs.getString(3));
+				vo.setExp(rs.getInt(4));
+				vo.setRegdate(rs.getDate(5));
+				vo.setHit(rs.getInt(6));
+				vo.setExp(rs.getInt(7));
+				list.add(vo);
+				rs.next();
+			}
+			rs.close();
+
 			
 		}catch(Exception ex){
 			System.out.println("freeMiniData()"+ex.getMessage());
@@ -452,6 +479,7 @@ public class freeDAO {
 		}
 		
 		return list;
+		
 	}
 	
 }

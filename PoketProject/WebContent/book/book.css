@@ -18,6 +18,7 @@
 		width:500px;
 		height: 100px;
 		float: left;
+		margin-left: 60px;
 	}
 	
 	.bookLogo input{
@@ -26,7 +27,7 @@
 	}
 	
 	.bookSearch{
-		width:780px;
+		width:690px;
 		height: 100px;
 		float: left;
 	}
@@ -89,7 +90,8 @@
 		-webkit-filter: drop-shadow(0px 20px 25px #8C8C8C);
 		filter: drop-shadow(0px 0px 25px #8C8C8C);
 		font-weight: bold;
-		transform:scale(1.05); -webkit-transform:scale(1.05);
+		transform:scale(1.05);
+		-webkit-transform:scale(1.05);
 	}
 	
 	.bookImg .overImg {
@@ -100,7 +102,10 @@
 		opacity:.60;
 		border-radius: 10px;
 	}
-	.bookImg:hover .overImg {display:block;}
+	
+	.bookImg:hover .overImg {
+		display:block;
+	}
 	
 	 .bookTypeImg{
 		width: 50px !important;
@@ -108,7 +113,8 @@
 	}
 	
 	#bookMap{
-		margin-top: 50px;
+		margin-top: 55px;
 		margin-left: 20px;
 		float: left;
 	}
+	

@@ -166,11 +166,13 @@
 		<div class="bookLogowrap">
 			<form name="logo" action="../main/main.jsp?mode=2" method="post">
 				<div class="bookLogo">
-								<input type="image" src="../image/book_image/book_logo.png">
+				<input type="image" src="../image/book_image/book_logo.png">
 				<a href="https://pokeinven.com/" target="_blank">
-					<img id="bookMap" alt="지도 보기" src="../image/book_image/location.png" onmouseover="this.src='../image/book_image/location1.png';" onmouseout="this.src='../image/book_image/location.png';"width="50">
+					<!-- <img id="bookMap" alt="지도 보기" src="../image/book_image/location.png" onmouseover="this.src='../image/book_image/location1.png';" onmouseout="this.src='../image/book_image/location.png';"width="50"> -->
+				<img id="bookMap" alt="지도 보기" src="../image/book_image/logo_Map.png" width="200">
 				</a>
 				</div>
+				
 			</form>
 			<form name="select" action="../main/main.jsp?mode=2" method="post">
 					<div class="bookSearch">

@@ -21,9 +21,11 @@
 </head>
 <body>
 <div id="chatHeader" >
+		<a href="main.jsp?mode=1">
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
 		공지사항
 		<img class="chat_ball" alt="포켓볼" src="../chat/image/chat_subject.png">
+		</a>
 	</div>
 	<table id="boardTable_mini" >
 		<!-- <tr>

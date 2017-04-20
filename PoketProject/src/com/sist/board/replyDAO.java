@@ -50,9 +50,10 @@ public class replyDAO {
 		List<replyVO> list=new ArrayList<>();
 		try{
 			getConnection();
-			String sql = "SELECT recontent.no, recontent.id, recontent.content, recontent.name, recontent.p_no "
+			String sql = "SELECT recontent.no, recontent.id, recontent.content, recontent.name, recontent.pwd,recontent.p_no "
 					+ "FROM recontent, pokeBoard "
-					+ "WHERE pokeBoard.no = ? AND recontent.p_no = ?";
+					+ "WHERE pokeBoard.no = ? AND recontent.p_no = ? "
+					+ "ORDER BY recontent.no ASC";
 //			String sql = "select no, content, name, p_no from recontent";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, no);
@@ -64,7 +65,8 @@ public class replyDAO {
 				vo.setId(rs.getString(2));
 				vo.setContent(rs.getString(3));
 				vo.setName(rs.getString(4));
-				vo.setP_no(rs.getInt(5));
+				vo.setPwd(rs.getString(5));
+				vo.setP_no(rs.getInt(6));
 				list.add(vo);
 			}       
 			rs.close();

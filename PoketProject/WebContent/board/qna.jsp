@@ -1,5 +1,7 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="com.sist.board.*, java.util.*,java.text.SimpleDateFormat"%>
+    pageEncoding="EUC-KR" import="java.util.*,com.sist.board.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String strPage=request.getParameter("page");
@@ -11,6 +13,7 @@
 	List<qnaVO> list=dao.qboardListData(curpage);
 	int totalpage=dao.qboardTotalpage();
 	int count=dao.qboardRowCount();
+	List<qnaVO> list2=dao.likeBoard();
 	//전체 18개 개시글 ==>18개
 	//첫번째 계시글 번호 
 	count=count-((curpage*10)-10);		//18-((1*10)-10)=18번
@@ -50,7 +53,38 @@
 				<th width="20%" style="text-align: center; font-size: 13px;">작성일</th>
 				<th width="10%" style="text-align: center; font-size: 13px;">조회수</th>
 			</tr>
-
+			</table>
+			
+			<table class="popular table table-hover" style="width: 70%" >
+				<c:forEach var="vo2" items="<%=list2 %>">
+					<tr>
+						<td width="10%" align="center"><img alt="인기글" src="../image/board_image/mini_star.png" width="20"></td>
+						
+						<td width="45%" align="left"><a href="main.jsp?mode=9&no=${vo2.no }">${vo2.subject }</a></td>
+						
+						<td width="15%" align="center">
+							<c:if test="${vo2.exp/1000 == 1 }">
+								<img alt="초급" src="../image/user_image/b1.png" width="15">
+							</c:if>
+							<c:if test="${vo2.exp/1000 == 2 }">
+								<img alt="중급" src="../image/user_image/b2.png" width="15">
+							</c:if>
+							
+							<c:if test="${vo2.exp/1000 == 3 }">
+								<img alt="고급" src="../image/user_image/b3.png" width="15">
+							</c:if>
+							
+							<c:if test="${vo2.exp/1000 == 4 }">
+								<img alt="대급" src="../image/user_image/b4.png" width="15">
+							</c:if>
+						${vo2.name }</td>
+						<td width="20%" align="center">${vo2.regdate }</td>
+						<td width="10%" align="center">${vo2.hit }</td>
+					</tr>
+				</c:forEach>
+			</table>
+			
+			<table class="table table-hover" style="width: 70%" >
 			<%
 				int i=0;
 				
