@@ -58,23 +58,21 @@
 						<td width="10%" align="center"><img alt="인기글" src="../image/board_image/mini_star.png" width="20"></td>
 						
 						<td width="45%" align="left"><a href="main.jsp?mode=9&no=${vo2.no }">${vo2.subject }</a></td>
-						<td width="15%" align="center">
-						
-						<c:if test="${vo2.exp/1000 == 1 }">
-						<img alt="초급" src="../image/user_image/b1.png" width="15">
-						</c:if>
-					
-					<c:if test="${vo2.exp/1000 == 2 }">
-						<img alt="중급" src="../image/user_image/b2.png" width="15">
-					</c:if>
-					
-					<c:if test="${vo2.exp/1000 == 3 }">
-						<img alt="고급" src="../image/user_image/b3.png" width="15">
-					</c:if>
-					
-					<c:if test="${vo2.exp/1000 == 4 }">
-						<img alt="대급" src="../image/user_image/b4.png" width="15">
-					</c:if>
+						<td width="15%" align="center">	
+							<c:if test="${vo2.exp/1000 == 1 }">
+								<img alt="초급" src="../image/user_image/b1.png" width="15">
+							</c:if>
+							<c:if test="${vo2.exp/1000 == 2 }">
+								<img alt="중급" src="../image/user_image/b2.png" width="15">
+							</c:if>
+							
+							<c:if test="${vo2.exp/1000 == 3 }">
+								<img alt="고급" src="../image/user_image/b3.png" width="15">
+							</c:if>
+							
+							<c:if test="${vo2.exp/1000 == 4 }">
+								<img alt="대급" src="../image/user_image/b4.png" width="15">
+							</c:if>
 						${vo2.name }</td>
 						<td width="20%" align="center">${vo2.regdate }</td>
 						<td width="10%" align="center">${vo2.hit }</td>
